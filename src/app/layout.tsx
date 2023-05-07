@@ -1,5 +1,10 @@
+'use client'
+import Image from 'next/image'
 import './globals.css'
 import { Inter } from 'next/font/google'
+import serveImage from "../../public/serve.png";
+import Link from 'next/link';
+import { usePathname} from 'next/navigation';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -13,9 +18,41 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+
+  const pathname = usePathname();
+
+  const homeStyle = pathname ==="/" ? {borderColor: '#c5ff52'} : {};
+  const servicesStyle = pathname ==="/services" ? {borderColor: '#c5ff52'} : {};
+  // const galleryStyle = router.asPath ==="/" ? {borderColor: '#c5ff52'} : null;
+  // const contactStyle = router.asPath ==="/" ? {borderColor: '#c5ff52'} : null;
+
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <div className='w-fill h-40'>
+          <div className='flex justify-between items-center w-full h-full px-2 py-20'>
+            <Image src={serveImage} alt='Serve Logo' height={500} width={300}/>
+            <div>
+              <ul className='hidden md:flex'>
+                <Link href="/" className='mx-5'>
+                  <li className='py-5' style={homeStyle}>Home</li>
+                </Link>
+                <Link href="/services" className='mx-5'>
+                  <li className='py-5' style={servicesStyle}>Services</li>
+                </Link>
+                <Link href="/gallery" className='mx-5'>
+                  <li className='py-5'>Gallery</li>
+                </Link>
+                <Link href="/contact" className='mx-5'>
+                  <li className='py-5'>Contact us</li>
+                </Link>
+              </ul>
+              <hr/>
+            </div>
+          </div>
+        </div>
+        {children}
+      </body>
     </html>
   )
 }
