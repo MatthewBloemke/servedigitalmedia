@@ -4,6 +4,8 @@
 
 
 body {
+  background-image: url("../../public/bg1.png");
+  background-repeat: repeat-y;
   background-color: black;
 }
 
@@ -12,12 +14,31 @@ h1 {
   color: white;
 }
 
-h6 {
+h2 {
+  font-size: 1.25em;
+}
+
+h3 {
+  font-size: 1em;
+}
+
+h6, h2, h3, p, li {
   color: white;
 }
 
-li {
+.navItems {
   color: white;
-  border-bottom: 2px solid #8c52ff;
-  font-size: 1.5em;
+  border-bottom: 4px solid #8c52ff;
+}
+
+.navList {
+  list-style-type: none;
+}
+
+.highlight {
+  color: #c5ff52;
+}
+
+ul {
+  list-style-type: disc;
 }
