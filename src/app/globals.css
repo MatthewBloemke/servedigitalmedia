@@ -2,11 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  button {
+    @apply text-white rounded-md bg-gradient-to-r from-[#e252ff] via-[#8c52ff] to-[#526fff] p-3 hover:shadow-md active:scale-95 active:opacity-75 ease-in duration-100;
+  }
+}
 
-body {
+#services,
+#gallery {
   background-image: url("../../public/bg1.png");
   background-repeat: repeat-y;
   background-color: black;
+  background-size: cover;
 }
 
 h1 {
@@ -22,7 +29,12 @@ h3 {
   font-size: 1em;
 }
 
-h6, h2, h3, p, li {
+h6,
+h2,
+h3,
+p,
+li,
+h4 {
   color: white;
 }
 
@@ -41,4 +53,10 @@ h6, h2, h3, p, li {
 
 ul {
   list-style-type: disc;
+}
+
+body {
+  background-image: url("../../public/bg2.png");
+  background-size: cover;
+  background-color: black;
 }

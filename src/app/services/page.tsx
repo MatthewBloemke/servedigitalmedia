@@ -1,12 +1,13 @@
 import React from "react";
 import Image from "next/image";
 import placeholder from "../../../public/placeholder.png";
+import Link from "next/link";
 
 const Page = () => {
   return (
-    <div>
-      <div className="my-[10px] flex flex-wrap flex-row md:flex-nowrap">
-        <div id="video" className="m-[15px]">
+    <div id="servicesPage" className="flex flex-col">
+      <div className="my-10 flex flex-wrap flex-row md:flex-nowrap">
+        <div id="video" className="m-8">
           <h2 className="font-bold">Video</h2>
           <p className="font-extralight">
             When competing for attention in the modern market, video helps you
@@ -31,6 +32,11 @@ const Page = () => {
             -Social media integration advising -Audio options (music, narration,
             etc.) -Additional graphics (beyond what is standard)
           </p>
+          <div className="flex justify-center w-full my-5">
+            <Link href="/gallery#videoProjects">
+              <button className="hover:shadow-white">View Video Gallery</button>
+            </Link>
+          </div>
         </div>
         <div className="w-[90%] m-[15px]">
           <div className="relative">
@@ -49,7 +55,7 @@ const Page = () => {
 
       <div
         id="web"
-        className="my-[10px] flex flex-wrap flex-col-reverse md:flex-row md:flex-nowrap"
+        className="my-14 flex flex-wrap flex-col-reverse md:flex-row md:flex-nowrap"
       >
         <div className="w-[90%] m-[15px]">
           <div className="relative">
@@ -87,13 +93,15 @@ const Page = () => {
             drafts included) -Email and plug-in options -Social media
             integration -Domain cost options
           </p>
+          <div className="flex justify-center w-full my-5">
+            <Link href="/gallery#webProjects">
+              <button className="hover:shadow-white">View Web Gallery</button>
+            </Link>
+          </div>
         </div>
       </div>
 
-      <div
-        id="social"
-        className="my-[10px] flex flex-wrap flex-row md:flex-nowrap"
-      >
+      <div id="social" className="my-14 flex flex-wrap flex-row md:flex-nowrap">
         <div className="m-[15px]">
           <h2 className="font-bold">Social Media Promotion</h2>
           <p className="font-extralight">
@@ -117,6 +125,13 @@ const Page = () => {
             -Advisement on maximizing social media reach -Number of social media
             platforms to work with (YouTube, Facebook, Instagram, etc.)
           </p>
+          <div className="flex justify-center w-full my-5">
+            <Link href="/gallery#socialProjects">
+              <button className="hover:shadow-white">
+                View Social Gallery
+              </button>
+            </Link>
+          </div>
         </div>
         <div className="w-[90%] m-[15px]">
           <div className="relative">
@@ -135,7 +150,7 @@ const Page = () => {
 
       <div
         id="branding"
-        className="my-[10px] flex flex-wrap flex-col-reverse md:flex-row md:flex-nowrap"
+        className="my-14 flex flex-wrap flex-col-reverse md:flex-row md:flex-nowrap"
       >
         <div className="w-[90%] m-[15px]">
           <div className="relative">
@@ -172,6 +187,13 @@ const Page = () => {
             revision (three drafts included) -Advisement on brand protection
             -Design of sales merchandise and promotional tools
           </p>
+          <div className="flex justify-center w-full my-5">
+            <Link href="/gallery#brandingProjects">
+              <button className="hover:shadow-white">
+                View Branding Gallery
+              </button>
+            </Link>
+          </div>
         </div>
       </div>
       <div className="flex flex-col items-center justify-center w-full my-[10px]">

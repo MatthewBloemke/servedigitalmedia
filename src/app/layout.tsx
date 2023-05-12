@@ -31,18 +31,17 @@ export default function RootLayout({
   const homeStyle = pathname === "/" ? { borderColor: "#c5ff52" } : {};
   const servicesStyle =
     pathname === "/services" ? { borderColor: "#c5ff52" } : {};
-  // const galleryStyle = router.asPath ==="/" ? {borderColor: '#c5ff52'} : null;
-  // const contactStyle = router.asPath ==="/" ? {borderColor: '#c5ff52'} : null;
+  const galleryStyle =
+    pathname === "/gallery" ? { borderColor: "#c5ff52" } : {};
+  const contactStyle =
+    pathname === "/contact" ? { borderColor: "#c5ff52" } : {};
 
   return (
     <html lang="en">
-      <body
-        className={inter.className}
-        style={{ backgroundImage: bg, backgroundRepeat: "repeat" }}
-      >
-        <div className="w-full h-28 md:h-40">
+      <body id={pathname?.slice(1)} className={inter.className}>
+        <div className="w-full h-28 md:h-40" id="nav">
           <div className="flex justify-between items-center w-full h-full px-2">
-            <div className="w-[175px] md:w-[200px] lg:w-[250px]">
+            <div className="w-[175px] md:w-[200px] lg:w-[250px] ml-10">
               <Image src={serveImage} alt="Serve Logo" className="w-full" />
               <div className="w-full flex justify-center">
                 <p className="text-xs lg:text-lg">
@@ -60,7 +59,7 @@ export default function RootLayout({
                     Home
                   </li>
                 </Link>
-                <Link href="/services" className="mx-5">
+                <Link href="/services#nav" className="mx-5">
                   <li
                     className="py-[5px] md:text-xl lg:text-3xl navItems"
                     style={servicesStyle}
@@ -68,13 +67,19 @@ export default function RootLayout({
                     Services
                   </li>
                 </Link>
-                <Link href="/gallery" className="mx-5">
-                  <li className="py-[5px] md:text-xl lg:text-3xl navItems">
+                <Link href="/gallery#nav" className="mx-5">
+                  <li
+                    className="py-[5px] md:text-xl lg:text-3xl navItems"
+                    style={galleryStyle}
+                  >
                     Gallery
                   </li>
                 </Link>
-                <Link href="/contact" className="mx-5">
-                  <li className="py-[5px] md:text-xl lg:text-3xl navItems">
+                <Link href="/contact#nav" className="mx-5">
+                  <li
+                    className="py-[5px] md:text-xl lg:text-3xl navItems"
+                    style={contactStyle}
+                  >
                     Contact Us
                   </li>
                 </Link>
@@ -91,14 +96,14 @@ export default function RootLayout({
           <div
             className={
               nav
-                ? "md:hidden fixed left-0 top-0 w-full h-screen bg-black/70"
+                ? "md:hidden fixed left-0 top-0 w-full h-screen bg-black/70 z-[50]"
                 : ""
             }
           >
             <div
               className={
                 nav
-                  ? "fixed left-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen z-50 bg-[#000000] p-8 ease-in duration-500"
+                  ? "fixed left-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen  bg-[#000000] p-8 ease-in duration-500"
                   : "fixed left-[-100%] top-0 p-8 ease-in duration-500 h-screen"
               }
             >
@@ -132,17 +137,17 @@ export default function RootLayout({
                       Home
                     </li>
                   </Link>
-                  <Link href="/services">
+                  <Link href="/services#nav">
                     <li onClick={() => setNav(false)} className="py-4 text-sm">
                       Services
                     </li>
                   </Link>
-                  <Link href="/gallery">
+                  <Link href="/gallery#nav">
                     <li onClick={() => setNav(false)} className="py-4 text-sm">
                       Gallery
                     </li>
                   </Link>
-                  <Link href="/contact">
+                  <Link href="/contact#nav">
                     <li onClick={() => setNav(false)} className="py-4 text-sm">
                       Contact Us
                     </li>
