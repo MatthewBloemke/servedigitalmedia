@@ -4,8 +4,16 @@
 
 @layer base {
   button {
-    @apply text-white rounded-md bg-gradient-to-r from-[#e252ff] via-[#8c52ff] to-[#526fff] p-3 hover:shadow-md active:scale-95 active:opacity-75 ease-in duration-100;
+    @apply text-white rounded-md bg-gradient-to-r from-[#e252ff] via-[#8c52ff] to-[#526fff] p-3 hover:scale-105 active:scale-95 active:opacity-75 ease-in duration-100;
   }
+}
+
+html {
+  scroll-behavior: smooth !important;
+}
+
+a, button, div {
+  -webkit-tap-highlight-color: transparent;
 }
 
 #services,
