@@ -1,7 +1,7 @@
-import React from "react";
-import Image from "next/image";
-import placeholder from "../../../public/placeholder.png";
-import Link from "next/link";
+import React from 'react';
+import Image from 'next/image';
+import placeholder from '../../../public/placeholder.png';
+import Link from 'next/link';
 
 const Page = () => {
   return (
@@ -16,14 +16,14 @@ const Page = () => {
             Make a splash with this personal marketing tool!
           </p>
           <div className="flex">
-            <p className="font-semibold text-[#c5ff52]">Packages:</p>
+            <p className="font-semibold text-[#ff8c52]">Packages:</p>
             <ul className="ml-[35px]">
               <li>Promotional video package (1 - 2 minute video)</li>
               <li>Shorts/Reels package (under 60 second video)</li>
               <li>Long form video package (3+ minute video)</li>
             </ul>
           </div>
-          <p className="text-[#c5ff52]">
+          <p className="text-[#ff8c52]">
             Each package is customizable according to the following options:
           </p>
           <p className="font-extralight">
@@ -40,8 +40,8 @@ const Page = () => {
         </div>
         <div className="w-[90%] m-[15px]">
           <div className="relative">
-            <div className="absolute bg-gradient-to-b from-[#c5ff52] w-[70px] h-[50px] top-[-5px] left-[-5px] z-[-1]" />
-            <div className="absolute bg-gradient-to-t from-[#c5ff52] w-[70px] h-[50px] bottom-[-5px] right-[-5px] z-[-1]" />
+            <div className="absolute bg-gradient-to-b from-[#ff8c52] w-[70px] h-[50px] top-[-5px] left-[-5px] z-[-1]" />
+            <div className="absolute bg-gradient-to-t from-[#ff8c52] w-[70px] h-[50px] bottom-[-5px] right-[-5px] z-[-1]" />
             <Image
               src={placeholder}
               height={225}
@@ -49,7 +49,7 @@ const Page = () => {
               className="bg-white w-full relative -z-[1]"
             />
           </div>
-          <h2 className="text-[#c5ff52]">Packages starting at $100*</h2>
+          <h2 className="text-[#ff8c52]">Packages starting at $100*</h2>
         </div>
       </div>
 
@@ -59,8 +59,8 @@ const Page = () => {
       >
         <div className="w-[90%] m-[15px]">
           <div className="relative">
-            <div className="absolute bg-gradient-to-b from-[#c5ff52] w-[70px] h-[50px] top-[-5px] left-[-5px] z-[-1]" />
-            <div className="absolute bg-gradient-to-t from-[#c5ff52] w-[70px] h-[50px] bottom-[-5px] right-[-5px] z-[-1]" />
+            <div className="absolute bg-gradient-to-b from-[#ff8c52] w-[70px] h-[50px] top-[-5px] left-[-5px] z-[-1]" />
+            <div className="absolute bg-gradient-to-t from-[#ff8c52] w-[70px] h-[50px] bottom-[-5px] right-[-5px] z-[-1]" />
             <Image
               src={placeholder}
               height={225}
@@ -68,7 +68,7 @@ const Page = () => {
               className="bg-white w-full relative -z-[1]"
             />
           </div>
-          <h2 className="text-[#c5ff52]">Packages starting at $450*</h2>
+          <h2 className="text-[#ff8c52]">Packages starting at $450*</h2>
         </div>
         <div className="m-[15px]">
           <h2 className="font-bold">Web Design</h2>
@@ -79,13 +79,13 @@ const Page = () => {
             rate!
           </p>
           <div className="flex">
-            <p className="font-semibold text-[#c5ff52]">Packages:</p>
+            <p className="font-semibold text-[#ff8c52]">Packages:</p>
             <ul className="ml-[35px]">
               <li>Website (Customize up from 3-page site)</li>
               <li>Website and updated maintenance</li>
             </ul>
           </div>
-          <p className="text-[#c5ff52]">
+          <p className="text-[#ff8c52]">
             Each package is customizable according to the following options:
           </p>
           <p className="font-extralight">
@@ -111,13 +111,13 @@ const Page = () => {
             eye-catching techniques to your social media for the future!
           </p>
           <div className="flex">
-            <p className="font-semibold text-[#c5ff52]">Packages:</p>
+            <p className="font-semibold text-[#ff8c52]">Packages:</p>
             <ul className="ml-[35px]">
               <li>Post creation & campaign direction</li>
               <li>General social media advisement</li>
             </ul>
           </div>
-          <p className="text-[#c5ff52]">
+          <p className="text-[#ff8c52]">
             Each package is customizable according to the following options:
           </p>
           <p className="font-extralight">
@@ -135,8 +135,8 @@ const Page = () => {
         </div>
         <div className="w-[90%] m-[15px]">
           <div className="relative">
-            <div className="absolute bg-gradient-to-b from-[#c5ff52] w-[70px] h-[50px] top-[-5px] left-[-5px] z-[-1]" />
-            <div className="absolute bg-gradient-to-t from-[#c5ff52] w-[70px] h-[50px] bottom-[-5px] right-[-5px] z-[-1]" />
+            <div className="absolute bg-gradient-to-b from-[#ff8c52] w-[70px] h-[50px] top-[-5px] left-[-5px] z-[-1]" />
+            <div className="absolute bg-gradient-to-t from-[#ff8c52] w-[70px] h-[50px] bottom-[-5px] right-[-5px] z-[-1]" />
             <Image
               src={placeholder}
               height={225}
@@ -144,7 +144,7 @@ const Page = () => {
               className="bg-white w-full relative -z-[1]"
             />
           </div>
-          <h2 className="text-[#c5ff52]">Packages starting at $50*</h2>
+          <h2 className="text-[#ff8c52]">Packages starting at $50*</h2>
         </div>
       </div>
 
@@ -154,8 +154,8 @@ const Page = () => {
       >
         <div className="w-[90%] m-[15px]">
           <div className="relative">
-            <div className="absolute bg-gradient-to-b from-[#c5ff52] w-[70px] h-[50px] top-[-5px] left-[-5px] z-[-1]" />
-            <div className="absolute bg-gradient-to-t from-[#c5ff52] w-[70px] h-[50px] bottom-[-5px] right-[-5px] z-[-1]" />
+            <div className="absolute bg-gradient-to-b from-[#ff8c52] w-[70px] h-[50px] top-[-5px] left-[-5px] z-[-1]" />
+            <div className="absolute bg-gradient-to-t from-[#ff8c52] w-[70px] h-[50px] bottom-[-5px] right-[-5px] z-[-1]" />
             <Image
               src={placeholder}
               height={225}
@@ -163,7 +163,7 @@ const Page = () => {
               className="bg-white w-full relative -z-[1]"
             />
           </div>
-          <h2 className="text-[#c5ff52]">Packages starting at $100*</h2>
+          <h2 className="text-[#ff8c52]">Packages starting at $100*</h2>
         </div>
         <div className="m-[15px]">
           <h2 className="font-bold">General Branding</h2>
@@ -173,13 +173,13 @@ const Page = () => {
             both worthy of your business and that you can be proud of!
           </p>
           <div className="flex">
-            <p className="font-semibold text-[#c5ff52]">Packages:</p>
+            <p className="font-semibold text-[#ff8c52]">Packages:</p>
             <ul className="ml-[35px]">
               <li>Time-based development</li>
               <li>Choice of templates</li>
             </ul>
           </div>
-          <p className="text-[#c5ff52]">
+          <p className="text-[#ff8c52]">
             Each package is customizable according to the following options:
           </p>
           <p className="font-extralight">
@@ -198,12 +198,12 @@ const Page = () => {
       </div>
       <div className="flex flex-col items-center justify-center w-full my-[10px]">
         <h1 className="text-3xl md:text-4xl mx-[5%]">
-          Email us at <span className="text-[#c5ff52]">info@servedm.com</span>{" "}
+          Email us at <span className="text-[#ff8c52]">info@servedm.com</span>{' '}
           for specific pricing
         </h1>
       </div>
       <div className="flex items-center justify-center w-full my-[5px]">
-        <p className="text-[#c5ff52] mx-[10%]">
+        <p className="text-[#ff8c52] mx-[10%]">
           *Price represents the lowest level of the lowest package. Package
           pricing is subject to change upon adding additional benefits. Please
           contact us for pricing to fit your budget and desired product.

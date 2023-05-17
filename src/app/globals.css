@@ -40,7 +40,6 @@ h4 {
 
 .navItems {
   color: white;
-  border-bottom: 4px solid #8c52ff;
 }
 
 .navList {
@@ -48,7 +47,7 @@ h4 {
 }
 
 .highlight {
-  color: #c5ff52;
+  color: #ff8c52;
 }
 
 ul {

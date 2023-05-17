@@ -1,15 +1,15 @@
-import Image from "next/image";
-import React from "react";
-import webPhoto from "../../../public/website1.png";
-import social1 from "../../../public/social1.png";
-import social2 from "../../../public/social2.png";
-import social3 from "../../../public/social3.png";
-import branding1 from "../../../public/branding1.png";
-import branding2 from "../../../public/general2.png";
-import branding3 from "../../../public/general3.png";
-import branding4 from "../../../public/general4.png";
-import branding5 from "../../../public/general5.png";
-import branding6 from "../../../public/serve.png";
+import Image from 'next/image';
+import React from 'react';
+import webPhoto from '../../../public/website1.png';
+import social1 from '../../../public/social1.png';
+import social2 from '../../../public/social2.png';
+import social3 from '../../../public/social3.png';
+import branding1 from '../../../public/branding1.png';
+import branding2 from '../../../public/general2.png';
+import branding3 from '../../../public/general3.png';
+import branding4 from '../../../public/general4.png';
+import branding5 from '../../../public/general5.png';
+import branding6 from '../../../public/serve.png';
 
 const Gallery = () => {
   return (
@@ -18,8 +18,8 @@ const Gallery = () => {
         <h1 className="ml-[5%]">Video Projects</h1>
         <div className="flex flex-col md:flex-row items-center justify-evenly flex-wrap">
           <div className="relative mt-5">
-            <div className="absolute bg-gradient-to-b from-[#c5ff52] w-[70px] h-[50px] top-[-5px] left-[-5px] z-[-1]" />
-            <div className="absolute bg-gradient-to-t from-[#c5ff52] w-[70px] h-[50px] bottom-[-5px] right-[-5px] z-[-1]" />
+            <div className="absolute bg-gradient-to-b from-[#ff8c52] w-[70px] h-[50px] top-[-5px] left-[-5px] z-[-1]" />
+            <div className="absolute bg-gradient-to-t from-[#ff8c52] w-[70px] h-[50px] bottom-[-5px] right-[-5px] z-[-1]" />
             <iframe
               className="w-[280px] h-[158px] md:w-[560px] md:h-[315px]"
               src="https://www.youtube.com/embed/Br7rBBV3mw0"
@@ -29,8 +29,8 @@ const Gallery = () => {
             ></iframe>
           </div>
           <div className="relative mt-5">
-            <div className="absolute bg-gradient-to-b from-[#c5ff52] w-[70px] h-[50px] top-[-5px] left-[-5px] z-[-1]" />
-            <div className="absolute bg-gradient-to-t from-[#c5ff52] w-[70px] h-[50px] bottom-[-5px] right-[-5px] z-[-1]" />
+            <div className="absolute bg-gradient-to-b from-[#ff8c52] w-[70px] h-[50px] top-[-5px] left-[-5px] z-[-1]" />
+            <div className="absolute bg-gradient-to-t from-[#ff8c52] w-[70px] h-[50px] bottom-[-5px] right-[-5px] z-[-1]" />
             <iframe
               className="w-[280px] h-[158px] md:w-[560px] md:h-[315px]"
               src="https://www.youtube.com/embed/3JveLCwEFu0"
@@ -40,8 +40,8 @@ const Gallery = () => {
             ></iframe>
           </div>
           <div className="relative mt-5">
-            <div className="absolute bg-gradient-to-b from-[#c5ff52] w-[70px] h-[50px] top-[-5px] left-[-5px] z-[-1]" />
-            <div className="absolute bg-gradient-to-t from-[#c5ff52] w-[70px] h-[50px] bottom-[-5px] right-[-5px] z-[-1]" />
+            <div className="absolute bg-gradient-to-b from-[#ff8c52] w-[70px] h-[50px] top-[-5px] left-[-5px] z-[-1]" />
+            <div className="absolute bg-gradient-to-t from-[#ff8c52] w-[70px] h-[50px] bottom-[-5px] right-[-5px] z-[-1]" />
             <iframe
               className="w-[280px] h-[158px] md:w-[560px] md:h-[315px]"
               src="https://www.youtube.com/embed/BVidAEhVXJ4"
@@ -66,8 +66,8 @@ const Gallery = () => {
         <h1 className="ml-[5%]">Web Design Projects</h1>
         <div className="flex flex-col md:flex-row justify-center items-center">
           <div className="relative mt-5 w-[80%] md:w-[40%]">
-            <div className="absolute bg-gradient-to-b from-[#c5ff52] w-[70px] h-[50px] top-[-5px] left-[-5px] z-[-1]" />
-            <div className="absolute bg-gradient-to-t from-[#c5ff52] w-[70px] h-[50px] bottom-[-5px] right-[-5px] z-[-1]" />
+            <div className="absolute bg-gradient-to-b from-[#ff8c52] w-[70px] h-[50px] top-[-5px] left-[-5px] z-[-1]" />
+            <div className="absolute bg-gradient-to-t from-[#ff8c52] w-[70px] h-[50px] bottom-[-5px] right-[-5px] z-[-1]" />
             <Image className="w-full" src={webPhoto} alt="web photo" />
           </div>
         </div>
@@ -86,8 +86,8 @@ const Gallery = () => {
         <h1 className="ml-[5%]">Social Media Projects</h1>
         <div className="flex flex-col md:flex-row justify-evenly items-center">
           <div className="relative mt-5 w-[80%] md:w-[30%] bg-black">
-            <div className="absolute bg-gradient-to-b from-[#c5ff52] w-[70px] h-[50px] top-[-5px] left-[-5px] z-[-1]" />
-            <div className="absolute bg-gradient-to-t from-[#c5ff52] w-[70px] h-[50px] bottom-[-5px] right-[-5px] z-[-1]" />
+            <div className="absolute bg-gradient-to-b from-[#ff8c52] w-[70px] h-[50px] top-[-5px] left-[-5px] z-[-1]" />
+            <div className="absolute bg-gradient-to-t from-[#ff8c52] w-[70px] h-[50px] bottom-[-5px] right-[-5px] z-[-1]" />
             <Image
               src={social2}
               className="max-h-[300px] w-auto m-auto"
@@ -95,8 +95,8 @@ const Gallery = () => {
             />
           </div>
           <div className="relative mt-5 w-[80%] md:w-[30%] bg-black">
-            <div className="absolute bg-gradient-to-b from-[#c5ff52] w-[70px] h-[50px] top-[-5px] left-[-5px] z-[-1]" />
-            <div className="absolute bg-gradient-to-t from-[#c5ff52] w-[70px] h-[50px] bottom-[-5px] right-[-5px] z-[-1]" />
+            <div className="absolute bg-gradient-to-b from-[#ff8c52] w-[70px] h-[50px] top-[-5px] left-[-5px] z-[-1]" />
+            <div className="absolute bg-gradient-to-t from-[#ff8c52] w-[70px] h-[50px] bottom-[-5px] right-[-5px] z-[-1]" />
             <Image
               src={social1}
               className="max-h-[300px] w-auto m-auto"
@@ -104,8 +104,8 @@ const Gallery = () => {
             />
           </div>
           <div className="relative mt-5 w-[80%] md:w-[30%] bg-black">
-            <div className="absolute bg-gradient-to-b from-[#c5ff52] w-[70px] h-[50px] top-[-5px] left-[-5px] z-[-1]" />
-            <div className="absolute bg-gradient-to-t from-[#c5ff52] w-[70px] h-[50px] bottom-[-5px] right-[-5px] z-[-1]" />
+            <div className="absolute bg-gradient-to-b from-[#ff8c52] w-[70px] h-[50px] top-[-5px] left-[-5px] z-[-1]" />
+            <div className="absolute bg-gradient-to-t from-[#ff8c52] w-[70px] h-[50px] bottom-[-5px] right-[-5px] z-[-1]" />
             <Image
               src={social3}
               className="max-h-[300px] w-auto m-auto my-auto"
@@ -129,8 +129,8 @@ const Gallery = () => {
         <div className="flex flex-col">
           <div className="flex flex-col md:flex-row justify-evenly items-center">
             <div className="relative mt-5 w-[80%] md:w-[30%] bg-black flex justify-center align-center">
-              <div className="absolute bg-gradient-to-b from-[#c5ff52] w-[70px] h-[50px] top-[-5px] left-[-5px] z-[-1]" />
-              <div className="absolute bg-gradient-to-t from-[#c5ff52] w-[70px] h-[50px] bottom-[-5px] right-[-5px] z-[-1]" />
+              <div className="absolute bg-gradient-to-b from-[#ff8c52] w-[70px] h-[50px] top-[-5px] left-[-5px] z-[-1]" />
+              <div className="absolute bg-gradient-to-t from-[#ff8c52] w-[70px] h-[50px] bottom-[-5px] right-[-5px] z-[-1]" />
               <Image
                 src={branding1}
                 className="max-h-[300px] w-auto m-auto"
@@ -138,8 +138,8 @@ const Gallery = () => {
               />
             </div>
             <div className="relative mt-5 w-[80%] md:w-[30%] bg-black flex justify-center align-center">
-              <div className="absolute bg-gradient-to-b from-[#c5ff52] w-[70px] h-[50px] top-[-5px] left-[-5px] z-[-1]" />
-              <div className="absolute bg-gradient-to-t from-[#c5ff52] w-[70px] h-[50px] bottom-[-5px] right-[-5px] z-[-1]" />
+              <div className="absolute bg-gradient-to-b from-[#ff8c52] w-[70px] h-[50px] top-[-5px] left-[-5px] z-[-1]" />
+              <div className="absolute bg-gradient-to-t from-[#ff8c52] w-[70px] h-[50px] bottom-[-5px] right-[-5px] z-[-1]" />
               <Image
                 src={branding2}
                 className="max-h-[300px] w-auto m-auto"
@@ -147,8 +147,8 @@ const Gallery = () => {
               />
             </div>
             <div className="relative mt-5 w-[80%] md:w-[30%] bg-black flex justify-center align-center">
-              <div className="absolute bg-gradient-to-b from-[#c5ff52] w-[70px] h-[50px] top-[-5px] left-[-5px] z-[-1]" />
-              <div className="absolute bg-gradient-to-t from-[#c5ff52] w-[70px] h-[50px] bottom-[-5px] right-[-5px] z-[-1]" />
+              <div className="absolute bg-gradient-to-b from-[#ff8c52] w-[70px] h-[50px] top-[-5px] left-[-5px] z-[-1]" />
+              <div className="absolute bg-gradient-to-t from-[#ff8c52] w-[70px] h-[50px] bottom-[-5px] right-[-5px] z-[-1]" />
               <Image
                 src={branding3}
                 className="max-h-[300px] w-auto m-auto"
@@ -158,8 +158,8 @@ const Gallery = () => {
           </div>
           <div className="flex flex-col md:flex-row justify-evenly items-center">
             <div className="relative mt-5 w-[80%] md:w-[30%] bg-black flex justify-center align-center">
-              <div className="absolute bg-gradient-to-b from-[#c5ff52] w-[70px] h-[50px] top-[-5px] left-[-5px] z-[-1]" />
-              <div className="absolute bg-gradient-to-t from-[#c5ff52] w-[70px] h-[50px] bottom-[-5px] right-[-5px] z-[-1]" />
+              <div className="absolute bg-gradient-to-b from-[#ff8c52] w-[70px] h-[50px] top-[-5px] left-[-5px] z-[-1]" />
+              <div className="absolute bg-gradient-to-t from-[#ff8c52] w-[70px] h-[50px] bottom-[-5px] right-[-5px] z-[-1]" />
               <Image
                 src={branding4}
                 className="max-h-[300px] w-auto m-auto"
@@ -167,8 +167,8 @@ const Gallery = () => {
               />
             </div>
             <div className="relative mt-5 w-[80%] md:w-[30%] bg-black flex justify-center align-center">
-              <div className="absolute bg-gradient-to-b from-[#c5ff52] w-[70px] h-[50px] top-[-5px] left-[-5px] z-[-1]" />
-              <div className="absolute bg-gradient-to-t from-[#c5ff52] w-[70px] h-[50px] bottom-[-5px] right-[-5px] z-[-1]" />
+              <div className="absolute bg-gradient-to-b from-[#ff8c52] w-[70px] h-[50px] top-[-5px] left-[-5px] z-[-1]" />
+              <div className="absolute bg-gradient-to-t from-[#ff8c52] w-[70px] h-[50px] bottom-[-5px] right-[-5px] z-[-1]" />
               <Image
                 src={branding5}
                 className="max-h-[300px] w-auto m-auto"
@@ -176,8 +176,8 @@ const Gallery = () => {
               />
             </div>
             <div className="relative mt-5 w-[80%] md:w-[30%] bg-black flex justify-center align-center">
-              <div className="absolute bg-gradient-to-b from-[#c5ff52] w-[70px] h-[50px] top-[-5px] left-[-5px] z-[-1]" />
-              <div className="absolute bg-gradient-to-t from-[#c5ff52] w-[70px] h-[50px] bottom-[-5px] right-[-5px] z-[-1]" />
+              <div className="absolute bg-gradient-to-b from-[#ff8c52] w-[70px] h-[50px] top-[-5px] left-[-5px] z-[-1]" />
+              <div className="absolute bg-gradient-to-t from-[#ff8c52] w-[70px] h-[50px] bottom-[-5px] right-[-5px] z-[-1]" />
               <Image
                 src={branding6}
                 className="max-h-[300px] w-auto"

@@ -1,17 +1,15 @@
-"use client";
-import Image from "next/image";
-import "./globals.css";
-import { Inter } from "next/font/google";
-import serveImage from "../../public/serve.png";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
-import bg from "../../public/bg4.png";
-import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
-import { useState } from "react";
+'use client';
+import Image from 'next/image';
+import './globals.css';
+import { Inter } from 'next/font/google';
+import serveImage from '../../public/serve.png';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import bg from '../../public/bg4.png';
+import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
+import { useState } from 'react';
 
-const inter = Inter({ subsets: ["latin"] });
-
-
+const inter = Inter({ subsets: ['latin'] });
 
 export default function RootLayout({
   children,
@@ -25,32 +23,29 @@ export default function RootLayout({
     setNav(!nav);
   };
 
-  const homeStyle = pathname === "/" ? { borderColor: "#c5ff52" } : {};
-  const servicesStyle =
-    pathname === "/services" ? { borderColor: "#c5ff52" } : {};
-  const galleryStyle =
-    pathname === "/gallery" ? { borderColor: "#c5ff52" } : {};
-  const contactStyle =
-    pathname === "/contact" ? { borderColor: "#c5ff52" } : {};
+  const homeStyle = pathname === '/' ? { color: '#8c52ff' } : {};
+  const servicesStyle = pathname === '/services' ? { color: '#8c52ff' } : {};
+  const galleryStyle = pathname === '/gallery' ? { color: '#8c52ff' } : {};
+  const contactStyle = pathname === '/contact' ? { color: '#8c52ff' } : {};
 
   return (
     <html lang="en">
       <body id={pathname?.slice(1)} className={inter.className}>
-        <div className="w-full h-28 md:h-40" id="nav">
+        <div className="w-full h-28 md:h-20 bg-black/70" id="nav">
           <div className="flex justify-between items-center w-full h-full px-2">
-            <div className="w-[175px] md:w-[200px] lg:w-[250px] ml-10">
-              <Image src={serveImage} alt="Serve Logo" className="w-full" />
-              <div className="w-full flex justify-center">
-                <p className="text-xs lg:text-lg">
-                  Serving to build your brand
-                </p>
+            <div className="w-full flex items-center">
+              <div className="flex flex-row justify-normal w-[175px] md:w-[200px] lg:w-[175px] ml-10">
+                <Image src={serveImage} alt="Serve Logo" className="w-full" />
               </div>
+              <p className="text-xs ml-5 lg:text-lg">
+                Serving to build your brand
+              </p>
             </div>
             <div>
               <ul className="hidden md:flex navList">
                 <Link href="/" className="mx-5">
                   <li
-                    className="py-[5px] md:text-xl lg:text-3xl navItems"
+                    className="py-[5px] md:text-xl lg:text-xl navItems"
                     style={homeStyle}
                   >
                     Home
@@ -58,7 +53,7 @@ export default function RootLayout({
                 </Link>
                 <Link href="/services#nav" className="mx-5">
                   <li
-                    className="py-[5px] md:text-xl lg:text-3xl navItems"
+                    className="py-[5px] md:text-xl lg:text-xl navItems"
                     style={servicesStyle}
                   >
                     Services
@@ -66,7 +61,7 @@ export default function RootLayout({
                 </Link>
                 <Link href="/gallery#nav" className="mx-5">
                   <li
-                    className="py-[5px] md:text-xl lg:text-3xl navItems"
+                    className="py-[5px] md:text-xl lg:text-xl navItems"
                     style={galleryStyle}
                   >
                     Gallery
@@ -74,10 +69,10 @@ export default function RootLayout({
                 </Link>
                 <Link href="/contact#nav" className="mx-5">
                   <li
-                    className="py-[5px] md:text-xl lg:text-3xl navItems"
+                    className="py-[5px] flex-nowrap md:text-xl lg:text-xl navItems"
                     style={contactStyle}
                   >
-                    Contact Us
+                    Contact
                   </li>
                 </Link>
               </ul>
@@ -87,21 +82,20 @@ export default function RootLayout({
               >
                 <AiOutlineMenu size={30} />
               </div>
-              <hr className="hidden md:block" />
             </div>
           </div>
           <div
             className={
               nav
-                ? "md:hidden fixed left-0 top-0 w-full h-screen bg-black/70 z-[50]"
-                : ""
+                ? 'md:hidden fixed left-0 top-0 w-full h-screen bg-black/70 z-[50]'
+                : ''
             }
           >
             <div
               className={
                 nav
-                  ? "fixed left-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen  bg-[#000000] p-8 ease-in duration-500"
-                  : "fixed left-[-100%] top-0 p-8 ease-in duration-500 h-screen"
+                  ? 'fixed left-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen  bg-[#000000] p-8 ease-in duration-500'
+                  : 'fixed left-[-100%] top-0 p-8 ease-in duration-500 h-screen'
               }
             >
               <div>
@@ -156,8 +150,8 @@ export default function RootLayout({
               onClick={() => setNav(false)}
               className={
                 nav
-                  ? "md:hidden fixed right-0 h-screen w-[25%] sm:w-[40%] md:w-[55%]"
-                  : ""
+                  ? 'md:hidden fixed right-0 h-screen w-[25%] sm:w-[40%] md:w-[55%]'
+                  : ''
               }
             />
           </div>
