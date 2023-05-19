@@ -1,13 +1,17 @@
 import React from 'react';
 import Image from 'next/image';
 import placeholder from '../../../public/placeholder.png';
+import webDesign from '../../../public/webDesign.png';
+import socialHome from '../../../public/socialHome.png';
+import generalBranding from '../../../public/generalBranding.png';
+import videoHome from '../../../public/videoHome.png';
 import Link from 'next/link';
 
 const Page = () => {
   return (
     <div id="servicesPage" className="flex flex-col">
       <div className="my-10 flex flex-wrap flex-row md:flex-nowrap">
-        <div id="video" className="m-8">
+        <div id="video" className="m-4 bg-black/60 p-4 rounded-md">
           <h2 className="font-bold">Video</h2>
           <p className="font-extralight">
             When competing for attention in the modern market, video helps you
@@ -34,19 +38,21 @@ const Page = () => {
           </p>
           <div className="flex justify-center w-full my-5">
             <Link href="/gallery#videoProjects">
-              <button className="hover:shadow-white">View Video Gallery</button>
+              <button className="hover:scale-105 active:scale-95">
+                View Video Gallery
+              </button>
             </Link>
           </div>
         </div>
-        <div className="w-[90%] m-[15px]">
+        <div className="w-[92%] m-4">
           <div className="relative">
-            <div className="absolute bg-gradient-to-b from-[#ff8c52] w-[70px] h-[50px] top-[-5px] left-[-5px] z-[-1]" />
-            <div className="absolute bg-gradient-to-t from-[#ff8c52] w-[70px] h-[50px] bottom-[-5px] right-[-5px] z-[-1]" />
+            <div className="absolute bg-gradient-to-b from-[#ff8c52] w-[70px] h-[50px] top-[-5px] left-[-5px] z-[-1] rounded-sm" />
+            <div className="absolute bg-gradient-to-t from-[#ff8c52] w-[70px] h-[50px] bottom-[-5px] right-[-5px] z-[-1] rounded-sm" />
             <Image
-              src={placeholder}
+              src={videoHome}
               height={225}
               alt="placeholder"
-              className="bg-white w-full relative -z-[1]"
+              className="bg-white w-full relative -z-[1] rounded-sm"
             />
           </div>
           <h2 className="text-[#ff8c52]">Packages starting at $100*</h2>
@@ -57,20 +63,20 @@ const Page = () => {
         id="web"
         className="my-14 flex flex-wrap flex-col-reverse md:flex-row md:flex-nowrap"
       >
-        <div className="w-[90%] m-[15px]">
+        <div className="w-[90%] m-4">
           <div className="relative">
-            <div className="absolute bg-gradient-to-b from-[#ff8c52] w-[70px] h-[50px] top-[-5px] left-[-5px] z-[-1]" />
-            <div className="absolute bg-gradient-to-t from-[#ff8c52] w-[70px] h-[50px] bottom-[-5px] right-[-5px] z-[-1]" />
+            <div className="absolute bg-gradient-to-b from-[#ff8c52] w-[70px] h-[50px] top-[-5px] left-[-5px] z-[-1] rounded-sm" />
+            <div className="absolute bg-gradient-to-t from-[#ff8c52] w-[70px] h-[50px] bottom-[-5px] right-[-5px] z-[-1] rounded-sm" />
             <Image
-              src={placeholder}
+              src={webDesign}
               height={225}
               alt="placeholder"
-              className="bg-white w-full relative -z-[1]"
+              className="bg-white w-full relative -z-[1] rounded-sm"
             />
           </div>
           <h2 className="text-[#ff8c52]">Packages starting at $450*</h2>
         </div>
-        <div className="m-[15px]">
+        <div className="m-4 bg-black/60 p-4 rounded-md">
           <h2 className="font-bold">Web Design</h2>
           <p className="font-extralight">
             Websites are the best way for you to promote your brand, but it can
@@ -95,14 +101,16 @@ const Page = () => {
           </p>
           <div className="flex justify-center w-full my-5">
             <Link href="/gallery#webProjects">
-              <button className="hover:shadow-white">View Web Gallery</button>
+              <button className="hover:scale-105 active:scale-95">
+                View Web Gallery
+              </button>
             </Link>
           </div>
         </div>
       </div>
 
       <div id="social" className="my-14 flex flex-wrap flex-row md:flex-nowrap">
-        <div className="m-[15px]">
+        <div className="m-4 bg-black/60 p-4 rounded-md">
           <h2 className="font-bold">Social Media Promotion</h2>
           <p className="font-extralight">
             In the modern market, social media is a necessity to maximize your
@@ -127,21 +135,21 @@ const Page = () => {
           </p>
           <div className="flex justify-center w-full my-5">
             <Link href="/gallery#socialProjects">
-              <button className="hover:shadow-white">
+              <button className="hover:scale-105 active:scale-95">
                 View Social Gallery
               </button>
             </Link>
           </div>
         </div>
-        <div className="w-[90%] m-[15px]">
+        <div className="w-[90%] m-4">
           <div className="relative">
-            <div className="absolute bg-gradient-to-b from-[#ff8c52] w-[70px] h-[50px] top-[-5px] left-[-5px] z-[-1]" />
-            <div className="absolute bg-gradient-to-t from-[#ff8c52] w-[70px] h-[50px] bottom-[-5px] right-[-5px] z-[-1]" />
+            <div className="absolute bg-gradient-to-b from-[#ff8c52] w-[70px] h-[50px] top-[-5px] left-[-5px] z-[-1] rounded-sm" />
+            <div className="absolute bg-gradient-to-t from-[#ff8c52] w-[70px] h-[50px] bottom-[-5px] right-[-5px] z-[-1] rounded-sm" />
             <Image
-              src={placeholder}
+              src={socialHome}
               height={225}
               alt="placeholder"
-              className="bg-white w-full relative -z-[1]"
+              className="bg-white w-full relative -z-[1] rounded-sm"
             />
           </div>
           <h2 className="text-[#ff8c52]">Packages starting at $50*</h2>
@@ -150,22 +158,22 @@ const Page = () => {
 
       <div
         id="branding"
-        className="my-14 flex flex-wrap flex-col-reverse md:flex-row md:flex-nowrap"
+        className="mt-14 flex flex-wrap flex-col-reverse md:flex-row md:flex-nowrap"
       >
-        <div className="w-[90%] m-[15px]">
+        <div className="w-[90%] m-4">
           <div className="relative">
-            <div className="absolute bg-gradient-to-b from-[#ff8c52] w-[70px] h-[50px] top-[-5px] left-[-5px] z-[-1]" />
-            <div className="absolute bg-gradient-to-t from-[#ff8c52] w-[70px] h-[50px] bottom-[-5px] right-[-5px] z-[-1]" />
+            <div className="absolute bg-gradient-to-b from-[#ff8c52] w-[70px] h-[50px] top-[-5px] left-[-5px] z-[-1] rounded-sm" />
+            <div className="absolute bg-gradient-to-t from-[#ff8c52] w-[70px] h-[50px] bottom-[-5px] right-[-5px] z-[-1] rounded-sm" />
             <Image
-              src={placeholder}
+              src={generalBranding}
               height={225}
               alt="placeholder"
-              className="bg-white w-full relative -z-[1]"
+              className="bg-white w-full relative -z-[1] rounded-sm"
             />
           </div>
           <h2 className="text-[#ff8c52]">Packages starting at $100*</h2>
         </div>
-        <div className="m-[15px]">
+        <div className="m-4 bg-black/60 p-4 rounded-md">
           <h2 className="font-bold">General Branding</h2>
           <p className="font-extralight">
             Logos, color palettes and general design for starting your brand can
@@ -189,7 +197,7 @@ const Page = () => {
           </p>
           <div className="flex justify-center w-full my-5">
             <Link href="/gallery#brandingProjects">
-              <button className="hover:shadow-white">
+              <button className="hover:scale-105 active:scale-95">
                 View Branding Gallery
               </button>
             </Link>
@@ -197,12 +205,13 @@ const Page = () => {
         </div>
       </div>
       <div className="flex flex-col items-center justify-center w-full my-[10px]">
-        <h1 className="text-3xl md:text-4xl mx-[5%]">
-          Email us at <span className="text-[#ff8c52]">info@servedm.com</span>{' '}
-          for specific pricing
-        </h1>
+        <Link href="/contact#nav">
+          <button className="hover:scale-105 active:scale-95 mb-4">
+            Contact Us
+          </button>
+        </Link>
       </div>
-      <div className="flex items-center justify-center w-full my-[5px]">
+      <div className="flex items-center justify-center w-full mb-4">
         <p className="text-[#ff8c52] mx-[10%]">
           *Price represents the lowest level of the lowest package. Package
           pricing is subject to change upon adding additional benefits. Please

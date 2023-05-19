@@ -31,10 +31,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body id={pathname?.slice(1)} className={inter.className}>
-        <div className="w-full h-28 md:h-20 bg-black/70" id="nav">
+        <div className="w-full h-16 md:h-20 bg-black/70" id="nav">
           <div className="flex justify-between items-center w-full h-full px-2">
             <div className="w-full flex items-center">
-              <div className="flex flex-row justify-normal w-[175px] md:w-[200px] lg:w-[175px] ml-10">
+              <div className="flex flex-row justify-normal w-[125px] md:w-[150px] lg:w-[175px] md:ml-10">
                 <Image src={serveImage} alt="Serve Logo" className="w-full" />
               </div>
               <p className="text-xs ml-5 lg:text-lg">
@@ -110,7 +110,7 @@ export default function RootLayout({
                   </Link>
                   <div
                     onClick={handleNav}
-                    className="rounded-full p-3 cursor-pointer text-white bg-[#8c52ff]"
+                    className="rounded-full p-3 cursor-pointer text-white -mr-[10px]"
                   >
                     <AiOutlineClose />
                   </div>
