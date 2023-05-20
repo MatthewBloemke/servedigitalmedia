@@ -30,6 +30,9 @@ export default function RootLayout({
 
   return (
     <html lang="en">
+      <head>
+        <title>Serve Digital Media</title>
+      </head>
       <body id={pathname?.slice(1)} className={inter.className}>
         <div className="w-full h-16 md:h-20 bg-black/70" id="nav">
           <div className="flex justify-between items-center w-full h-full px-2">
