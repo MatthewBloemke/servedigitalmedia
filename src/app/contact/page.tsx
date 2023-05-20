@@ -1,5 +1,5 @@
 'use client';
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { send } from '@emailjs/browser';
 import Alert from '@/components/Alert';
 import Error from '@/components/Error';
@@ -10,12 +10,15 @@ const initialState = {
   email: '',
   subject: '',
   message: '',
+  secondUser: '',
 };
 
-const page = () => {
+const Page = () => {
   const [contactState, setContactState] = useState(initialState);
   const [error, setError] = useState(false);
   const [alert, setAlert] = useState(false);
+  const [disabled, setDisabled] = useState(false);
+  const phoneLength = useRef(0);
 
   useEffect(() => {
     setError(false);
@@ -24,31 +27,68 @@ const page = () => {
   }, []);
 
   const handleChange = ({ target }: any) => {
+    if (target.name === 'number') {
+      console.log(target.value.length, phoneLength.current);
+      if (target.value.length === 3 && phoneLength.current === 2) {
+        target.value = target.value + '-';
+      } else if (target.value.length === 7 && phoneLength.current === 6) {
+        target.value = target.value + '-';
+      } else if (target.value.length === 8 && phoneLength.current === 9) {
+        target.value = target.value.slice(0, -1);
+      } else if (target.value.length === 4 && phoneLength.current === 5) {
+        target.value = target.value.slice(0, -1);
+      } else if (target.value.length === 4 && phoneLength.current === 3) {
+        target.value = target.value.slice(0, 3) + '-' + target.value.slice(3);
+      } else if (target.value.length === 8 && phoneLength.current === 7) {
+        target.value = target.value.slice(0, 7) + '-' + target.value.slice(7);
+      }
+    }
     setContactState({
       ...contactState,
       [target.name]: target.value,
     });
+    phoneLength.current = target.value.length;
   };
 
   const handleSubmit = (event: any) => {
     event.preventDefault();
     console.log(contactState);
-    // send(
-    //   'service_ne09bab',
-    //   'template_8gnfxp5',
-    //   contactState,
-    //   'O_RJ2i4_VWfnQbVbv'
-    // ).then(
-    //   (result) => {
-    //     console.log(result.text);
-    //     setAlert(true);
-    //     setContactState(initialState);
-    //   },
-    //   (error) => {
-    //     setError(true);
-    //     console.log(error.text);
-    //   }
-    // );
+    setDisabled(true);
+    if (
+      contactState.name === '' ||
+      contactState.email === '' ||
+      contactState.message === '' ||
+      contactState.subject === '' ||
+      contactState.number === ''
+    ) {
+      setError(true);
+      setDisabled(false);
+      return;
+    } else if (contactState.number.length !== 12) {
+      setError(true);
+      setDisabled(false);
+      return;
+    }
+    if (contactState.subject === 'web') {
+      contactState.secondUser = 'mattbloemke@gmail.com';
+    }
+    send(
+      'service_ne09bab',
+      'template_ayev97b',
+      contactState,
+      'O_RJ2i4_VWfnQbVbv'
+    ).then(
+      (result) => {
+        console.log(result.text);
+        setAlert(true);
+        setContactState(initialState);
+      },
+      (error) => {
+        setError(true);
+        console.log(error.text);
+      }
+    );
+    setDisabled(false);
   };
 
   return (
@@ -74,6 +114,7 @@ const page = () => {
                   Phone Number
                 </label>
                 <input
+                  maxLength={12}
                   onChange={handleChange}
                   type="text"
                   className="border-2 rounded-lg p-3 flex border-gray-300"
@@ -123,7 +164,7 @@ const page = () => {
                 value={contactState.message}
               />
             </div>
-            <button className="w-full p-4 text-white hover:scale-105 mt-4">
+            <button className="w-full p-4 text-white hover:scale-105 mt-4 disabled:opacity-20 disabled:scale-100">
               Send message
             </button>
           </form>
@@ -135,4 +176,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

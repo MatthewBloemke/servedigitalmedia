@@ -21,7 +21,7 @@ export default function Home() {
                 className="bg-white relative -z-[1] rounded-sm"
               />
             </Link>
-            <h2 className="mt-[3px] w-[75%] text-xl md:text-4xl font-bold absolute top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2">
+            <h2 className="mt-[3px] w-[75%] text-xl md:text-2xl lg:text-4xl font-bold absolute top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2">
               Video options & packages
             </h2>
           </div>
@@ -36,7 +36,7 @@ export default function Home() {
                 alt="placeholder"
                 className="bg-white relative -z-[1] rounded-sm"
               />
-              <h2 className="mt-[3px] w-[75%] text-xl md:text-4xl font-bold absolute top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2">
+              <h2 className="mt-[3px] w-[75%] text-xl md:text-2xl lg:text-4xl font-bold absolute top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2">
                 Social media promotion options & packages
               </h2>
             </Link>
@@ -54,7 +54,7 @@ export default function Home() {
                 alt="placeholder"
                 className="bg-white relative -z-[1] rounded-sm"
               />
-              <h2 className="mt-[3px] w-[75%] text-xl md:text-4xl font-bold absolute top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2">
+              <h2 className="mt-[3px] w-[75%] text-xl md:text-2xl lg:text-4xl font-bold absolute top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2">
                 Web design options & packages
               </h2>
             </Link>
@@ -70,7 +70,7 @@ export default function Home() {
                 alt="placeholder"
                 className="bg-white relative -z-[1] rounded-sm"
               />
-              <h2 className="mt-[3px] w-[75%] text-xl md:text-4xl font-bold absolute top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2">
+              <h2 className="mt-[3px] w-[75%] text-xl md:text-2xl lg:text-4xl font-bold absolute top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2">
                 General branding options & packages
               </h2>
             </Link>
