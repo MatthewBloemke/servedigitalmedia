@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <div id="homePage">
       <div className="flex flex-row justify-evenly m-5 flex-wrap mt-5">
-        <div className="w-[80%] md:w-[35%]">
+        <div className="w-[80%] md:w-[33%]">
           <div className="relative mt-5 bg-black/40">
             <Link href="/services#video">
               <div className="absolute bg-gradient-to-b from-[#ff8c52] w-[70px] h-[50px] top-[-5px] left-[-5px] z-[-1] rounded-sm" />
@@ -26,7 +26,7 @@ export default function Home() {
             </h2>
           </div>
         </div>
-        <div className="w-[80%] md:w-[35%] ">
+        <div className="w-[80%] md:w-[33%] ">
           <div className="relative mt-5 bg-black/40">
             <Link href="/services#social">
               <div className="absolute bg-gradient-to-b from-[#ff8c52] w-[70px] h-[50px] top-[-5px] left-[-5px] z-[-1] rounded-sm" />
@@ -44,7 +44,7 @@ export default function Home() {
         </div>
       </div>
       <div className="flex justify-evenly m-5 flex-wrap mt-5">
-        <div className="w-[80%] md:w-[35%]">
+        <div className="w-[80%] md:w-[33%]">
           <div className="relative mt-5 bg-black/40">
             <Link href="/services#web">
               <div className="absolute bg-gradient-to-b from-[#ff8c52] w-[70px] h-[50px] top-[-5px] left-[-5px] z-[-1] rounded-sm" />
@@ -60,7 +60,7 @@ export default function Home() {
             </Link>
           </div>
         </div>
-        <div className="w-[80%] md:w-[35%]">
+        <div className="w-[80%] md:w-[33%]">
           <div className="relative mt-5 bg-black/40">
             <Link href="/services#branding">
               <div className="absolute bg-gradient-to-b from-[#ff8c52] w-[70px] h-[50px] top-[-5px] left-[-5px] z-[-1] rounded-sm" />
@@ -77,15 +77,19 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="flex justify-center items-center w-full mt-5">
-        <p className="md:text-lg m-5">
-          &quot;Samuel is absolutely great to work with! His professionalism is
-          only rivaled by his execution and creativity. I would 10/10 hire him
-          again&quot;
-        </p>
-      </div>
-      <div className="flex w-[80%] justify-end">
-        <h4 className="md:text-2xl mb-5">-Dan</h4>
+      <div className="border-2 border-white w-[80%] mx-auto mt-5 rounded-md relative bg-black/40">
+        <p className="text-6xl absolute top-[-15px] left-[-2px]">&quot;</p>
+        <p className="text-6xl absolute bottom-[-41px] right-[-1px]">&quot;</p>
+        <div className="flex justify-center items-center w-full text-center">
+          <p className="md:text-lg mt-2 mr-2 ml-2">
+            Samuel is absolutely great to work with! His professionalism is only
+            rivaled by his execution and creativity. I would 10/10 hire him
+            again.
+          </p>
+        </div>
+        <div className="flex w-[80%] justify-end">
+          <h4 className="md:text-2xl m-[-5px]">-Dan</h4>
+        </div>
       </div>
     </div>
   );

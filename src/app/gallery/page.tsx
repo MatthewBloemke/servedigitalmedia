@@ -51,15 +51,21 @@ const Gallery = () => {
             ></iframe>
           </div>
         </div>
-        <div className="flex justify-center items-center w-full mt-5">
-          <p className="md:text-lg m-5">
-            &quot;Samuel is absolutely great to work with! His professionalism
-            is only rivaled by his execution and creativity. I would 10/10 hire
-            him again&quot;
+        <div className="border-2 border-white w-[80%] mx-auto mt-5 rounded-md relative bg-black/40">
+          <p className="text-6xl absolute top-[-15px] left-[-2px]">&quot;</p>
+          <p className="text-6xl absolute bottom-[-41px] right-[-1px]">
+            &quot;
           </p>
-        </div>
-        <div className="flex w-[80%] justify-end">
-          <h4 className="md:text-2xl">-Dan</h4>
+          <div className="flex justify-center items-center w-full text-center">
+            <p className="md:text-lg m-2">
+              Samuel is absolutely great to work with! His professionalism is
+              only rivaled by his execution and creativity. I would 10/10 hire
+              him again.
+            </p>
+          </div>
+          <div className="flex w-[80%] justify-end">
+            <h4 className="md:text-2xl">-Dan</h4>
+          </div>
         </div>
       </div>
       <div id="webProjects" className="my-12">
@@ -77,15 +83,21 @@ const Gallery = () => {
             </Link>
           </div>
         </div>
-        <div className="flex justify-center items-center w-full mt-5">
-          <p className="md:text-lg m-5">
-            &quot;Here is a nice long example about why Samuel is the greatest
-            to work with. He is very professional and punctual, and is great to
-            work with.&quot;
+        <div className="border-2 border-white w-[80%] mx-auto mt-5 rounded-md relative bg-black/40">
+          <p className="text-6xl absolute top-[-15px] left-[-2px]">&quot;</p>
+          <p className="text-6xl absolute bottom-[-41px] right-[-1px]">
+            &quot;
           </p>
-        </div>
-        <div className="flex w-[80%] justify-end">
-          <h4 className="md:text-2xl">-Person</h4>
+          <div className="flex justify-center items-center w-full text-center">
+            <p className="md:text-lg m-2">
+              Here is a nice long example about why Samuel is the greatest to
+              work with. He is very professional and punctual, and is great to
+              work with.
+            </p>
+          </div>
+          <div className="flex w-[80%] justify-end">
+            <h4 className="md:text-2xl">-Person</h4>
+          </div>
         </div>
       </div>
       <div id="socialProjects" className="my-12">
@@ -119,15 +131,21 @@ const Gallery = () => {
             />
           </div>
         </div>
-        <div className="flex justify-center items-center w-full mt-5">
-          <p className="md:text-lg m-5">
-            &quot;Here is a nice long example about why Samuel is the greatest
-            to work with. He is very professional and punctual, and is great to
-            work with.&quot;
+        <div className="border-2 border-white w-[80%] mx-auto mt-5 rounded-md relative bg-black/40">
+          <p className="text-6xl absolute top-[-15px] left-[-2px]">&quot;</p>
+          <p className="text-6xl absolute bottom-[-41px] right-[-1px]">
+            &quot;
           </p>
-        </div>
-        <div className="flex w-[80%] justify-end ">
-          <h4 className="md:text-2xl">-Person</h4>
+          <div className="flex justify-center items-center w-full text-center">
+            <p className="md:text-lg m-2">
+              Here is a nice long example about why Samuel is the greatest to
+              work with. He is very professional and punctual, and is great to
+              work with.
+            </p>
+          </div>
+          <div className="flex w-[80%] justify-end">
+            <h4 className="md:text-2xl">-Person</h4>
+          </div>
         </div>
       </div>
       <div id="brandingProjects" className="my-12">
@@ -192,15 +210,21 @@ const Gallery = () => {
             </div>
           </div>
         </div>
-        <div className="flex justify-center items-center w-full">
-          <p className="md:text-lg m-5">
-            &quot;Here is a nice long example about why Samuel is the greatest
-            to work with. He is very professional and punctual, and is great to
-            work with.&quot;
+        <div className="border-2 border-white w-[80%] mx-auto mt-5 rounded-md relative bg-black/40">
+          <p className="text-6xl absolute top-[-15px] left-[-2px]">&quot;</p>
+          <p className="text-6xl absolute bottom-[-41px] right-[-1px]">
+            &quot;
           </p>
-        </div>
-        <div className="flex w-[80%] justify-end mb-5">
-          <h4 className="md:text-2xl">-Person</h4>
+          <div className="flex justify-center items-center w-full text-center">
+            <p className="md:text-lg m-2">
+              Here is a nice long example about why Samuel is the greatest to
+              work with. He is very professional and punctual, and is great to
+              work with.
+            </p>
+          </div>
+          <div className="flex w-[80%] justify-end">
+            <h4 className="md:text-2xl">-Person</h4>
+          </div>
         </div>
       </div>
     </div>

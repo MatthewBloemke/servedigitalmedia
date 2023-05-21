@@ -34,7 +34,7 @@ export default function RootLayout({
         <title>Serve Digital Media</title>
       </head>
       <body id={pathname?.slice(1)} className={inter.className}>
-        <div className="w-full h-16 md:h-20 bg-black/70" id="nav">
+        <div className="w-full h-16 md:h-[72px] bg-black/70" id="nav">
           <div className="flex justify-between items-center w-full h-full px-2">
             <div className="w-full flex items-center">
               <div className="flex flex-row justify-normal w-[125px] md:w-[150px] lg:w-[175px] lg:ml-10">
@@ -46,7 +46,7 @@ export default function RootLayout({
             </div>
             <div>
               <ul className="hidden md:flex navList">
-                <Link href="/" className="mx-5">
+                <Link href="/#nav" className="mx-5">
                   <li
                     className="py-[5px] md:text-xl lg:text-xl navItems"
                     style={homeStyle}

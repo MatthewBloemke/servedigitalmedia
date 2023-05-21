@@ -63,7 +63,9 @@ ul {
 }
 
 body {
-  background-image: url("../../public/bg2.png");
+  height: 100vh;
+  background-image: url("../../public/bg1.png");
   background-size: cover;
   background-color: black;
+  background-repeat: repeat-y;
 }
