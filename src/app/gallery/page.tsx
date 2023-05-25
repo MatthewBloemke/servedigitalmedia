@@ -44,7 +44,7 @@ const Gallery = () => {
             <div className="absolute bg-gradient-to-t from-[#ff8c52] w-[70px] h-[50px] bottom-[-5px] right-[-5px] z-[-1] rounded-sm" />
             <iframe
               className="w-[280px] h-[158px] md:w-[560px] md:h-[315px] rounded-sm"
-              src="https://www.youtube.com/embed/BVidAEhVXJ4"
+              src="https://www.youtube.com/embed/Cl8-Hv3o5K0"
               title="YouTube video player"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen
