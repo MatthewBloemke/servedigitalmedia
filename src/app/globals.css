@@ -16,14 +16,6 @@ a, button, div {
   -webkit-tap-highlight-color: transparent;
 }
 
-#services,
-#gallery {
-  background-image: url("../../public/bg1.png");
-  background-repeat: repeat-y;
-  background-color: black;
-  background-size: cover;
-}
-
 h1 {
   font-size: 1.5em;
   color: white;
@@ -68,4 +60,11 @@ body {
   background-size: cover;
   background-color: black;
   background-repeat: repeat-y;
+}
+
+@media screen and (max-width: 1024px) {
+  body {
+    background: rgb(150,107,203);
+    background: radial-gradient(circle, rgba(150,107,203,1) 0%, rgba(49,0,147,1) 100%);
+  }
 }

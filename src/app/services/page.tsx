@@ -10,7 +10,7 @@ import Link from 'next/link';
 const Page = () => {
   return (
     <div id="servicesPage" className="flex flex-col">
-      <div className="my-10 flex flex-wrap flex-row md:flex-nowrap">
+      <div className="my-10 flex flex-wrap flex-row lg:flex-nowrap justify-evenly">
         <div id="video" className="m-4 bg-black/60 p-4 rounded-md">
           <h2 className="font-bold">Video</h2>
           <p className="font-extralight">
@@ -61,9 +61,9 @@ const Page = () => {
 
       <div
         id="web"
-        className="my-14 flex flex-wrap flex-col-reverse md:flex-row md:flex-nowrap"
+        className="my-14 flex flex-wrap flex-col-reverse lg:flex-row lg:flex-nowrap justify-evenly"
       >
-        <div className="w-[90%] m-4">
+        <div className="w-[90%] my-4 mx-auto lg:m-4">
           <div className="relative">
             <div className="absolute bg-gradient-to-b from-[#ff8c52] w-[70px] h-[50px] top-[-5px] left-[-5px] z-[-1] rounded-sm" />
             <div className="absolute bg-gradient-to-t from-[#ff8c52] w-[70px] h-[50px] bottom-[-5px] right-[-5px] z-[-1] rounded-sm" />
@@ -109,7 +109,10 @@ const Page = () => {
         </div>
       </div>
 
-      <div id="social" className="my-14 flex flex-wrap flex-row md:flex-nowrap">
+      <div
+        id="social"
+        className="my-14 flex flex-wrap flex-row lg:flex-nowrap justify-evenly"
+      >
         <div className="m-4 bg-black/60 p-4 rounded-md">
           <h2 className="font-bold">Social Media Promotion</h2>
           <p className="font-extralight">
@@ -158,9 +161,9 @@ const Page = () => {
 
       <div
         id="branding"
-        className="mt-14 flex flex-wrap flex-col-reverse md:flex-row md:flex-nowrap"
+        className="mt-14 flex flex-wrap flex-col-reverse lg:flex-row lg:flex-nowrap justify-evenly"
       >
-        <div className="w-[90%] m-4">
+        <div className="w-[90%] my-4 mx-auto lg:m-4">
           <div className="relative">
             <div className="absolute bg-gradient-to-b from-[#ff8c52] w-[70px] h-[50px] top-[-5px] left-[-5px] z-[-1] rounded-sm" />
             <div className="absolute bg-gradient-to-t from-[#ff8c52] w-[70px] h-[50px] bottom-[-5px] right-[-5px] z-[-1] rounded-sm" />

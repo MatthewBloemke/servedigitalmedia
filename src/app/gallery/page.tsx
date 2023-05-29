@@ -17,7 +17,9 @@ const Gallery = () => {
     <div className="flex flex-col">
       <div id="videoProjects" className=" flex flex-col mt-3 items-center">
         <div className="flex w-full">
-          <h1 className="font-semibold text-2xl ml-[5%]">Video Projects</h1>
+          <h1 className="font-semibold text-2xl ml-[5%] md:text-3xl lg:text-4xl">
+            Video Projects
+          </h1>
         </div>
         <div className="flex flex-col md:flex-row items-center justify-evenly flex-wrap">
           <div className="relative mt-5">
@@ -73,12 +75,12 @@ const Gallery = () => {
       </div>
       <div id="webProjects" className="flex flex-col my-12 items-center">
         <div className="flex w-full">
-          <h1 className="ml-[5%] text-2xl font-semibold">
+          <h1 className="ml-[5%] text-2xl font-semibold md:text-3xl lg:text-4xl">
             Web Design Projects
           </h1>
         </div>
         <div className="flex flex-col md:flex-row justify-center items-center">
-          <div className="relative mt-5 w-[80%] md:w-[40%]">
+          <div className="relative mt-5 w-[80%] md:w-[60%]">
             <Link href="https://matthewbloemke.com" target="_blank">
               <div className="absolute bg-gradient-to-b from-[#ff8c52] w-[70px] h-[50px] top-[-5px] left-[-5px] z-[-1] rounded-sm" />
               <div className="absolute bg-gradient-to-t from-[#ff8c52] w-[70px] h-[50px] bottom-[-5px] right-[-5px] z-[-1] rounded-sm" />
@@ -108,7 +110,9 @@ const Gallery = () => {
         </div>
       </div>
       <div id="socialProjects" className="my-12">
-        <h1 className="ml-[5%]">Social Media Projects</h1>
+        <h1 className="ml-[5%] font-semibold text-2xl md:text-3xl lg:text-4xl">
+          Social Media Projects
+        </h1>
         <div className="flex flex-col md:flex-row justify-evenly items-center">
           <div className="relative mt-5 w-[80%] md:w-[30%] bg-white rounded-sm">
             <div className="absolute bg-gradient-to-b from-[#ff8c52] w-[70px] h-[50px] top-[-5px] left-[-5px] z-[-1] rounded-sm" />
@@ -156,7 +160,9 @@ const Gallery = () => {
         </div>
       </div>
       <div id="brandingProjects" className="my-12">
-        <h1 className="ml-[5%]">General Branding Projects</h1>
+        <h1 className="mx-[5%] font-semibold text-2xl md:text-3xl lg:text-4xl">
+          General Branding Projects
+        </h1>
         <div className="flex flex-col">
           <div className="flex flex-col md:flex-row justify-evenly items-center">
             <div className="relative mt-5 w-[80%] md:w-[30%] bg-black flex justify-center align-center rounded-sm">
