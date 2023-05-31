@@ -12,8 +12,8 @@ export default function Home() {
       <div className="w-[80%] md:w-[35%]">
         <div className="relative mt-5 bg-black/40">
           <Link href="/services#video">
-            <div className="absolute bg-gradient-to-b from-[#ff8c52] w-[70px] h-[50px] top-[-5px] left-[-5px] z-[-1] rounded-sm" />
-            <div className="absolute bg-gradient-to-t from-[#ff8c52] w-[70px] h-[50px] bottom-[-5px] right-[-5px] z-[-1] rounded-sm" />
+            <div className="absolute bg-gradient-to-b from-[#fb5d00] w-[70px] h-[50px] top-[-5px] left-[-5px] z-[-1] rounded-sm" />
+            <div className="absolute bg-gradient-to-t from-[#fb5d00] w-[70px] h-[50px] bottom-[-5px] right-[-5px] z-[-1] rounded-sm" />
             <Image
               src={videoHome}
               alt="placeholder"
@@ -28,8 +28,8 @@ export default function Home() {
       <div className="w-[80%] md:w-[35%] ">
         <div className="relative mt-5 bg-black/40">
           <Link href="/services#social">
-            <div className="absolute bg-gradient-to-b from-[#ff8c52] w-[70px] h-[50px] top-[-5px] left-[-5px] z-[-1] rounded-sm" />
-            <div className="absolute bg-gradient-to-t from-[#ff8c52] w-[70px] h-[50px] bottom-[-5px] right-[-5px] z-[-1] rounded-sm" />
+            <div className="absolute bg-gradient-to-b from-[#fb5d00] w-[70px] h-[50px] top-[-5px] left-[-5px] z-[-1] rounded-sm" />
+            <div className="absolute bg-gradient-to-t from-[#fb5d00] w-[70px] h-[50px] bottom-[-5px] right-[-5px] z-[-1] rounded-sm" />
             <Image
               src={socialHome}
               alt="placeholder"
@@ -44,8 +44,8 @@ export default function Home() {
       <div className="w-[80%] md:w-[35%]">
         <div className="relative mt-5 bg-black/40">
           <Link href="/services#web">
-            <div className="absolute bg-gradient-to-b from-[#ff8c52] w-[70px] h-[50px] top-[-5px] left-[-5px] z-[-1] rounded-sm" />
-            <div className="absolute bg-gradient-to-t from-[#ff8c52] w-[70px] h-[50px] bottom-[-5px] right-[-5px] z-[-1] rounded-sm" />
+            <div className="absolute bg-gradient-to-b from-[#fb5d00] w-[70px] h-[50px] top-[-5px] left-[-5px] z-[-1] rounded-sm" />
+            <div className="absolute bg-gradient-to-t from-[#fb5d00] w-[70px] h-[50px] bottom-[-5px] right-[-5px] z-[-1] rounded-sm" />
             <Image
               src={webDesign}
               alt="placeholder"
@@ -60,8 +60,8 @@ export default function Home() {
       <div className="w-[80%] md:w-[35%]">
         <div className="relative mt-5 bg-black/40">
           <Link href="/services#branding">
-            <div className="absolute bg-gradient-to-b from-[#ff8c52] w-[70px] h-[50px] top-[-5px] left-[-5px] z-[-1] rounded-sm" />
-            <div className="absolute bg-gradient-to-t from-[#ff8c52] w-[70px] h-[50px] bottom-[-5px] right-[-5px] z-[-1] rounded-sm" />
+            <div className="absolute bg-gradient-to-b from-[#fb5d00] w-[70px] h-[50px] top-[-5px] left-[-5px] z-[-1] rounded-sm" />
+            <div className="absolute bg-gradient-to-t from-[#fb5d00] w-[70px] h-[50px] bottom-[-5px] right-[-5px] z-[-1] rounded-sm" />
             <Image
               src={generalBranding}
               alt="placeholder"

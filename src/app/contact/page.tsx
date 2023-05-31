@@ -164,7 +164,7 @@ const Page = () => {
                 value={contactState.message}
               />
             </div>
-            <button className="w-full p-4 text-white hover:scale-105 mt-4 disabled:opacity-20 disabled:scale-100">
+            <button className="w-full p-4 text-white hover:scale-[1.01] mt-4 disabled:opacity-20 disabled:scale-100">
               Send message
             </button>
           </form>

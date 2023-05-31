@@ -4,7 +4,7 @@
 
 @layer base {
   button {
-    @apply text-white rounded-md bg-gradient-to-r from-[#e252ff] via-[#8c52ff] to-[#526fff] p-3 hover:scale-105 active:scale-95 active:opacity-75 ease-in duration-100;
+    @apply text-white rounded-md bg-gradient-to-r from-[#e252ff] via-[#8c52ff] to-[#526fff] p-3 hover:scale-[1.01] active:scale-95 active:opacity-75 ease-in duration-100;
   }
 }
 
@@ -47,7 +47,7 @@ h4 {
 }
 
 .highlight {
-  color: #ff8c52;
+  color: #fb5d00;
 }
 
 ul {

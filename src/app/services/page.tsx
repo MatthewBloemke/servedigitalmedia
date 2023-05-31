@@ -20,14 +20,14 @@ const Page = () => {
             Make a splash with this personal marketing tool!
           </p>
           <div className="flex">
-            <p className="font-semibold text-[#ff8c52]">Packages:</p>
+            <p className="font-semibold text-[#fb5d00]">Packages:</p>
             <ul className="ml-[35px]">
               <li>Promotional video package (1 - 2 minute video)</li>
               <li>Shorts/Reels package (under 60 second video)</li>
               <li>Long form video package (3+ minute video)</li>
             </ul>
           </div>
-          <p className="text-[#ff8c52]">
+          <p className="text-[#fb5d00]">
             Each package is customizable according to the following options:
           </p>
           <p className="font-extralight">
@@ -46,8 +46,8 @@ const Page = () => {
         </div>
         <div className="w-[92%] m-4">
           <div className="relative">
-            <div className="absolute bg-gradient-to-b from-[#ff8c52] w-[70px] h-[50px] top-[-5px] left-[-5px] z-[-1] rounded-sm" />
-            <div className="absolute bg-gradient-to-t from-[#ff8c52] w-[70px] h-[50px] bottom-[-5px] right-[-5px] z-[-1] rounded-sm" />
+            <div className="absolute bg-gradient-to-b from-[#fb5d00] w-[70px] h-[50px] top-[-5px] left-[-5px] z-[-1] rounded-sm" />
+            <div className="absolute bg-gradient-to-t from-[#fb5d00] w-[70px] h-[50px] bottom-[-5px] right-[-5px] z-[-1] rounded-sm" />
             <Image
               src={videoHome}
               height={225}
@@ -55,7 +55,7 @@ const Page = () => {
               className="bg-white w-full relative -z-[1] rounded-sm"
             />
           </div>
-          <h2 className="text-[#ff8c52]">Packages starting at $100*</h2>
+          <h2 className="text-[#fb5d00]">Packages starting at $100*</h2>
         </div>
       </div>
 
@@ -65,8 +65,8 @@ const Page = () => {
       >
         <div className="w-[90%] my-4 mx-auto lg:m-4">
           <div className="relative">
-            <div className="absolute bg-gradient-to-b from-[#ff8c52] w-[70px] h-[50px] top-[-5px] left-[-5px] z-[-1] rounded-sm" />
-            <div className="absolute bg-gradient-to-t from-[#ff8c52] w-[70px] h-[50px] bottom-[-5px] right-[-5px] z-[-1] rounded-sm" />
+            <div className="absolute bg-gradient-to-b from-[#fb5d00] w-[70px] h-[50px] top-[-5px] left-[-5px] z-[-1] rounded-sm" />
+            <div className="absolute bg-gradient-to-t from-[#fb5d00] w-[70px] h-[50px] bottom-[-5px] right-[-5px] z-[-1] rounded-sm" />
             <Image
               src={webDesign}
               height={225}
@@ -74,7 +74,7 @@ const Page = () => {
               className="bg-white w-full relative -z-[1] rounded-sm"
             />
           </div>
-          <h2 className="text-[#ff8c52]">Packages starting at $450*</h2>
+          <h2 className="text-[#fb5d00]">Packages starting at $450*</h2>
         </div>
         <div className="m-4 bg-black/60 p-4 rounded-md">
           <h2 className="font-bold">Web Design</h2>
@@ -85,13 +85,13 @@ const Page = () => {
             rate!
           </p>
           <div className="flex">
-            <p className="font-semibold text-[#ff8c52]">Packages:</p>
+            <p className="font-semibold text-[#fb5d00]">Packages:</p>
             <ul className="ml-[35px]">
               <li>Website (Customize up from 3-page site)</li>
               <li>Website and updated maintenance</li>
             </ul>
           </div>
-          <p className="text-[#ff8c52]">
+          <p className="text-[#fb5d00]">
             Each package is customizable according to the following options:
           </p>
           <p className="font-extralight">
@@ -122,13 +122,13 @@ const Page = () => {
             eye-catching techniques to your social media for the future!
           </p>
           <div className="flex">
-            <p className="font-semibold text-[#ff8c52]">Packages:</p>
+            <p className="font-semibold text-[#fb5d00]">Packages:</p>
             <ul className="ml-[35px]">
               <li>Post creation & campaign direction</li>
               <li>General social media advisement</li>
             </ul>
           </div>
-          <p className="text-[#ff8c52]">
+          <p className="text-[#fb5d00]">
             Each package is customizable according to the following options:
           </p>
           <p className="font-extralight">
@@ -146,8 +146,8 @@ const Page = () => {
         </div>
         <div className="w-[90%] m-4">
           <div className="relative">
-            <div className="absolute bg-gradient-to-b from-[#ff8c52] w-[70px] h-[50px] top-[-5px] left-[-5px] z-[-1] rounded-sm" />
-            <div className="absolute bg-gradient-to-t from-[#ff8c52] w-[70px] h-[50px] bottom-[-5px] right-[-5px] z-[-1] rounded-sm" />
+            <div className="absolute bg-gradient-to-b from-[#fb5d00] w-[70px] h-[50px] top-[-5px] left-[-5px] z-[-1] rounded-sm" />
+            <div className="absolute bg-gradient-to-t from-[#fb5d00] w-[70px] h-[50px] bottom-[-5px] right-[-5px] z-[-1] rounded-sm" />
             <Image
               src={socialHome}
               height={225}
@@ -155,7 +155,7 @@ const Page = () => {
               className="bg-white w-full relative -z-[1] rounded-sm"
             />
           </div>
-          <h2 className="text-[#ff8c52]">Packages starting at $50*</h2>
+          <h2 className="text-[#fb5d00]">Packages starting at $50*</h2>
         </div>
       </div>
 
@@ -165,8 +165,8 @@ const Page = () => {
       >
         <div className="w-[90%] my-4 mx-auto lg:m-4">
           <div className="relative">
-            <div className="absolute bg-gradient-to-b from-[#ff8c52] w-[70px] h-[50px] top-[-5px] left-[-5px] z-[-1] rounded-sm" />
-            <div className="absolute bg-gradient-to-t from-[#ff8c52] w-[70px] h-[50px] bottom-[-5px] right-[-5px] z-[-1] rounded-sm" />
+            <div className="absolute bg-gradient-to-b from-[#fb5d00] w-[70px] h-[50px] top-[-5px] left-[-5px] z-[-1] rounded-sm" />
+            <div className="absolute bg-gradient-to-t from-[#fb5d00] w-[70px] h-[50px] bottom-[-5px] right-[-5px] z-[-1] rounded-sm" />
             <Image
               src={generalBranding}
               height={225}
@@ -174,7 +174,7 @@ const Page = () => {
               className="bg-white w-full relative -z-[1] rounded-sm"
             />
           </div>
-          <h2 className="text-[#ff8c52]">Packages starting at $100*</h2>
+          <h2 className="text-[#fb5d00]">Packages starting at $100*</h2>
         </div>
         <div className="m-4 bg-black/60 p-4 rounded-md">
           <h2 className="font-bold">General Branding</h2>
@@ -184,13 +184,13 @@ const Page = () => {
             both worthy of your business and that you can be proud of!
           </p>
           <div className="flex">
-            <p className="font-semibold text-[#ff8c52]">Packages:</p>
+            <p className="font-semibold text-[#fb5d00]">Packages:</p>
             <ul className="ml-[35px]">
               <li>Time-based development</li>
               <li>Choice of templates</li>
             </ul>
           </div>
-          <p className="text-[#ff8c52]">
+          <p className="text-[#fb5d00]">
             Each package is customizable according to the following options:
           </p>
           <p className="font-extralight">
@@ -214,8 +214,8 @@ const Page = () => {
           </button>
         </Link>
       </div>
-      <div className="flex items-center justify-center w-full mb-4">
-        <p className="text-[#ff8c52] mx-[10%]">
+      <div className="flex items-center justify-center w-full py-3 bg-black/70">
+        <p className="text-[#fb5d00] mx-[10%]">
           *Price represents the lowest level of the lowest package. Package
           pricing is subject to change upon adding additional benefits. Please
           contact us for pricing to fit your budget and desired product.
