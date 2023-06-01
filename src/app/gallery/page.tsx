@@ -2,6 +2,7 @@ import Image from 'next/image';
 import React from 'react';
 import webPhoto from '../../../public/website1.png';
 import social1 from '../../../public/social1.png';
+import social2 from '../../../public/social2.png';
 import social3 from '../../../public/social3.png';
 import branding1 from '../../../public/branding1.png';
 import branding2 from '../../../public/general2.png';
@@ -118,7 +119,7 @@ const Gallery = () => {
             <div className="absolute bg-gradient-to-b from-[#fb5d00] w-[70px] h-[50px] top-[-5px] left-[-5px] z-[-1] rounded-sm" />
             <div className="absolute bg-gradient-to-t from-[#fb5d00] w-[70px] h-[50px] bottom-[-5px] right-[-5px] z-[-1] rounded-sm" />
             <Image
-              src={placeHolder}
+              src={social2}
               className="max-h-[300px] w-auto m-auto rounded-sm"
               alt="social media photo"
             />
