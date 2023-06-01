@@ -115,7 +115,7 @@ const Gallery = () => {
           Social Media Projects
         </h1>
         <div className="flex flex-col md:flex-row justify-evenly items-center">
-          <div className="relative mt-5 w-[80%] md:w-[30%] bg-white rounded-sm">
+          <div className="relative mt-5 w-[80%] md:w-[30%] bg-black rounded-sm">
             <div className="absolute bg-gradient-to-b from-[#fb5d00] w-[70px] h-[50px] top-[-5px] left-[-5px] z-[-1] rounded-sm" />
             <div className="absolute bg-gradient-to-t from-[#fb5d00] w-[70px] h-[50px] bottom-[-5px] right-[-5px] z-[-1] rounded-sm" />
             <Image
