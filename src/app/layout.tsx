@@ -32,6 +32,9 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <title>Serve Digital Media</title>
+        <meta property="og:title" content="Serve Digital Media" />
+        <meta property="og:image" content="https://imgur.com/rhosxhH" />
+        <meta property="og:description" content="Serving to build your brand" />
       </head>
       <body id={pathname?.slice(1)} className={inter.className}>
         <div className="w-full h-16 md:h-[72px] bg-black/70" id="nav">
