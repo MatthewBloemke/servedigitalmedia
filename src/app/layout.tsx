@@ -33,7 +33,7 @@ export default function RootLayout({
       <head>
         <title>Serve Digital Media</title>
         <meta property="og:title" content="Serve Digital Media" />
-        <meta property="og:image" content="https://imgur.com/rhosxhH" />
+        <meta property="og:image" content="https://i.imgur.com/rhosxhH.png" />
         <meta property="og:description" content="Serving to build your brand" />
       </head>
       <body id={pathname?.slice(1)} className={inter.className}>
