@@ -10,7 +10,6 @@ import branding3 from '../../../public/general3.png';
 import branding4 from '../../../public/general4.png';
 import branding5 from '../../../public/general5.png';
 import branding6 from '../../../public/serve.png';
-import placeHolder from '../../../public/placeholder.png';
 import Link from 'next/link';
 
 const Gallery = () => {

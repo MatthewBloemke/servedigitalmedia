@@ -1,41 +1,9 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-@layer base {
-  button {
-    @apply text-white rounded-md bg-gradient-to-r from-[#e252ff] via-[#8c52ff] to-[#526fff] p-3 hover:scale-[1.01] active:scale-95 active:opacity-75 ease-in duration-100;
-  }
-}
-
 html {
   scroll-behavior: smooth !important;
 }
 
 a, button, div {
   -webkit-tap-highlight-color: transparent;
-}
-
-h1 {
-  font-size: 1.5em;
-  color: white;
-}
-
-h2 {
-  font-size: 1.25em;
-}
-
-h3 {
-  font-size: 1em;
-}
-
-h6,
-h2,
-h3,
-p,
-li,
-h4 {
-  color: white;
 }
 
 .navItems {
@@ -56,10 +24,9 @@ ul {
 
 body {
   height: 100vh;
-  background-image: url("../../public/bg1.png");
+  background-image: url("../../public/bg3.png");
   background-size: cover;
   background-color: black;
-  background-repeat: repeat-y;
 }
 
 @media screen and (max-width: 1024px) {
