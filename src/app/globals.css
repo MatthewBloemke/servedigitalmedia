@@ -3,9 +3,6 @@
 @tailwind utilities;
 
 @layer base {
-  button {
-    @apply text-white rounded-md bg-gradient-to-r from-[#e252ff] via-[#8c52ff] to-[#526fff] p-3 hover:scale-[1.01] active:scale-95 active:opacity-75 ease-in duration-100;
-  }
   h1 {
     @apply text-6xl text-white;
   }
@@ -58,6 +55,29 @@ body {
   background-size: cover;
   background-color: black;
   background-repeat: repeat-y;
+}
+
+.carouselActive {
+  visibility: visible;
+  opacity: 1;
+}
+
+.carouselNext {
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.carouselPrev {
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.carouselHidden {
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
 }
 
 @media screen and (max-width: 1024px) {

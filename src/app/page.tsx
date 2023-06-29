@@ -5,28 +5,61 @@ import socialHome from '../../public/socialHome.png';
 import generalBranding from '../../public/generalBranding.png';
 import videoHome from '../../public/videoHome.png';
 import Link from 'next/link';
+import Carousel from '@/components/Carousel';
 
 export default function Home() {
+  const slide = [
+    {
+      id: 1,
+      src: videoHome,
+      alt: 'Video',
+      label: 'Video Editing',
+      button: 'View Video Editing Services',
+    },
+    {
+      id: 2,
+      src: webDesign,
+      alt: 'Web',
+      label: 'Web Design',
+      button: 'View Web Design Services',
+    },
+    {
+      id: 3,
+      src: socialHome,
+      alt: 'social',
+      label: 'Social Media',
+      button: 'View Social Media Services',
+    },
+    {
+      id: 4,
+      src: generalBranding,
+      alt: 'General branding',
+      label: 'General Branding',
+      button: 'View General Branding Services',
+    },
+  ];
+  const buttons = [0, 1, 2, 3];
   return (
     <div>
-      <div id='home' className='w-full flex flex-row'>
-        <div id='info' className='w-3/6 m-40'>
+      <div id="home" className="w-full flex flex-row">
+        <div id="info" className="w-3/6 m-40">
           <h1>Serve Digital Media</h1>
-          <h2 className='text-[#8c52ff] mt-[8px]'>Serving to build your brand</h2>
-          <p className='mt-[8px]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nec ultrices dui sapien eget mi proin. Eget mauris pharetra et ultrices neque ornare aenean euismod elementum. At lectus urna duis convallis convallis tellus id interdum. Cursus risus at ultrices mi tempus imperdiet nulla malesuada pellentesque.</p>
+          <h2 className="text-[#8c52ff] mt-[8px]">
+            Serving to build your brand
+          </h2>
+          <p className="mt-[8px]">
+            Serve Digital Media was created to serve businesses and individuals
+            in building their online brand. Through services in social media
+            advertising, web design, video editing, and general branding
+            development, our goal is to help you maximize your reach in the
+            digital space.
+          </p>
         </div>
-        <div  className='w-3/6 items-center justify-center flex mr-[96px] mt-[48px]'>
-          {/* First item */}
-          <div className='relative rounded-md w-full  bg-black/40'>
-            <Image src={webDesign} alt='Web design photo' className='block w-full rounded-md relative -z-[1]'/>
-            <div className='absolute inset-x-[15%] bottom-5 hidden py-5 text-center text-white md:block'>
-              <h4>Web Design Services</h4>
-              <button className='bg-none border-solid border-[#8c52ff]'>View web design services</button>
-            </div>
-          </div>
+        <div className="w-3/6 items-center justify-center flex mr-[96px] mt-[48px]">
+          <Carousel cardObjects={slide} buttons={buttons} />
         </div>
       </div>
-      <div className="border-2 border-white w-[60%] mx-auto mt-5 rounded-md relative bg-black/40 pb-1">
+      <div className="w-[60%] ml-10 mt-5 rounded-md relative pb-1">
         <p className="text-6xl absolute top-[-15px] left-[-2px]">&quot;</p>
         <p className="text-6xl absolute bottom-[-41px] right-[-1px]">&quot;</p>
         <div className="flex justify-center items-center w-full text-center">
