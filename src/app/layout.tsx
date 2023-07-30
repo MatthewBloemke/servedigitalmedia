@@ -24,9 +24,12 @@ export default function RootLayout({
   };
 
   const homeStyle = pathname === '/' ? { borderBottom: 'solid #8c52ff' } : {};
-  const servicesStyle = pathname === '/services' ? { borderBottom: 'solid #8c52ff' } : {};
-  const galleryStyle = pathname === '/gallery' ? { borderBottom: 'solid #8c52ff' } : {};
-  const contactStyle = pathname === '/contact' ? { borderBottom: 'solid #8c52ff' } : {};
+  const servicesStyle =
+    pathname === '/services' ? { borderBottom: 'solid #8c52ff' } : {};
+  const galleryStyle =
+    pathname === '/gallery' ? { borderBottom: 'solid #8c52ff' } : {};
+  const contactStyle =
+    pathname === '/contact' ? { borderBottom: 'solid #8c52ff' } : {};
 
   return (
     <html lang="en">
@@ -39,7 +42,7 @@ export default function RootLayout({
         <meta property="og:description" content="Serving to build your brand" />
       </head>
       <body id={pathname?.slice(1)} className={inter.className}>
-        <div className="w-full h-16 md:h-[72px]" id="nav">
+        <div className="w-full h-16 md:h-[72px] absolute" id="nav">
           <div className="flex justify-between items-center w-full h-full px-2">
             <div className="w-full flex items-center">
               <div className="flex flex-row justify-normal w-[125px] md:w-[150px] lg:w-[175px] lg:ml-10">

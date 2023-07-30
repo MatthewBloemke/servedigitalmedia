@@ -40,9 +40,9 @@ export default function Home() {
   ];
   const buttons = [0, 1, 2, 3];
   return (
-    <div>
+    <div id="home-page" className="100vh">
       <div id="home" className="w-full flex flex-row">
-        <div id="info" className="w-3/6 m-40">
+        <div id="info" className="w-3/6 ml-20 mt-40 mr-4">
           <h1>Serve Digital Media</h1>
           <h2 className="text-[#8c52ff] mt-[8px]">
             Serving to build your brand
@@ -55,11 +55,11 @@ export default function Home() {
             digital space.
           </p>
         </div>
-        <div className="w-3/6 items-center justify-center flex mr-[96px] mt-[48px]">
+        <div className="w-3/6 items-center justify-center flex mr-[96px] mt-40 ml-12">
           <Carousel cardObjects={slide} buttons={buttons} />
         </div>
       </div>
-      <div className="w-[60%] ml-10 mt-5 rounded-md relative pb-1">
+      <div className="w-[60%] ml-10 mt-8  relative pb-1">
         <p className="text-6xl absolute top-[-15px] left-[-2px]">&quot;</p>
         <p className="text-6xl absolute bottom-[-41px] right-[-1px]">&quot;</p>
         <div className="flex justify-center items-center w-full text-center">

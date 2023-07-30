@@ -22,7 +22,6 @@ const Carousel = ({ cardObjects }: any) => {
   useEffect(() => {
     const autoPlay = () => {
       let ms = 14000;
-      console.log(timeoutId);
       if (timeoutId > 0) {
         ms = 7000;
       }
@@ -56,10 +55,10 @@ const Carousel = ({ cardObjects }: any) => {
   };
 
   return (
-    <div className=" relative ml-20">
+    <div className="relative ml-20">
       <div
         onClick={handlePrevious}
-        className="group absolute flex top-[50%] left-[-28px] translate-x-1/2 -translate-y-1/2 z-50 text-gray-400 h-full items-center px-2.5 rounded-md hover:bg-black/20 w-[55px] cursor-pointer"
+        className="group absolute flex top-[50%] left-[-28px] translate-x-1/2 -translate-y-1/2 z-50 text-gray-400 h-full items-center px-2.5  hover:bg-black/20 w-[55px] cursor-pointer"
       >
         <button className="align-middle group-hover:block hidden">
           <IoIosArrowBack size="2em" />
@@ -67,7 +66,7 @@ const Carousel = ({ cardObjects }: any) => {
       </div>
       <div
         onClick={handleNext}
-        className="group absolute flex top-[50%] right-[-28px] -translate-x-1/2 -translate-y-1/2 z-50 text-gray-400 h-full items-center px-2.5 rounded-md hover:bg-black/20 w-[55px] cursor-pointer"
+        className="group absolute flex top-[50%] right-[-28px] -translate-x-1/2 -translate-y-1/2 z-50 text-gray-400 h-full items-center px-2.5  hover:bg-black/20 w-[55px] cursor-pointer"
       >
         <button className="align-middle group-hover:block hidden">
           <IoIosArrowForward size="2em" />
@@ -80,7 +79,7 @@ const Carousel = ({ cardObjects }: any) => {
               key={index}
               onClick={() => onClickIndex(index)}
               className={
-                'w-[25px] h-[6px] mx-1 rounded-sm ' +
+                'w-[25px] h-[6px] mx-1 rounded-md ' +
                 (activeIndex === index
                   ? 'bg-gray-400 scale-x-[1.25]'
                   : 'bg-gray-700')
@@ -99,15 +98,13 @@ const Carousel = ({ cardObjects }: any) => {
           >
             <div
               className={
-                ' relative rounded-md w-full bg-black/40' +
-                ' ' +
-                setClass(index)
+                ' relative  w-full bg-black/40' + ' ' + setClass(index)
               }
             >
               <Image
                 src={obj.src}
                 alt={obj.alt}
-                className="block w-full rounded-md relative -z-[1]"
+                className="block w-full  relative -z-[1]"
               />
               <div className="absolute inset-x-[15%] bottom-5 py-5 text-center text-white md:block">
                 <h4>{obj.label}</h4>
