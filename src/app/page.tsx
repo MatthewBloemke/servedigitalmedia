@@ -42,8 +42,8 @@ export default function Home() {
   const buttons = [0, 1, 2, 3];
   return (
     <div id="home-page" className="100vh">
-      <div id="home" className="w-full flex flex-row">
-        <div id="info" className="w-3/6 ml-20 mt-40 mr-4">
+      <div id="home" className="w-full flex flex-row flex-wrap">
+        <div id="info" className="w-[90&] mx-[5%] md:w-3/6 ml-20 mt-40 mr-4">
           <h1>Serve Digital Media</h1>
           <h2 className="text-[#8c52ff] mt-[8px]">
             Serving to build your brand
@@ -56,11 +56,11 @@ export default function Home() {
             digital space.
           </p>
         </div>
-        <div className="w-3/6 items-center justify-center flex mr-[96px] mt-40 ml-12">
+        <div className="w-[90&] mx-[5%] md:w-3/6 items-center justify-center flex md:mr-[96px] md:mt-40 md:ml-12">
           <Carousel cardObjects={slide} buttons={buttons} />
         </div>
       </div>
-      <div className="bg-[#121212] w-[60%] mx-[20%] px-4 py-2 mt-8  relative pb-1">
+      <div className="bg-[#121212] md:w-[60%] md:mx-[20%] px-4 py-2 mt-8 relative pb-1">
         <div className="flex justify-center items-center w-full text-center">
           <p className="md:text-lg mt-2 mr-2 ml-2">
             <span className="text-3xl">&quot;</span> Samuel is absolutely great to work with! His professionalism is only

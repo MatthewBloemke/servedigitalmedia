@@ -17,12 +17,12 @@ const Gallery = () => {
   return (
     <div className="flex flex-col">
       <div id="socialProjects" className="mt-20 pb-10 bg-[#121212]">
-        <h1 className="mt-3 font-semibold w-3/6 mx-auto bg-[#1c1c1c] text-center py-2 text-2xl md:text-3xl lg:text-4xl">
+        <h1 className="mt-3 font-semibold w-[90%] mx-[5%] bg-[#1c1c1c] text-center py-2 text-2xl md:text-3xl lg:text-4xl">
           Social Media Projects
         </h1>
         <div className="flex flex-col md:flex-row flex-wrap justify-evenly items-center">
-          <div className="my-2 w-[40%] mx-[5%] bg-[#1c1c1c] flex flex-row">
-            <div className="relative m-5 w-3/6">
+          <div className="my-2 w-[90&] mx-[5%] md:w-[40%] md:mx-[5%] bg-[#1c1c1c] flex flex-row flex-wrap md:flex-nowrap">
+            <div className="relative m-5 md:w-3/6">
               <div className="absolute bg-gradient-to-b from-[#fb5d00] w-[70px] h-[50px] top-[-5px] left-[-5px]" />
               <div className="absolute bg-gradient-to-t from-[#fb5d00] w-[70px] h-[50px] bottom-[-5px] right-[-5px]" />
               <Image
@@ -31,7 +31,7 @@ const Gallery = () => {
                 className="relative"
               />
             </div>
-            <div className="social-gallery-text m-5 w-3/6">
+            <div className="social-gallery-text m-5 md:w-3/6">
               <div className="m-2">
                 <h3 className="text-white">Speedymason Post</h3>
                 <p>This is a post that was created for Speedymason.</p>
@@ -42,8 +42,8 @@ const Gallery = () => {
               </div>
             </div>
           </div>
-          <div className="my-2 w-[40%] mx-[5%] bg-[#1c1c1c] flex flex-row">
-            <div className="relative m-5 w-3/6">
+          <div className="my-2 w-[90&] mx-[5%] md:w-[40%] md:mx-[5%] bg-[#1c1c1c] flex flex-row flex-wrap md:flex-nowrap">
+            <div className="relative m-5 md:w-3/6">
               <div className="absolute bg-gradient-to-b from-[#fb5d00] w-[70px] h-[50px] top-[-5px] left-[-5px]" />
               <div className="absolute bg-gradient-to-t from-[#fb5d00] w-[70px] h-[50px] bottom-[-5px] right-[-5px]" />
               <Image
@@ -52,7 +52,7 @@ const Gallery = () => {
                 className="relative"
               />
             </div>
-            <div className="social-gallery-text m-5 w-3/6 border-l border-white">
+            <div className="social-gallery-text m-5 md:w-3/6 md:border-l md:border-white">
               <div className="m-2">
                 <h3 className="text-white">Youth Alive Post</h3>
                 <p>This is a post that was created for Youth Alive.</p>
@@ -63,8 +63,8 @@ const Gallery = () => {
               </div>
             </div>
           </div>
-          <div className="my-2 w-[40%] mx-[5%] bg-[#1c1c1c] flex flex-row">
-            <div className="relative m-5 w-3/6">
+          <div className="my-2 w-[90&] mx-[5%] md:w-[40%] md:mx-[5%] bg-[#1c1c1c] flex flex-row flex-wrap md:flex-nowrap">
+            <div className="relative m-5 md:w-3/6">
               <div className="absolute bg-gradient-to-b from-[#fb5d00] w-[70px] h-[50px] top-[-5px] left-[-5px]" />
               <div className="absolute bg-gradient-to-t from-[#fb5d00] w-[70px] h-[50px] bottom-[-5px] right-[-5px]" />
               <Image
@@ -73,7 +73,7 @@ const Gallery = () => {
                 className="relative"
               />
             </div>
-            <div className="w-3/6 m-5 ">
+            <div className="md:w-3/6 m-5 ">
               <div className="m-2">
                 <h3 className="text-white">Youth Alive Post</h3>
                 <p>This is a post that was created for Youth Alive.</p>
@@ -85,7 +85,7 @@ const Gallery = () => {
             </div>
           </div>
         </div>
-        <div className="w-[50%] mx-auto my-5 relative bg-[#1c1c1c]">
+        <div className="w-[90%] mx-auto my-5 relative bg-[#1c1c1c]">
           <p className="text-6xl absolute top-[-15px] left-[-2px]"></p>
           <p className="text-6xl absolute bottom-[-41px] right-[-1px]"></p>
           <div className="flex justify-center items-center w-full text-center">
@@ -97,7 +97,7 @@ const Gallery = () => {
           </div>
           <div className="flex w-[80%] justify-end">
             <h4 className="md:text-2xl">-Dan</h4>
-            <div className="flex flex-row justify-center mt-2 ml-3">
+            <div className="flex flex-row justify-center mt-[5px] ml-3">
               <BsStarFill className="text-yellow-500" />
               <BsStarFill className="text-yellow-500" />
               <BsStarFill className="text-yellow-500" />
@@ -113,15 +113,15 @@ const Gallery = () => {
           Web Design Projects
         </h1>
         <div className="flex flex-col md:flex-row justify-center items-center">
-          <div className="my-2 w-[80%] mx-[5%] bg-[#121212] flex flex-row">
-            <div className="relative m-5 w-3/6">
+          <div className="my-2 w-[80%] mx-[5%] bg-[#121212] flex flex-row flex-wrap md:flex-nowrap">
+            <div className="relative m-5 md:w-3/6">
               <div className="absolute bg-gradient-to-b from-[#fb5d00] w-[70px] h-[50px] top-[-5px] left-[-5px]" />
               <div className="absolute bg-gradient-to-t from-[#fb5d00] w-[70px] h-[50px] bottom-[-5px] right-[-5px]" />
               <Link href="https://matthewbloemke.com" target="_blank">
                 <Image className="relative" src={webPhoto} alt="web photo" />
               </Link>
             </div>
-            <div className="social-gallery-text m-5 w-3/6">
+            <div className="social-gallery-text m-5 md:w-3/6">
               <div className="m-2">
                 <h3 className="text-white">Website</h3>
                 <p>This is the website of the Serve Digital Media developer</p>
@@ -144,7 +144,7 @@ const Gallery = () => {
           </div>
           <div className="flex w-[80%] justify-end">
             <h4 className="md:text-2xl">-Dale</h4>
-            <div className="flex flex-row justify-center mt-2 ml-3">
+            <div className="flex flex-row justify-center mt-[5px] ml-3">
               <BsStarFill className="text-yellow-500" />
               <BsStarFill className="text-yellow-500" />
               <BsStarFill className="text-yellow-500" />
@@ -230,13 +230,13 @@ const Gallery = () => {
         </div>
       </div>
       <div id="brandingProjects" className="py-12">
-        <h1 className="mx-[10%] w-[80%] text-center bg-[#121212] font-semibold text-2xl md:text-3xl lg:text-4xl">
+        <h1 className="mx-[5%] w-[90%] text-center bg-[#121212] py-2 font-semibold text-2xl md:text-3xl lg:text-4xl">
           General Branding Projects
         </h1>
         <div className="flex flex-col">
-          <div className="flex flex-col md:flex-row  flex-wrap justify-evenly items-center">
-            <div className="my-2 w-[40%] mx-[5%] bg-[#121212] flex flex-row">
-              <div className="relative m-5 w-3/6">
+          <div className="flex flex-col md:flex-row flex-wrap justify-evenly items-center">
+            <div className="my-2 w-[90%] mx-[5%] md:w-[40%] md:mx-[5%] bg-[#121212] flex flex-row flex-wrap md:flex-nowrap">
+              <div className="relative m-5 md:w-3/6">
                 <div className="absolute bg-gradient-to-b from-[#fb5d00] w-[70px] h-[50px] top-[-5px] left-[-5px]" />
                 <div className="absolute bg-gradient-to-t from-[#fb5d00] w-[70px] h-[50px] bottom-[-5px] right-[-5px]" />
                 <Image
@@ -245,7 +245,7 @@ const Gallery = () => {
                   className="relative"
                 />
               </div>
-              <div className="social-gallery-text m-5 w-3/6">
+              <div className="social-gallery-text m-5 md:w-3/6">
                 <div className="m-2">
                   <h3 className="text-white">Speedymason Post</h3>
                   <p>This is a post that was created for Speedymason.</p>
@@ -256,8 +256,8 @@ const Gallery = () => {
                 </div>
               </div>
             </div>
-            <div className="my-2 w-[40%] mx-[5%] bg-[#121212] flex flex-row">
-              <div className="relative m-5 w-3/6">
+            <div className="my-2 w-[90%] mx-[5%] md:w-[40%] md:mx-[5%] bg-[#121212] flex flex-row flex-wrap md:flex-nowrap">
+              <div className="relative m-5 md:w-3/6">
                 <div className="absolute bg-gradient-to-b from-[#fb5d00] w-[70px] h-[50px] top-[-5px] left-[-5px]" />
                 <div className="absolute bg-gradient-to-t from-[#fb5d00] w-[70px] h-[50px] bottom-[-5px] right-[-5px]" />
                 <Image
@@ -266,7 +266,7 @@ const Gallery = () => {
                   className="relative"
                 />
               </div>
-              <div className="social-gallery-text m-5 w-3/6">
+              <div className="social-gallery-text m-5 md:w-3/6">
                 <div className="m-2">
                   <h3 className="text-white">Speedymason Post</h3>
                   <p>This is a post that was created for Speedymason.</p>
@@ -277,8 +277,8 @@ const Gallery = () => {
                 </div>
               </div>
             </div>
-            <div className="my-2 w-[40%] mx-[5%] bg-[#121212] flex flex-row">
-              <div className="relative m-5 w-3/6">
+            <div className="my-2 w-[90%] mx-[5%] md:w-[40%] md:mx-[5%] bg-[#121212] flex flex-row flex-wrap md:flex-nowrap">
+              <div className="relative m-5 md:w-3/6">
                 <div className="absolute bg-gradient-to-b from-[#fb5d00] w-[70px] h-[50px] top-[-5px] left-[-5px]" />
                 <div className="absolute bg-gradient-to-t from-[#fb5d00] w-[70px] h-[50px] bottom-[-5px] right-[-5px]" />
                 <Image
@@ -287,7 +287,7 @@ const Gallery = () => {
                   className="relative"
                 />
               </div>
-              <div className="social-gallery-text m-5 w-3/6">
+              <div className="social-gallery-text m-5 md:w-3/6">
                 <div className="m-2">
                   <h3 className="text-white">Speedymason Post</h3>
                   <p>This is a post that was created for Speedymason.</p>
@@ -298,8 +298,8 @@ const Gallery = () => {
                 </div>
               </div>
             </div>
-            <div className="my-2 w-[40%] mx-[5%] bg-[#121212] flex flex-row">
-              <div className="relative m-5 w-3/6">
+            <div className="my-2 w-[90%] mx-[5%] md:w-[40%] md:mx-[5%] bg-[#121212] flex flex-row flex-wrap md:flex-nowrap">
+              <div className="relative m-5 md:w-3/6">
                 <div className="absolute bg-gradient-to-b from-[#fb5d00] w-[70px] h-[50px] top-[-5px] left-[-5px]" />
                 <div className="absolute bg-gradient-to-t from-[#fb5d00] w-[70px] h-[50px] bottom-[-5px] right-[-5px]" />
                 <Image
@@ -308,7 +308,7 @@ const Gallery = () => {
                   className="relative"
                 />
               </div>
-              <div className="social-gallery-text m-5 w-3/6">
+              <div className="social-gallery-text m-5 md:w-3/6">
                 <div className="m-2">
                   <h3 className="text-white">Speedymason Post</h3>
                   <p>This is a post that was created for Speedymason.</p>
@@ -319,8 +319,8 @@ const Gallery = () => {
                 </div>
               </div>
             </div>
-            <div className="my-2 w-[40%] mx-[5%] bg-[#121212] flex flex-row">
-              <div className="relative m-5 w-3/6">
+            <div className="my-2 w-[90%] mx-[5%] md:w-[40%] md:mx-[5%] bg-[#121212] flex flex-row flex-wrap md:flex-nowrap">
+              <div className="relative m-5 md:w-3/6">
                 <div className="absolute bg-gradient-to-b from-[#fb5d00] w-[70px] h-[50px] top-[-5px] left-[-5px]" />
                 <div className="absolute bg-gradient-to-t from-[#fb5d00] w-[70px] h-[50px] bottom-[-5px] right-[-5px]" />
                 <Image
@@ -329,7 +329,7 @@ const Gallery = () => {
                   className="relative"
                 />
               </div>
-              <div className="social-gallery-text m-5 w-3/6">
+              <div className="social-gallery-text m-5 md:w-3/6">
                 <div className="m-2">
                   <h3 className="text-white">Speedymason Post</h3>
                   <p>This is a post that was created for Speedymason.</p>
@@ -340,17 +340,17 @@ const Gallery = () => {
                 </div>
               </div>
             </div>
-            <div className="my-2 w-[40%] mx-[5%] bg-[#121212] flex flex-row">
-              <div className="relative m-5 w-3/6">
+            <div className="my-2 w-[90%] mx-[5%] md:w-[40%] md:mx-[5%] bg-[#121212] flex flex-row flex-wrap md:flex-nowrap items-center">
+              <div className="relative m-5 md:w-3/6">
                 <div className="absolute bg-gradient-to-b from-[#fb5d00] w-[70px] h-[50px] top-[-5px] left-[-5px]" />
                 <div className="absolute bg-gradient-to-t from-[#fb5d00] w-[70px] h-[50px] bottom-[-5px] right-[-5px]" />
                 <Image
                   src={branding6}
                   alt="social media photo"
-                  className="relative"
+                  className="relative bg-[#121212]"
                 />
               </div>
-              <div className="social-gallery-text m-5 w-3/6">
+              <div className="social-gallery-text m-5 md:w-3/6">
                 <div className="m-2">
                   <h3 className="text-white">Speedymason Post</h3>
                   <p>This is a post that was created for Speedymason.</p>
