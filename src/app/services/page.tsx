@@ -9,8 +9,8 @@ import Link from 'next/link';
 const Page = () => {
   return (
     <div id="servicesPage" className="flex flex-col">
-      <div className="mt-20 pb-4 md:pb-20 flex flex-wrap flex-row lg:flex-nowrap justify-evenly bg-[#262626]">
-        <div id="video" className="m-4 bg-[#434343] p-4 ">
+      <div className="mt-20 pb-4 md:pb-20 flex flex-wrap flex-row lg:flex-nowrap justify-evenly bg-[#121212]">
+        <div id="video" className="m-4 bg-[#1c1c1c] p-4 ">
           <h2 className="font-bold text-[#c4c4c4]">Video</h2>
           <p className="font-extralight">
             When competing for attention in the modern market, video helps you
@@ -37,7 +37,7 @@ const Page = () => {
           </p>
           <div className="flex justify-center w-full my-5">
             <Link href="/gallery#videoProjects">
-              <button>View Video Gallery</button>
+              <button className='serve-button'>View Video Gallery</button>
             </Link>
           </div>
         </div>
@@ -73,7 +73,7 @@ const Page = () => {
           </div>
           <h2 className="text-[#fb5d00]">Packages starting at $450*</h2>
         </div>
-        <div className="m-4 bg-[#262626] p-4 ">
+        <div className="m-4 bg-[#121212] p-4 ">
           <h2 className="font-bold text-[#c4c4c4]">Web Design</h2>
           <p className="font-extralight">
             Websites are the best way for you to promote your brand, but it can
@@ -98,7 +98,7 @@ const Page = () => {
           </p>
           <div className="flex justify-center w-full my-5">
             <Link href="/gallery#webProjects">
-              <button>View Web Gallery</button>
+              <button className='serve-button'>View Web Gallery</button>
             </Link>
           </div>
         </div>
@@ -106,9 +106,9 @@ const Page = () => {
 
       <div
         id="social"
-        className="py-4 md:py-14 flex flex-wrap flex-row lg:flex-nowrap justify-evenly bg-[#262626]"
+        className="py-4 md:py-14 flex flex-wrap flex-row lg:flex-nowrap justify-evenly bg-[#121212]"
       >
-        <div className="m-4 bg-[#434343] p-4 ">
+        <div className="m-4 bg-[#1c1c1c] p-4 ">
           <h2 className="font-bold text-[#c4c4c4]">Social Media Promotion</h2>
           <p className="font-extralight">
             In the modern market, social media is a necessity to maximize your
@@ -133,7 +133,7 @@ const Page = () => {
           </p>
           <div className="flex justify-center w-full my-5">
             <Link href="/gallery#socialProjects">
-              <button>View Social Gallery</button>
+              <button className='serve-button'>View Social Gallery</button>
             </Link>
           </div>
         </div>
@@ -169,7 +169,7 @@ const Page = () => {
           </div>
           <h2 className="text-[#fb5d00]">Packages starting at $100*</h2>
         </div>
-        <div className="m-4 bg-[#434343] p-4 ">
+        <div className="m-4 bg-[#121212] p-4 ">
           <h2 className="font-bold text-[#c4c4c4]">General Branding</h2>
           <p className="font-extralight">
             Logos, color palettes and general design for starting your brand can
@@ -193,17 +193,17 @@ const Page = () => {
           </p>
           <div className="flex justify-center w-full my-5">
             <Link href="/gallery#brandingProjects">
-              <button>View Branding Gallery</button>
+              <button className='serve-button'>View Branding Gallery</button>
             </Link>
           </div>
         </div>
       </div>
-      <div className="flex flex-col items-center justify-center w-full bg-[#262626]">
+      <div className="flex flex-col items-center justify-center w-full bg-[#121212]">
         <Link href="/contact#nav">
-          <button className="mt-2">Contact Us</button>
+          <button className="mt-2 serve-button">Contact Us</button>
         </Link>
       </div>
-      <div className="flex items-center justify-center w-full py-3 bg-[#262626]">
+      <div className="flex items-center justify-center w-full py-3 bg-[#121212]">
         <p className="text-[#fd8c5a] mx-[10%]">
           *Price represents the lowest level of the lowest package. Package
           pricing is subject to change upon adding additional benefits. Please

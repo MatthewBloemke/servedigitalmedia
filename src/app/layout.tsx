@@ -2,7 +2,7 @@
 import Image from 'next/image';
 import './globals.css';
 import { Inter, Roboto } from 'next/font/google';
-import serveImage from '../../public/serve.png';
+import serveImage from '../../public/ServeWhite.png';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import bg from '../../public/bg4.png';

@@ -18,8 +18,8 @@
   p {
     @apply text-[#e9e9e9]
   }
-  #standard-button {
-    @apply bg-[#fb5d00] text-white p-3  hover:bg-[#d54700] active:scale-[.98]
+  .serve-button {
+    @apply bg-[#8c52ff] text-white p-3  hover:bg-[#511dee] active:scale-[.98]
   }
   li {
     @apply text-[#c4c4c4]

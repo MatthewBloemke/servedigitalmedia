@@ -6,6 +6,7 @@ import generalBranding from '../../public/generalBranding.png';
 import videoHome from '../../public/videoHome.png';
 import Link from 'next/link';
 import Carousel from '@/components/Carousel';
+import { BsStarFill } from 'react-icons/bs';
 
 export default function Home() {
   const slide = [
@@ -59,18 +60,23 @@ export default function Home() {
           <Carousel cardObjects={slide} buttons={buttons} />
         </div>
       </div>
-      <div className="w-[60%] ml-10 mt-8  relative pb-1">
-        <p className="text-6xl absolute top-[-15px] left-[-2px]">&quot;</p>
-        <p className="text-6xl absolute bottom-[-41px] right-[-1px]">&quot;</p>
+      <div className="bg-[#121212] w-[60%] mx-[20%] px-4 py-2 mt-8  relative pb-1">
         <div className="flex justify-center items-center w-full text-center">
           <p className="md:text-lg mt-2 mr-2 ml-2">
-            Samuel is absolutely great to work with! His professionalism is only
+            <span className="text-3xl">&quot;</span> Samuel is absolutely great to work with! His professionalism is only
             rivaled by his execution and creativity. I would 10/10 hire him
-            again.
+            again.<span className="text-3xl">&quot;</span>
           </p>
         </div>
-        <div className="flex w-[80%] justify-end">
+        <div className="flex w-[80%] justify-end mb-3">
           <h4 className="md:text-2xl m-[-5px] text-white">-Dan</h4>
+          <div className="flex flex-row justify-center mt-[3px] ml-4">
+              <BsStarFill className="text-yellow-500" />
+              <BsStarFill className="text-yellow-500" />
+              <BsStarFill className="text-yellow-500" />
+              <BsStarFill className="text-yellow-500" />
+              <BsStarFill className="text-yellow-500" />
+            </div>
         </div>
       </div>
     </div>

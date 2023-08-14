@@ -28,7 +28,6 @@ const Page = () => {
 
   const handleChange = ({ target }: any) => {
     if (target.name === 'number') {
-      console.log(target.value.length, phoneLength.current);
       if (target.value.length === 3 && phoneLength.current === 2) {
         target.value = target.value + '-';
       } else if (target.value.length === 7 && phoneLength.current === 6) {
@@ -93,7 +92,7 @@ const Page = () => {
 
   return (
     <div className="flex justify-center items-center">
-      <div className=" w-full md:w-[80%] h-auto rounded-xl lg:p-4">
+      <div className=" w-full md:w-[80%] h-auto rounded-xl lg:p-4 mt-10">
         <div className="p-4">
           <form onSubmit={handleSubmit}>
             <div className="grid md:grid-cols-2 gap-4 w-full py-2">
@@ -164,9 +163,11 @@ const Page = () => {
                 value={contactState.message}
               />
             </div>
-            <button className="w-full p-4 text-white hover:scale-[1.01] mt-4 disabled:opacity-20 disabled:scale-100">
-              Send message
-            </button>
+            <div className='w-full text-center'>
+              <button className="serve-button">
+                Send message
+              </button>
+            </div>
           </form>
         </div>
       </div>
