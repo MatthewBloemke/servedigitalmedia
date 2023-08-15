@@ -43,7 +43,7 @@ export default function Home() {
   return (
     <div id="home-page" className="100vh">
       <div id="home" className="w-full flex flex-row flex-wrap md:flex-nowrap">
-        <div id="info" className="w-[90&] mx-[5%] md:w-3/6 ml-20 mt-40 mr-4">
+        <div id="info" className="w-[90&] mx-[5%] mt-20 md:w-3/6 md:ml-20 md:mt-40 md:mr-4">
           <h1>Serve Digital Media</h1>
           <h2 className="text-[#8c52ff] mt-[8px]">
             Serving to build your brand
@@ -56,7 +56,7 @@ export default function Home() {
             digital space.
           </p>
         </div>
-        <div className="w-[90&] mx-[5%] md:w-3/6 items-center justify-center flex md:mr-[96px] md:mt-40 md:ml-12">
+        <div className="w-[90&] mx-[5%] md:w-3/6 items-center justify-center flex md:mr-[96px] mt-5 md:mt-40 md:ml-12">
           <Carousel cardObjects={slide} buttons={buttons} />
         </div>
       </div>

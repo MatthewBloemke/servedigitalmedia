@@ -55,20 +55,20 @@ const Carousel = ({ cardObjects }: any) => {
   };
 
   return (
-    <div className="relative ml-20">
+    <div className="relative">
       <div
         onClick={handlePrevious}
-        className="group absolute flex top-[50%] left-[-28px] translate-x-1/2 -translate-y-1/2 z-50 text-gray-400 h-full items-center px-2.5  hover:bg-black/20 w-[55px] cursor-pointer"
+        className="group absolute flex top-[50%] left-[-28px] translate-x-1/2 -translate-y-1/2 z-50 text-gray-400 h-full items-center px-2.5  md:hover:bg-black/20 w-[55px] cursor-pointer"
       >
-        <button className="align-middle group-hover:block hidden">
+        <button className="align-middle group-hover:block md:hidden">
           <IoIosArrowBack size="2em" />
         </button>
       </div>
       <div
         onClick={handleNext}
-        className="group absolute flex top-[50%] right-[-28px] -translate-x-1/2 -translate-y-1/2 z-50 text-gray-400 h-full items-center px-2.5  hover:bg-black/20 w-[55px] cursor-pointer"
+        className="group absolute flex top-[50%] right-[-28px] -translate-x-1/2 -translate-y-1/2 z-50 text-gray-400 h-full items-center px-2.5  md:hover:bg-black/20 w-[55px] cursor-pointer"
       >
-        <button className="align-middle group-hover:block hidden">
+        <button className="align-middle group-hover:block md:hidden">
           <IoIosArrowForward size="2em" />
         </button>
       </div>
@@ -106,9 +106,9 @@ const Carousel = ({ cardObjects }: any) => {
                 alt={obj.alt}
                 className="block w-full  relative -z-[1]"
               />
-              <div className="absolute inset-x-[15%] bottom-5 py-5 text-center text-white md:block">
-                <h4>{obj.label}</h4>
-                <button className="bg-none border-solid border-[#8c52ff]">
+              <div className="absolute inset-x-[15%] bottom-3 py-5 text-center text-white md:block">
+                <h3>{obj.label}</h3>
+                <button className="border-solid border-2 border-[#8c52ff] px-2 hover:bg-[#8c52ff] active:scale-[.98] text-sm">
                   {obj.button}
                 </button>
               </div>
