@@ -46,7 +46,9 @@ export default function RootLayout({
           <div className="flex justify-between items-center w-full h-full px-2">
             <div className="w-full flex items-center">
               <div className="flex flex-row justify-normal w-[125px] md:w-[150px] lg:w-[175px] lg:ml-10">
-                <Image src={serveImage} alt="Serve Logo" className="w-full" />
+                <Link href="/">
+                  <Image src={serveImage} alt="Serve Logo" className="w-full" />
+                </Link>
               </div>
             </div>
             <div>
@@ -112,7 +114,7 @@ export default function RootLayout({
                     <Image
                       onClick={() => setNav(false)}
                       src={serveImage}
-                      alt="/"
+                      alt="Serve Digital Media logo"
                       width={125}
                     />
                   </Link>
