@@ -9,7 +9,7 @@ import Link from 'next/link';
 const Page = () => {
   return (
     <div id="servicesPage" className="flex flex-col">
-      <div className="mt-20 pb-4 md:pb-20 flex flex-wrap flex-row lg:flex-nowrap justify-evenly bg-[#121212]">
+      <div className="mt-20 pb-4 md:py-8 flex flex-wrap flex-row lg:flex-nowrap justify-evenly bg-[#121212]">
         <div id="video" className="m-4 bg-[#1c1c1c] p-4 ">
           <h2 className="font-bold text-[#c4c4c4]">Video</h2>
           <p className="font-extralight">
@@ -19,14 +19,14 @@ const Page = () => {
             Make a splash with this personal marketing tool!
           </p>
           <div className="flex">
-            <p className="font-semibold text-[#fd8c5a]">Packages:</p>
+            <p className="font-semibold text-[#fb5d00]">Packages:</p>
             <ul className="ml-[35px]">
               <li>Promotional video package (1 - 2 minute video)</li>
               <li>Shorts/Reels package (under 60 second video)</li>
               <li>Long form video package (3+ minute video)</li>
             </ul>
           </div>
-          <p className="text-[#fd8c5a]">
+          <p className="text-[#fb5d00]">
             Each package is customizable according to the following options:
           </p>
           <p className="font-extralight">
@@ -82,13 +82,13 @@ const Page = () => {
             rate!
           </p>
           <div className="flex">
-            <p className="font-semibold text-[#fd8c5a]">Packages:</p>
+            <p className="font-semibold text-[#fb5d00]">Packages:</p>
             <ul className="ml-[35px]">
               <li>Website (Customize up from 3-page site)</li>
               <li>Website and updated maintenance</li>
             </ul>
           </div>
-          <p className="text-[#fd8c5a]">
+          <p className="text-[#fb5d00]">
             Each package is customizable according to the following options:
           </p>
           <p className="font-extralight">
@@ -106,7 +106,7 @@ const Page = () => {
 
       <div
         id="social"
-        className="py-4 md:py-14 flex flex-wrap flex-row lg:flex-nowrap justify-evenly bg-[#121212]"
+        className="py-4 md:py-8 flex flex-wrap flex-row lg:flex-nowrap justify-evenly bg-[#121212]"
       >
         <div className="m-4 bg-[#1c1c1c] p-4 ">
           <h2 className="font-bold text-[#c4c4c4]">Social Media Promotion</h2>
@@ -117,13 +117,13 @@ const Page = () => {
             eye-catching techniques to your social media for the future!
           </p>
           <div className="flex">
-            <p className="font-semibold text-[#fd8c5a]">Packages:</p>
+            <p className="font-semibold text-[#fb5d00]">Packages:</p>
             <ul className="ml-[35px]">
               <li>Post creation & campaign direction</li>
               <li>General social media advisement</li>
             </ul>
           </div>
-          <p className="text-[#fd8c5a]">
+          <p className="text-[#fb5d00]">
             Each package is customizable according to the following options:
           </p>
           <p className="font-extralight">
@@ -177,13 +177,13 @@ const Page = () => {
             both worthy of your business and that you can be proud of!
           </p>
           <div className="flex">
-            <p className="font-semibold text-[#fd8c5a]">Packages:</p>
+            <p className="font-semibold text-[#fb5d00]">Packages:</p>
             <ul className="ml-[35px]">
               <li>Time-based development</li>
               <li>Choice of templates</li>
             </ul>
           </div>
-          <p className="text-[#fd8c5a]">
+          <p className="text-[#fb5d00]">
             Each package is customizable according to the following options:
           </p>
           <p className="font-extralight">
@@ -204,7 +204,7 @@ const Page = () => {
         </Link>
       </div>
       <div className="flex items-center justify-center w-full py-3 bg-[#121212]">
-        <p className="text-[#fd8c5a] mx-[10%]">
+        <p className="text-[#fb5d00] mx-[10%]">
           *Price represents the lowest level of the lowest package. Package
           pricing is subject to change upon adding additional benefits. Please
           contact us for pricing to fit your budget and desired product.
