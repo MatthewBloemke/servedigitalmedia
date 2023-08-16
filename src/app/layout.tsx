@@ -42,7 +42,7 @@ export default function RootLayout({
         <meta property="og:description" content="Serving to build your brand" />
       </head>
       <body id={pathname?.slice(1)} className={inter.className}>
-        <div className="w-full h-16 md:h-[72px] absolute" id="nav">
+        <div className="w-full h-16 md:h-[72px] absolute">
           <div className="flex justify-between items-center w-full h-full px-2">
             <div className="w-full flex items-center">
               <div className="flex flex-row justify-normal w-[125px] md:w-[150px] lg:w-[175px] lg:ml-10">
@@ -53,7 +53,7 @@ export default function RootLayout({
             </div>
             <div>
               <ul className="hidden md:flex navList">
-                <Link href="/#nav" className="mx-5">
+                <Link href="/" className="mx-5">
                   <li
                     className="py-[5px] md:text-xl lg:text-xl navItems"
                     style={homeStyle}
@@ -61,7 +61,7 @@ export default function RootLayout({
                     Home
                   </li>
                 </Link>
-                <Link href="/services#nav" className="mx-5">
+                <Link href="/services" className="mx-5">
                   <li
                     className="py-[5px] md:text-xl lg:text-xl navItems"
                     style={servicesStyle}
@@ -69,7 +69,7 @@ export default function RootLayout({
                     Services
                   </li>
                 </Link>
-                <Link href="/gallery#nav" className="mx-5">
+                <Link href="/gallery" className="mx-5">
                   <li
                     className="py-[5px] md:text-xl lg:text-xl navItems"
                     style={galleryStyle}
@@ -77,7 +77,7 @@ export default function RootLayout({
                     Gallery
                   </li>
                 </Link>
-                <Link href="/contact#nav" className="mx-5">
+                <Link href="/contact" className="mx-5">
                   <li
                     className="py-[5px] flex-nowrap md:text-xl lg:text-xl navItems"
                     style={contactStyle}
@@ -138,17 +138,17 @@ export default function RootLayout({
                       Home
                     </li>
                   </Link>
-                  <Link href="/services#nav">
+                  <Link href="/services">
                     <li onClick={() => setNav(false)} className="py-4 text-sm">
                       Services
                     </li>
                   </Link>
-                  <Link href="/gallery#nav">
+                  <Link href="/gallery">
                     <li onClick={() => setNav(false)} className="py-4 text-sm">
                       Gallery
                     </li>
                   </Link>
-                  <Link href="/contact#nav">
+                  <Link href="/contact">
                     <li onClick={() => setNav(false)} className="py-4 text-sm">
                       Contact Us
                     </li>

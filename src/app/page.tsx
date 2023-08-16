@@ -16,6 +16,7 @@ export default function Home() {
       alt: 'Video',
       label: 'Video Editing',
       button: 'View Video Editing Services',
+      href: '/services#video'
     },
     {
       id: 2,
@@ -23,6 +24,7 @@ export default function Home() {
       alt: 'Web',
       label: 'Web Design',
       button: 'View Web Design Services',
+      href: '/services#web'
     },
     {
       id: 3,
@@ -30,6 +32,7 @@ export default function Home() {
       alt: 'social',
       label: 'Social Media',
       button: 'View Social Media Services',
+      href: '/services#social'
     },
     {
       id: 4,
@@ -37,6 +40,7 @@ export default function Home() {
       alt: 'General branding',
       label: 'General Branding',
       button: 'View General Branding Services',
+      href: '/services#branding'
     },
   ];
   const buttons = [0, 1, 2, 3];

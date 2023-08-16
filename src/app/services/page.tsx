@@ -9,8 +9,8 @@ import Link from 'next/link';
 const Page = () => {
   return (
     <div id="servicesPage" className="flex flex-col">
-      <div className="mt-20 pb-4 md:py-8 flex flex-wrap flex-row lg:flex-nowrap justify-evenly bg-[#121212]">
-        <div id="video" className="m-4 bg-[#1c1c1c] p-4 ">
+      <div id="video" className="mt-20 pb-4 md:py-8 flex flex-wrap flex-row lg:flex-nowrap justify-evenly bg-[#121212]">
+        <div  className="m-4 bg-[#1c1c1c] p-4">
           <h2 className="font-bold text-[#c4c4c4]">Video</h2>
           <p className="font-extralight">
             When competing for attention in the modern market, video helps you
@@ -199,7 +199,7 @@ const Page = () => {
         </div>
       </div>
       <div className="flex flex-col items-center justify-center w-full bg-[#121212]">
-        <Link href="/contact#nav">
+        <Link href="/contact">
           <button className="mt-2 serve-button">Contact Us</button>
         </Link>
       </div>

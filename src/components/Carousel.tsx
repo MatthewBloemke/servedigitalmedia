@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
+import Link from 'next/link';
 
 const Carousel = ({ cardObjects }: any) => {
   const [activeIndex, setIndex] = useState(0);
@@ -108,9 +109,11 @@ const Carousel = ({ cardObjects }: any) => {
               />
               <div className="absolute inset-x-[15%] bottom-3 py-5 text-center text-white md:block">
                 <h3>{obj.label}</h3>
-                <button className="border-solid border-2 border-[#8c52ff] px-2 hover:bg-[#8c52ff] active:scale-[.98] text-sm">
-                  {obj.button}
-                </button>
+                <Link href={obj.href}>
+                  <button className="border-solid border-2 border-[#8c52ff] px-2 hover:bg-[#8c52ff] active:scale-[.98] text-sm">
+                    {obj.button}
+                  </button>
+                </Link>
               </div>
             </div>
           </div>
