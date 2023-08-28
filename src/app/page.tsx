@@ -5,86 +5,86 @@ import socialHome from '../../public/socialHome.png';
 import generalBranding from '../../public/generalBranding.png';
 import videoHome from '../../public/videoHome.png';
 import Link from 'next/link';
+import Carousel from '@/components/Carousel';
+import { BsStarFill } from 'react-icons/bs';
 
 export default function Home() {
+  const slide = [
+    {
+      id: 1,
+      src: videoHome,
+      alt: 'Video',
+      label: 'Video Editing',
+      button: 'View Video Editing Services',
+      href: '/services#video',
+    },
+    {
+      id: 2,
+      src: webDesign,
+      alt: 'Web',
+      label: 'Web Design',
+      button: 'View Web Design Services',
+      href: '/services#web',
+    },
+    {
+      id: 3,
+      src: socialHome,
+      alt: 'social',
+      label: 'Social Media',
+      button: 'View Social Media Services',
+      href: '/services#social',
+    },
+    {
+      id: 4,
+      src: generalBranding,
+      alt: 'General branding',
+      label: 'General Branding',
+      button: 'View General Branding Services',
+      href: '/services#branding',
+    },
+  ];
+  const buttons = [0, 1, 2, 3];
   return (
-    <div id="homePage" className="flex flex-row flex-wrap justify-evenly">
-      <div className="w-[80%] md:w-[35%]">
-        <div className="relative mt-5 bg-black/40">
-          <Link href="/services#video">
-            <div className="absolute bg-gradient-to-b from-[#fb5d00] w-[70px] h-[50px] top-[-5px] left-[-5px] z-[-1] rounded-sm" />
-            <div className="absolute bg-gradient-to-t from-[#fb5d00] w-[70px] h-[50px] bottom-[-5px] right-[-5px] z-[-1] rounded-sm" />
-            <Image
-              src={videoHome}
-              alt="placeholder"
-              className="bg-white relative -z-[1] rounded-sm"
-            />
-          </Link>
-          <h2 className="mt-[3px] w-[75%] text-xl md:text-2xl lg:text-4xl font-bold absolute top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2">
-            Video options & packages
+    <div id="home-page" className="100vh">
+      <div id="home" className="w-full flex flex-row flex-wrap md:flex-nowrap">
+        <div
+          id="info"
+          className="w-[90&] mx-[5%] mt-20 md:w-3/6 md:ml-20 md:mt-40 md:mr-4"
+        >
+          <h1>Serve Digital Media</h1>
+          <h2 className="text-[#8c52ff] mt-[8px]">
+            Serving to build your brand
           </h2>
-        </div>
-      </div>
-      <div className="w-[80%] md:w-[35%] ">
-        <div className="relative mt-5 bg-black/40">
-          <Link href="/services#social">
-            <div className="absolute bg-gradient-to-b from-[#fb5d00] w-[70px] h-[50px] top-[-5px] left-[-5px] z-[-1] rounded-sm" />
-            <div className="absolute bg-gradient-to-t from-[#fb5d00] w-[70px] h-[50px] bottom-[-5px] right-[-5px] z-[-1] rounded-sm" />
-            <Image
-              src={socialHome}
-              alt="placeholder"
-              className="bg-white relative -z-[1] rounded-sm"
-            />
-            <h2 className="mt-[3px] w-[75%] text-xl md:text-2xl lg:text-4xl font-bold absolute top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2">
-              Social media promotion options & packages
-            </h2>
-          </Link>
-        </div>
-      </div>
-      <div className="w-[80%] md:w-[35%]">
-        <div className="relative mt-5 bg-black/40">
-          <Link href="/services#web">
-            <div className="absolute bg-gradient-to-b from-[#fb5d00] w-[70px] h-[50px] top-[-5px] left-[-5px] z-[-1] rounded-sm" />
-            <div className="absolute bg-gradient-to-t from-[#fb5d00] w-[70px] h-[50px] bottom-[-5px] right-[-5px] z-[-1] rounded-sm" />
-            <Image
-              src={webDesign}
-              alt="placeholder"
-              className="bg-white relative -z-[1] rounded-sm"
-            />
-            <h2 className="mt-[3px] w-[75%] text-xl md:text-2xl lg:text-4xl font-bold absolute top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2">
-              Web design options & packages
-            </h2>
-          </Link>
-        </div>
-      </div>
-      <div className="w-[80%] md:w-[35%]">
-        <div className="relative mt-5 bg-black/40">
-          <Link href="/services#branding">
-            <div className="absolute bg-gradient-to-b from-[#fb5d00] w-[70px] h-[50px] top-[-5px] left-[-5px] z-[-1] rounded-sm" />
-            <div className="absolute bg-gradient-to-t from-[#fb5d00] w-[70px] h-[50px] bottom-[-5px] right-[-5px] z-[-1] rounded-sm" />
-            <Image
-              src={generalBranding}
-              alt="placeholder"
-              className="bg-white relative -z-[1] rounded-sm"
-            />
-            <h2 className="mt-[3px] w-[75%] text-xl md:text-2xl lg:text-4xl font-bold absolute top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2">
-              General branding options & packages
-            </h2>
-          </Link>
-        </div>
-      </div>
-      <div className="border-2 border-white w-[80%] mx-auto mt-5 rounded-md relative bg-black/40 pb-1">
-        <p className="text-6xl absolute top-[-15px] left-[-2px]">&quot;</p>
-        <p className="text-6xl absolute bottom-[-41px] right-[-1px]">&quot;</p>
-        <div className="flex justify-center items-center w-full text-center">
-          <p className="md:text-lg mt-2 mr-2 ml-2">
-            Samuel is absolutely great to work with! His professionalism is only
-            rivaled by his execution and creativity. I would 10/10 hire him
-            again.
+          <p className="mt-[8px]">
+            Serve Digital Media was created to serve businesses and individuals
+            in building their online brand. Through services in social media
+            advertising, web design, video editing, and general branding
+            development, our goal is to help you maximize your reach in the
+            digital space.
           </p>
         </div>
-        <div className="flex w-[80%] justify-end">
-          <h4 className="md:text-2xl m-[-5px]">-Dan</h4>
+        <div className="w-[90&] mx-[5%] md:w-3/6 items-center justify-center flex md:mr-[96px] mt-5 md:mt-40 md:ml-12">
+          <Carousel cardObjects={slide} buttons={buttons} />
+        </div>
+      </div>
+      <div className="bg-[#121212] md:w-[60%] md:mx-[20%] px-4 mt-8 relative pb-1 md:mb-10">
+        <div className="flex justify-center items-center w-full text-center">
+          <p className="md:text-lg mt-2 mr-2 ml-2">
+            <span className="">&quot;</span> Samuel is absolutely great to work
+            with! His professionalism is only rivaled by his execution and
+            creativity. I would 10/10 hire him again.
+            <span className="">&quot;</span>
+          </p>
+        </div>
+        <div className="flex w-[80%] justify-end mb-1">
+          <h4 className="md:text-2xl m-[-5px] text-white">-Dan</h4>
+          <div className="flex flex-row justify-center mt-[3px] ml-4">
+            <BsStarFill className="text-yellow-500" />
+            <BsStarFill className="text-yellow-500" />
+            <BsStarFill className="text-yellow-500" />
+            <BsStarFill className="text-yellow-500" />
+            <BsStarFill className="text-yellow-500" />
+          </div>
         </div>
       </div>
     </div>

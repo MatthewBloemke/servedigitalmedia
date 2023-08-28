@@ -1,6 +1,5 @@
 import React from 'react';
 import Image from 'next/image';
-import placeholder from '../../../public/placeholder.png';
 import webDesign from '../../../public/webDesign.png';
 import socialHome from '../../../public/socialHome.png';
 import generalBranding from '../../../public/generalBranding.png';
@@ -10,9 +9,12 @@ import Link from 'next/link';
 const Page = () => {
   return (
     <div id="servicesPage" className="flex flex-col">
-      <div className="my-10 flex flex-wrap flex-row lg:flex-nowrap justify-evenly">
-        <div id="video" className="m-4 bg-black/60 p-4 rounded-md">
-          <h2 className="font-bold">Video</h2>
+      <div
+        id="video"
+        className="mt-20 pb-4 md:py-8 flex flex-wrap flex-row lg:flex-nowrap justify-evenly bg-[#121212]"
+      >
+        <div className="m-4 bg-[#1c1c1c] p-4">
+          <h2 className="font-bold text-[#c4c4c4]">Video</h2>
           <p className="font-extralight">
             When competing for attention in the modern market, video helps you
             stand out from the rest of the world with the opportunity for your
@@ -38,21 +40,19 @@ const Page = () => {
           </p>
           <div className="flex justify-center w-full my-5">
             <Link href="/gallery#videoProjects">
-              <button className="hover:scale-105 active:scale-95">
-                View Video Gallery
-              </button>
+              <button className="serve-button">View Video Gallery</button>
             </Link>
           </div>
         </div>
         <div className="w-[92%] m-4">
           <div className="relative">
-            <div className="absolute bg-gradient-to-b from-[#fb5d00] w-[70px] h-[50px] top-[-5px] left-[-5px] z-[-1] rounded-sm" />
-            <div className="absolute bg-gradient-to-t from-[#fb5d00] w-[70px] h-[50px] bottom-[-5px] right-[-5px] z-[-1] rounded-sm" />
+            <div className="absolute bg-gradient-to-b from-[#fb5d00] w-[70px] h-[50px] top-[-5px] left-[-5px] " />
+            <div className="absolute bg-gradient-to-t from-[#fb5d00] w-[70px] h-[50px] bottom-[-5px] right-[-5px] " />
             <Image
               src={videoHome}
               height={225}
               alt="placeholder"
-              className="bg-white w-full relative -z-[1] rounded-sm"
+              className="bg-white w-full relative "
             />
           </div>
           <h2 className="text-[#fb5d00]">Packages starting at $100*</h2>
@@ -61,23 +61,23 @@ const Page = () => {
 
       <div
         id="web"
-        className="my-14 flex flex-wrap flex-col-reverse lg:flex-row lg:flex-nowrap justify-evenly"
+        className="py-4 md:py-14 flex flex-wrap flex-col-reverse lg:flex-row lg:flex-nowrap justify-evenly "
       >
         <div className="w-[90%] my-4 mx-auto lg:m-4">
           <div className="relative">
-            <div className="absolute bg-gradient-to-b from-[#fb5d00] w-[70px] h-[50px] top-[-5px] left-[-5px] z-[-1] rounded-sm" />
-            <div className="absolute bg-gradient-to-t from-[#fb5d00] w-[70px] h-[50px] bottom-[-5px] right-[-5px] z-[-1] rounded-sm" />
+            <div className="absolute bg-gradient-to-b from-[#fb5d00] w-[70px] h-[50px] top-[-5px] left-[-5px] " />
+            <div className="absolute bg-gradient-to-t from-[#fb5d00] w-[70px] h-[50px] bottom-[-5px] right-[-5px] " />
             <Image
               src={webDesign}
               height={225}
               alt="placeholder"
-              className="bg-white w-full relative -z-[1] rounded-sm"
+              className="bg-white w-full relative "
             />
           </div>
-          <h2 className="text-[#fb5d00]">Packages starting at $450*</h2>
+          <h2 className="text-[#fb5d00]">Packages starting at $550*</h2>
         </div>
-        <div className="m-4 bg-black/60 p-4 rounded-md">
-          <h2 className="font-bold">Web Design</h2>
+        <div className="m-4 bg-[#121212] p-4 ">
+          <h2 className="font-bold text-[#c4c4c4]">Web Design</h2>
           <p className="font-extralight">
             Websites are the best way for you to promote your brand, but it can
             be hard to make one look professional without paying a lot to have
@@ -101,9 +101,7 @@ const Page = () => {
           </p>
           <div className="flex justify-center w-full my-5">
             <Link href="/gallery#webProjects">
-              <button className="hover:scale-105 active:scale-95">
-                View Web Gallery
-              </button>
+              <button className="serve-button">View Web Gallery</button>
             </Link>
           </div>
         </div>
@@ -111,10 +109,10 @@ const Page = () => {
 
       <div
         id="social"
-        className="my-14 flex flex-wrap flex-row lg:flex-nowrap justify-evenly"
+        className="py-4 md:py-8 flex flex-wrap flex-row lg:flex-nowrap justify-evenly bg-[#121212]"
       >
-        <div className="m-4 bg-black/60 p-4 rounded-md">
-          <h2 className="font-bold">Social Media Promotion</h2>
+        <div className="m-4 bg-[#1c1c1c] p-4 ">
+          <h2 className="font-bold text-[#c4c4c4]">Social Media Promotion</h2>
           <p className="font-extralight">
             In the modern market, social media is a necessity to maximize your
             {" brand's reach. Allow us to create posts and plan social media "}
@@ -138,46 +136,44 @@ const Page = () => {
           </p>
           <div className="flex justify-center w-full my-5">
             <Link href="/gallery#socialProjects">
-              <button className="hover:scale-105 active:scale-95">
-                View Social Gallery
-              </button>
+              <button className="serve-button">View Social Gallery</button>
             </Link>
           </div>
         </div>
         <div className="w-[90%] m-4">
           <div className="relative">
-            <div className="absolute bg-gradient-to-b from-[#fb5d00] w-[70px] h-[50px] top-[-5px] left-[-5px] z-[-1] rounded-sm" />
-            <div className="absolute bg-gradient-to-t from-[#fb5d00] w-[70px] h-[50px] bottom-[-5px] right-[-5px] z-[-1] rounded-sm" />
+            <div className="absolute bg-gradient-to-b from-[#fb5d00] w-[70px] h-[50px] top-[-5px] left-[-5px] " />
+            <div className="absolute bg-gradient-to-t from-[#fb5d00] w-[70px] h-[50px] bottom-[-5px] right-[-5px] " />
             <Image
               src={socialHome}
               height={225}
               alt="placeholder"
-              className="bg-white w-full relative -z-[1] rounded-sm"
+              className="bg-white w-full relative "
             />
           </div>
-          <h2 className="text-[#fb5d00]">Packages starting at $50*</h2>
+          <h2 className="text-[#fb5d00]">Packages starting at $75*</h2>
         </div>
       </div>
 
       <div
         id="branding"
-        className="mt-14 flex flex-wrap flex-col-reverse lg:flex-row lg:flex-nowrap justify-evenly"
+        className="py-4 md:py-14 flex flex-wrap flex-col-reverse lg:flex-row lg:flex-nowrap justify-evenly"
       >
         <div className="w-[90%] my-4 mx-auto lg:m-4">
           <div className="relative">
-            <div className="absolute bg-gradient-to-b from-[#fb5d00] w-[70px] h-[50px] top-[-5px] left-[-5px] z-[-1] rounded-sm" />
-            <div className="absolute bg-gradient-to-t from-[#fb5d00] w-[70px] h-[50px] bottom-[-5px] right-[-5px] z-[-1] rounded-sm" />
+            <div className="absolute bg-gradient-to-b from-[#fb5d00] w-[70px] h-[50px] top-[-5px] left-[-5px] " />
+            <div className="absolute bg-gradient-to-t from-[#fb5d00] w-[70px] h-[50px] bottom-[-5px] right-[-5px] " />
             <Image
               src={generalBranding}
               height={225}
               alt="placeholder"
-              className="bg-white w-full relative -z-[1] rounded-sm"
+              className="bg-white w-full relative "
             />
           </div>
-          <h2 className="text-[#fb5d00]">Packages starting at $100*</h2>
+          <h2 className="text-[#fb5d00]">Packages starting at $120*</h2>
         </div>
-        <div className="m-4 bg-black/60 p-4 rounded-md">
-          <h2 className="font-bold">General Branding</h2>
+        <div className="m-4 bg-[#121212] p-4 ">
+          <h2 className="font-bold text-[#c4c4c4]">General Branding</h2>
           <p className="font-extralight">
             Logos, color palettes and general design for starting your brand can
             be a daunting task, but allow us to help create a brand with you
@@ -200,21 +196,17 @@ const Page = () => {
           </p>
           <div className="flex justify-center w-full my-5">
             <Link href="/gallery#brandingProjects">
-              <button className="hover:scale-105 active:scale-95">
-                View Branding Gallery
-              </button>
+              <button className="serve-button">View Branding Gallery</button>
             </Link>
           </div>
         </div>
       </div>
-      <div className="flex flex-col items-center justify-center w-full my-[10px]">
-        <Link href="/contact#nav">
-          <button className="hover:scale-105 active:scale-95 mb-4">
-            Contact Us
-          </button>
+      <div className="flex flex-col items-center justify-center w-full bg-[#121212]">
+        <Link href="/contact">
+          <button className="mt-2 serve-button">Contact Us</button>
         </Link>
       </div>
-      <div className="flex items-center justify-center w-full py-3 bg-black/70">
+      <div className="flex items-center justify-center w-full py-3 bg-[#121212]">
         <p className="text-[#fb5d00] mx-[10%]">
           *Price represents the lowest level of the lowest package. Package
           pricing is subject to change upon adding additional benefits. Please

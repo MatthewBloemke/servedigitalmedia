@@ -19,8 +19,8 @@ const Error = ({ error, setError }: props) => {
     <div
       className={
         error
-          ? 'fixed bg-[#da0000] bottom-[25px] right-[50%] translate-x-[50%] w-[200px] py-2 rounded-md text-white text-center ease-in duration-500'
-          : 'fixed bg-[#da0000] bottom-[-10%] right-[50%] translate-x-[50%] w-[200px] py-2 rounded-md ease-in duration-500'
+          ? 'fixed bg-[#da0000] bottom-[25px] right-[50%] translate-x-[50%] w-[200px] py-2  text-white text-center ease-in duration-500'
+          : 'fixed bg-[#da0000] bottom-[-10%] right-[50%] translate-x-[50%] w-[200px] py-2  ease-in duration-500'
       }
     >
       <div className="flex items-center justify-center w-full">

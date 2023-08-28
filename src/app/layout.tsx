@@ -1,15 +1,15 @@
 'use client';
 import Image from 'next/image';
 import './globals.css';
-import { Inter } from 'next/font/google';
-import serveImage from '../../public/serve.png';
+import { Inter, Roboto } from 'next/font/google';
+import serveImage from '../../public/ServeWhite.png';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import bg from '../../public/bg4.png';
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
 import { useState } from 'react';
 
-const inter = Inter({ subsets: ['latin'] });
+const inter = Roboto({ subsets: ['latin'], weight: '500' });
 
 export default function RootLayout({
   children,
@@ -23,10 +23,13 @@ export default function RootLayout({
     setNav(!nav);
   };
 
-  const homeStyle = pathname === '/' ? { color: '#8c52ff' } : {};
-  const servicesStyle = pathname === '/services' ? { color: '#8c52ff' } : {};
-  const galleryStyle = pathname === '/gallery' ? { color: '#8c52ff' } : {};
-  const contactStyle = pathname === '/contact' ? { color: '#8c52ff' } : {};
+  const homeStyle = pathname === '/' ? { borderBottom: 'solid #8c52ff' } : {};
+  const servicesStyle =
+    pathname === '/services' ? { borderBottom: 'solid #8c52ff' } : {};
+  const galleryStyle =
+    pathname === '/gallery' ? { borderBottom: 'solid #8c52ff' } : {};
+  const contactStyle =
+    pathname === '/contact' ? { borderBottom: 'solid #8c52ff' } : {};
 
   return (
     <html lang="en">
@@ -39,19 +42,18 @@ export default function RootLayout({
         <meta property="og:description" content="Serving to build your brand" />
       </head>
       <body id={pathname?.slice(1)} className={inter.className}>
-        <div className="w-full h-16 md:h-[72px] bg-black/70" id="nav">
+        <div className="w-full h-16 md:h-[72px] absolute">
           <div className="flex justify-between items-center w-full h-full px-2">
             <div className="w-full flex items-center">
               <div className="flex flex-row justify-normal w-[125px] md:w-[150px] lg:w-[175px] lg:ml-10">
-                <Image src={serveImage} alt="Serve Logo" className="w-full" />
+                <Link href="/">
+                  <Image src={serveImage} alt="Serve Logo" className="w-full" />
+                </Link>
               </div>
-              <p className="text-xs ml-5 lg:text-lg">
-                Serving to build your brand
-              </p>
             </div>
             <div>
               <ul className="hidden md:flex navList">
-                <Link href="/#nav" className="mx-5">
+                <Link href="/" className="mx-5">
                   <li
                     className="py-[5px] md:text-xl lg:text-xl navItems"
                     style={homeStyle}
@@ -59,7 +61,7 @@ export default function RootLayout({
                     Home
                   </li>
                 </Link>
-                <Link href="/services#nav" className="mx-5">
+                <Link href="/services" className="mx-5">
                   <li
                     className="py-[5px] md:text-xl lg:text-xl navItems"
                     style={servicesStyle}
@@ -67,7 +69,7 @@ export default function RootLayout({
                     Services
                   </li>
                 </Link>
-                <Link href="/gallery#nav" className="mx-5">
+                <Link href="/gallery" className="mx-5">
                   <li
                     className="py-[5px] md:text-xl lg:text-xl navItems"
                     style={galleryStyle}
@@ -75,7 +77,7 @@ export default function RootLayout({
                     Gallery
                   </li>
                 </Link>
-                <Link href="/contact#nav" className="mx-5">
+                <Link href="/contact" className="mx-5">
                   <li
                     className="py-[5px] flex-nowrap md:text-xl lg:text-xl navItems"
                     style={contactStyle}
@@ -112,7 +114,7 @@ export default function RootLayout({
                     <Image
                       onClick={() => setNav(false)}
                       src={serveImage}
-                      alt="/"
+                      alt="Serve Digital Media logo"
                       width={125}
                     />
                   </Link>
@@ -136,17 +138,17 @@ export default function RootLayout({
                       Home
                     </li>
                   </Link>
-                  <Link href="/services#nav">
+                  <Link href="/services">
                     <li onClick={() => setNav(false)} className="py-4 text-sm">
                       Services
                     </li>
                   </Link>
-                  <Link href="/gallery#nav">
+                  <Link href="/gallery">
                     <li onClick={() => setNav(false)} className="py-4 text-sm">
                       Gallery
                     </li>
                   </Link>
-                  <Link href="/contact#nav">
+                  <Link href="/contact">
                     <li onClick={() => setNav(false)} className="py-4 text-sm">
                       Contact Us
                     </li>
