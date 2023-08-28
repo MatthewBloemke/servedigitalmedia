@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import React from 'react';
 import webPhoto from '../../../public/website1.png';
+import webPhoto2 from '../../../public/lesterheatair.png';
 import social1 from '../../../public/social1.png';
 import social2 from '../../../public/social2.png';
 import social3 from '../../../public/social3.png';
@@ -9,7 +10,7 @@ import branding2 from '../../../public/general2.png';
 import branding3 from '../../../public/general3.png';
 import branding4 from '../../../public/general4.png';
 import branding5 from '../../../public/general5.png';
-import branding6 from '../../../public/serve.png';
+import branding6 from '../../../public/ServeWhite.png';
 import Link from 'next/link';
 import { BsStarFill } from 'react-icons/bs';
 
@@ -20,71 +21,50 @@ const Gallery = () => {
         <h1 className="mt-3 font-semibold w-[90%] mx-[5%] bg-[#1c1c1c] text-center py-2 text-2xl md:text-3xl lg:text-4xl">
           Social Media Projects
         </h1>
-        <div className="flex flex-col md:flex-row flex-wrap justify-evenly items-center">
-          <div className="my-2 w-[90&] mx-[5%] md:w-[40%] md:mx-[5%] bg-[#1c1c1c] flex flex-row flex-wrap md:flex-nowrap">
-            <div className="relative m-5 md:w-3/6">
+        <div className="w-[90%] mx-auto my-5 relative bg-[#1c1c1c]">
+          <div className="m-2 p-3 text-center">
+            <p>
+              Social media posts are made custom for each client according to
+              their {"brand's"} identity.
+            </p>
+          </div>
+        </div>
+        <div className="flex flex-col md:flex-row flex-wrap justify-evenly items-center mt-5">
+          <div className="my-2 mx-[5%] md:mx-2 bg-[#1c1c1c] flex flex-row flex-wrap md:flex-nowrap">
+            <div className="relative m-5 ">
               <div className="absolute bg-gradient-to-b from-[#fb5d00] w-[70px] h-[50px] top-[-5px] left-[-5px]" />
               <div className="absolute bg-gradient-to-t from-[#fb5d00] w-[70px] h-[50px] bottom-[-5px] right-[-5px]" />
               <Image
                 src={social2}
                 alt="social media photo"
-                className="relative"
+                className="relative w-auto max-h-[300px]"
               />
             </div>
-            <div className="social-gallery-text m-5 md:w-3/6">
-              <div className="m-2">
-                <h3 className="text-white">Speedymason Post</h3>
-                <p>This is a post that was created for Speedymason.</p>
-                <p className="mt-2">
-                  100% of all posts created by Serve Digital Media increase that
-                  businesses profit by 500%
-                </p>
-              </div>
-            </div>
           </div>
-          <div className="my-2 w-[90&] mx-[5%] md:w-[40%] md:mx-[5%] bg-[#1c1c1c] flex flex-row flex-wrap md:flex-nowrap">
-            <div className="relative m-5 md:w-3/6">
+          <div className="my-2 mx-[5%] md:mx-2 bg-[#1c1c1c] flex flex-row flex-wrap md:flex-nowrap">
+            <div className="relative m-5">
               <div className="absolute bg-gradient-to-b from-[#fb5d00] w-[70px] h-[50px] top-[-5px] left-[-5px]" />
               <div className="absolute bg-gradient-to-t from-[#fb5d00] w-[70px] h-[50px] bottom-[-5px] right-[-5px]" />
               <Image
                 src={social1}
                 alt="social media photo"
-                className="relative"
+                className="relative w-auto max-h-[300px]"
               />
             </div>
-            <div className="social-gallery-text m-5 md:w-3/6 md:border-l md:border-white">
-              <div className="m-2">
-                <h3 className="text-white">Youth Alive Post</h3>
-                <p>This is a post that was created for Youth Alive.</p>
-                <p className="mt-2">
-                  100% of all posts created by Serve Digital Media increase that
-                  businesses profit by 500%
-                </p>
-              </div>
-            </div>
           </div>
-          <div className="my-2 w-[90&] mx-[5%] md:w-[40%] md:mx-[5%] bg-[#1c1c1c] flex flex-row flex-wrap md:flex-nowrap">
-            <div className="relative m-5 md:w-3/6">
+          <div className="my-2 mx-[5%] md:mx-2 bg-[#1c1c1c] flex flex-row flex-wrap md:flex-nowrap">
+            <div className="relative m-5">
               <div className="absolute bg-gradient-to-b from-[#fb5d00] w-[70px] h-[50px] top-[-5px] left-[-5px]" />
               <div className="absolute bg-gradient-to-t from-[#fb5d00] w-[70px] h-[50px] bottom-[-5px] right-[-5px]" />
               <Image
                 src={social3}
                 alt="social media photo"
-                className="relative"
+                className="relative w-auto max-h-[300px]"
               />
-            </div>
-            <div className="md:w-3/6 m-5 ">
-              <div className="m-2">
-                <h3 className="text-white">Youth Alive Post</h3>
-                <p>This is a post that was created for Youth Alive.</p>
-                <p className="mt-2">
-                  100% of all posts created by Serve Digital Media increase that
-                  businesses profit by 500%
-                </p>
-              </div>
             </div>
           </div>
         </div>
+
         <div className="w-[90%] mx-auto my-5 relative bg-[#1c1c1c]">
           <p className="text-6xl absolute top-[-15px] left-[-2px]"></p>
           <p className="text-6xl absolute bottom-[-41px] right-[-1px]"></p>
@@ -112,24 +92,32 @@ const Gallery = () => {
         <h1 className="text-2xl font-semibold text-center md:text-3xl lg:text-4xl bg-[#121212] py-2 w-[80%] mx-[10%]">
           Web Design Projects
         </h1>
+        <div className="w-[80%] mx-auto my-5 relative bg-[#121212]">
+          <div className="m-2 p-3 text-center">
+            <p>
+              Websites are custom made for each client, hand coded by our
+              subcontracted developer. Inquire to learn more about the benefits
+              of this approach versus Wordpress or WIX.
+            </p>
+          </div>
+        </div>
         <div className="flex flex-col md:flex-row justify-center items-center">
-          <div className="my-2 w-[80%] mx-[5%] bg-[#121212] flex flex-row flex-wrap md:flex-nowrap">
-            <div className="relative m-5 md:w-3/6">
+          <div className="my-2 w-[80%] mx-[5%] md:w-[40%] md:mx-[5%] bg-[#121212] flex flex-row flex-wrap md:flex-nowrap">
+            <div className="relative m-5">
               <div className="absolute bg-gradient-to-b from-[#fb5d00] w-[70px] h-[50px] top-[-5px] left-[-5px]" />
               <div className="absolute bg-gradient-to-t from-[#fb5d00] w-[70px] h-[50px] bottom-[-5px] right-[-5px]" />
               <Link href="https://matthewbloemke.com" target="_blank">
                 <Image className="relative" src={webPhoto} alt="web photo" />
               </Link>
             </div>
-            <div className="social-gallery-text m-5 md:w-3/6">
-              <div className="m-2">
-                <h3 className="text-white">Website</h3>
-                <p>This is the website of the Serve Digital Media developer</p>
-                <p className="mt-2">
-                  100% of all websites created by Serve Digital Media increase
-                  that businesses profit by 500%
-                </p>
-              </div>
+          </div>
+          <div className="my-2 w-[80%] mx-[5%] md:w-[40%] md:mx-[5%] bg-[#121212] flex flex-row flex-wrap md:flex-nowrap">
+            <div className="relative m-5">
+              <div className="absolute bg-gradient-to-b from-[#fb5d00] w-[70px] h-[50px] top-[-5px] left-[-5px]" />
+              <div className="absolute bg-gradient-to-t from-[#fb5d00] w-[70px] h-[50px] bottom-[-5px] right-[-5px]" />
+              <Link href="https://lesterheatandair.com" target="_blank">
+                <Image className="relative" src={webPhoto2} alt="web photo" />
+              </Link>
             </div>
           </div>
         </div>
@@ -162,15 +150,11 @@ const Gallery = () => {
           Video Projects
         </h1>
         <div className="w-[80%] mx-auto my-5 relative bg-[#1c1c1c]">
-          <div className="m-2">
+          <div className="m-2 p-2 text-center">
             <p>
-              Here are some video projects that have been completed by members
-              of Serve Digital Media. Here is some extra filler text to make
-              this section fuller.
-            </p>
-            <p>
-              Here is an intersting fact about video engagement, and why Serve
-              Digital Media Video services are the best.
+              Video projects are made to showcase each {"client's"} brand in an
+              engaging way for brand awareness and prospect understanding of the
+              brand
             </p>
           </div>
         </div>
@@ -229,119 +213,78 @@ const Gallery = () => {
           </div>
         </div>
       </div>
+
       <div id="brandingProjects" className="py-12">
         <h1 className="mx-[5%] w-[90%] text-center bg-[#121212] py-2 font-semibold text-2xl md:text-3xl lg:text-4xl">
           General Branding Projects
         </h1>
+        <div className="w-[90%] mx-auto my-5 relative bg-[#121212]">
+          <div className="m-2 p-2 text-center">
+            <p>
+              Branding is important for marketing consistency as well as
+              building a positive image to prospects.
+            </p>
+          </div>
+        </div>
         <div className="flex flex-col">
           <div className="flex flex-col md:flex-row flex-wrap justify-evenly items-center">
-            <div className="my-2 w-[90%] mx-[5%] md:w-[40%] md:mx-[5%] bg-[#121212] flex flex-row flex-wrap md:flex-nowrap">
-              <div className="relative m-5 md:w-3/6">
+            <div className="my-2 w-[90%] mx-[5%] md:w-[27%] md:mx-[3%] bg-[#121212] flex flex-row flex-wrap md:flex-nowrap">
+              <div className="relative m-5">
                 <div className="absolute bg-gradient-to-b from-[#fb5d00] w-[70px] h-[50px] top-[-5px] left-[-5px]" />
                 <div className="absolute bg-gradient-to-t from-[#fb5d00] w-[70px] h-[50px] bottom-[-5px] right-[-5px]" />
                 <Image
                   src={branding1}
                   alt="social media photo"
-                  className="relative"
+                  className="relative bg-[#121212]"
                 />
               </div>
-              <div className="social-gallery-text m-5 md:w-3/6">
-                <div className="m-2">
-                  <h3 className="text-white">Speedymason Post</h3>
-                  <p>This is a post that was created for Speedymason.</p>
-                  <p className="mt-2">
-                    100% of all posts created by Serve Digital Media increase
-                    that businesses profit by 500%
-                  </p>
-                </div>
-              </div>
             </div>
-            <div className="my-2 w-[90%] mx-[5%] md:w-[40%] md:mx-[5%] bg-[#121212] flex flex-row flex-wrap md:flex-nowrap">
-              <div className="relative m-5 md:w-3/6">
+            <div className="my-2 w-[90%] mx-[5%] md:w-[27%] md:mx-[3%] bg-[#121212] flex flex-row flex-wrap md:flex-nowrap">
+              <div className="relative m-5">
                 <div className="absolute bg-gradient-to-b from-[#fb5d00] w-[70px] h-[50px] top-[-5px] left-[-5px]" />
                 <div className="absolute bg-gradient-to-t from-[#fb5d00] w-[70px] h-[50px] bottom-[-5px] right-[-5px]" />
                 <Image
                   src={branding2}
                   alt="social media photo"
-                  className="relative"
+                  className="relative bg-[#121212]"
                 />
               </div>
-              <div className="social-gallery-text m-5 md:w-3/6">
-                <div className="m-2">
-                  <h3 className="text-white">Speedymason Post</h3>
-                  <p>This is a post that was created for Speedymason.</p>
-                  <p className="mt-2">
-                    100% of all posts created by Serve Digital Media increase
-                    that businesses profit by 500%
-                  </p>
-                </div>
-              </div>
             </div>
-            <div className="my-2 w-[90%] mx-[5%] md:w-[40%] md:mx-[5%] bg-[#121212] flex flex-row flex-wrap md:flex-nowrap">
-              <div className="relative m-5 md:w-3/6">
+            <div className="my-2 w-[90%] mx-[5%] md:w-[27%] md:mx-[3%] bg-[#121212] flex flex-row flex-wrap md:flex-nowrap">
+              <div className="relative m-5">
                 <div className="absolute bg-gradient-to-b from-[#fb5d00] w-[70px] h-[50px] top-[-5px] left-[-5px]" />
                 <div className="absolute bg-gradient-to-t from-[#fb5d00] w-[70px] h-[50px] bottom-[-5px] right-[-5px]" />
                 <Image
                   src={branding3}
                   alt="social media photo"
-                  className="relative"
+                  className="relative bg-[#121212]"
                 />
               </div>
-              <div className="social-gallery-text m-5 md:w-3/6">
-                <div className="m-2">
-                  <h3 className="text-white">Speedymason Post</h3>
-                  <p>This is a post that was created for Speedymason.</p>
-                  <p className="mt-2">
-                    100% of all posts created by Serve Digital Media increase
-                    that businesses profit by 500%
-                  </p>
-                </div>
-              </div>
             </div>
-            <div className="my-2 w-[90%] mx-[5%] md:w-[40%] md:mx-[5%] bg-[#121212] flex flex-row flex-wrap md:flex-nowrap">
-              <div className="relative m-5 md:w-3/6">
+            <div className="my-2 w-[90%] mx-[5%] md:w-[27%] md:mx-[3%] bg-[#121212] flex flex-row flex-wrap md:flex-nowrap">
+              <div className="relative m-5">
                 <div className="absolute bg-gradient-to-b from-[#fb5d00] w-[70px] h-[50px] top-[-5px] left-[-5px]" />
                 <div className="absolute bg-gradient-to-t from-[#fb5d00] w-[70px] h-[50px] bottom-[-5px] right-[-5px]" />
                 <Image
                   src={branding4}
                   alt="social media photo"
-                  className="relative"
+                  className="relative bg-[#121212]"
                 />
               </div>
-              <div className="social-gallery-text m-5 md:w-3/6">
-                <div className="m-2">
-                  <h3 className="text-white">Speedymason Post</h3>
-                  <p>This is a post that was created for Speedymason.</p>
-                  <p className="mt-2">
-                    100% of all posts created by Serve Digital Media increase
-                    that businesses profit by 500%
-                  </p>
-                </div>
-              </div>
             </div>
-            <div className="my-2 w-[90%] mx-[5%] md:w-[40%] md:mx-[5%] bg-[#121212] flex flex-row flex-wrap md:flex-nowrap">
-              <div className="relative m-5 md:w-3/6">
+            <div className="my-2 w-[90%] mx-[5%] md:w-[27%] md:mx-[3%] bg-[#121212] flex flex-row flex-wrap md:flex-nowrap">
+              <div className="relative m-5">
                 <div className="absolute bg-gradient-to-b from-[#fb5d00] w-[70px] h-[50px] top-[-5px] left-[-5px]" />
                 <div className="absolute bg-gradient-to-t from-[#fb5d00] w-[70px] h-[50px] bottom-[-5px] right-[-5px]" />
                 <Image
                   src={branding5}
                   alt="social media photo"
-                  className="relative"
+                  className="relative bg-[#121212]"
                 />
               </div>
-              <div className="social-gallery-text m-5 md:w-3/6">
-                <div className="m-2">
-                  <h3 className="text-white">Speedymason Post</h3>
-                  <p>This is a post that was created for Speedymason.</p>
-                  <p className="mt-2">
-                    100% of all posts created by Serve Digital Media increase
-                    that businesses profit by 500%
-                  </p>
-                </div>
-              </div>
             </div>
-            <div className="my-2 w-[90%] mx-[5%] md:w-[40%] md:mx-[5%] bg-[#121212] flex flex-row flex-wrap md:flex-nowrap items-center">
-              <div className="relative m-5 md:w-3/6">
+            <div className="my-2 w-[90%] mx-[5%] md:w-[27%] md:mx-[3%] bg-[#121212] flex flex-row flex-wrap md:flex-nowrap items-center">
+              <div className="relative m-5">
                 <div className="absolute bg-gradient-to-b from-[#fb5d00] w-[70px] h-[50px] top-[-5px] left-[-5px]" />
                 <div className="absolute bg-gradient-to-t from-[#fb5d00] w-[70px] h-[50px] bottom-[-5px] right-[-5px]" />
                 <Image
@@ -349,16 +292,6 @@ const Gallery = () => {
                   alt="social media photo"
                   className="relative bg-[#121212]"
                 />
-              </div>
-              <div className="social-gallery-text m-5 md:w-3/6">
-                <div className="m-2">
-                  <h3 className="text-white">Speedymason Post</h3>
-                  <p>This is a post that was created for Speedymason.</p>
-                  <p className="mt-2">
-                    100% of all posts created by Serve Digital Media increase
-                    that businesses profit by 500%
-                  </p>
-                </div>
               </div>
             </div>
           </div>

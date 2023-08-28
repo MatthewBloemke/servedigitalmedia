@@ -103,7 +103,7 @@ const Page = () => {
                 <input
                   onChange={handleChange}
                   type="text"
-                  className="border-2 rounded-lg p-3 flex border-gray-300"
+                  className="border-2 rounded-lg p-2 flex border-gray-300"
                   name="name"
                   value={contactState.name}
                 />
@@ -116,7 +116,7 @@ const Page = () => {
                   maxLength={12}
                   onChange={handleChange}
                   type="text"
-                  className="border-2 rounded-lg p-3 flex border-gray-300"
+                  className="border-2 rounded-lg p-2 flex border-gray-300"
                   name="number"
                   value={contactState.number}
                 />
@@ -127,7 +127,7 @@ const Page = () => {
               <input
                 onChange={handleChange}
                 type="email"
-                className="border-2 rounded-lg p-3 flex border-gray-300"
+                className="border-2 rounded-lg p-2 flex border-gray-300"
                 name="email"
                 value={contactState.email}
               />
@@ -141,7 +141,7 @@ const Page = () => {
                   setContactState({ ...contactState, subject: target.value })
                 }
                 value={contactState.subject}
-                className="border-2 rounded-lg p-3 flex border-gray-300"
+                className="border-2 rounded-lg p-2 flex border-gray-300"
               >
                 <option value="">Select a subject</option>
                 <option value="general">General Inquiry</option>
@@ -157,16 +157,14 @@ const Page = () => {
               </label>
               <textarea
                 onChange={handleChange}
-                className="border-2 rounded-lg p-3 border-gray-300"
-                rows={10}
+                className="border-2 rounded-lg p-2 border-gray-300"
+                rows={4}
                 name="message"
                 value={contactState.message}
               />
             </div>
-            <div className='w-full text-center'>
-              <button className="serve-button">
-                Send message
-              </button>
+            <div className="w-full text-center">
+              <button className="serve-button">Send message</button>
             </div>
           </form>
         </div>
