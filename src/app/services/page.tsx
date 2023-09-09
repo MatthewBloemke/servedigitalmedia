@@ -1,3 +1,4 @@
+'use client';
 import React from 'react';
 import Image from 'next/image';
 import webDesign from '../../../public/webDesign.png';
@@ -5,6 +6,7 @@ import socialHome from '../../../public/socialHome.png';
 import generalBranding from '../../../public/generalBranding.png';
 import videoHome from '../../../public/videoHome.png';
 import Link from 'next/link';
+import { Button } from 'flowbite-react';
 
 const Page = () => {
   return (
@@ -14,7 +16,7 @@ const Page = () => {
         className="mt-20 pb-4 md:py-8 flex flex-wrap flex-row lg:flex-nowrap justify-evenly bg-[#121212]"
       >
         <div className="m-4 bg-[#1c1c1c] p-4">
-          <h2 className="font-bold text-[#c4c4c4]">Video</h2>
+          <h2 className="text-white">Video</h2>
           <p className="font-extralight">
             When competing for attention in the modern market, video helps you
             stand out from the rest of the world with the opportunity for your
@@ -40,7 +42,7 @@ const Page = () => {
           </p>
           <div className="flex justify-center w-full my-5">
             <Link href="/gallery#videoProjects">
-              <button className="serve-button">View Video Gallery</button>
+              <Button color="purple">View Video Gallery</Button>
             </Link>
           </div>
         </div>
