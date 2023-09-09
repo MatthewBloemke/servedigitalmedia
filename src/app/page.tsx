@@ -23,7 +23,7 @@ export default function Home() {
           <DefaultCarousel />
         </div>
       </div>
-      <div className="bg-[#121212] w-[90%] mx-[5%] px-4 relative pb-1 mt-8 md:mb-10 rounded-md">
+      {/* <div className="bg-[#121212] w-[90%] mx-[5%] px-4 relative pb-1 mt-8 md:mb-10 rounded-md">
         <div className="flex justify-center items-center w-full text-center">
           <p className="md:text-lg mt-2 mr-2 ml-2">
             <span className="">&quot;</span> Samuel is absolutely great to work
@@ -42,7 +42,7 @@ export default function Home() {
             <BsStarFill className="text-yellow-500" />
           </div>
         </div>
-      </div>
+      </div> */}
       <div className="md:hidden h-4"></div>
     </div>
   );

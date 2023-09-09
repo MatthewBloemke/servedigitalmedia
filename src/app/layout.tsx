@@ -45,7 +45,7 @@ export default function RootLayout({
         <div className="w-full h-16 md:h-[72px] absolute">
           <div className="flex justify-between items-center w-full h-full px-2">
             <div className="w-full flex items-center">
-              <div className="flex flex-row justify-normal w-[125px] md:w-[150px] lg:w-[175px] lg:ml-10">
+              <div className="flex flex-row justify-normal w-[125px] md:w-[140px] lg:w-[150px] lg:ml-10">
                 <Link href="/">
                   <Image src={serveImage} alt="Serve Logo" className="w-full" />
                 </Link>
@@ -115,7 +115,7 @@ export default function RootLayout({
                       onClick={() => setNav(false)}
                       src={serveImage}
                       alt="Serve Digital Media logo"
-                      width={125}
+                      width={100}
                     />
                   </Link>
                   <div
