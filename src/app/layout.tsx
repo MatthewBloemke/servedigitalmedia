@@ -8,6 +8,7 @@ import { usePathname } from 'next/navigation';
 import bg from '../../public/bg4.png';
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
 import { useState } from 'react';
+import { Analytics } from '@vercel/analytics/react';
 
 const inter = Roboto({ subsets: ['latin'], weight: '500' });
 
@@ -167,6 +168,7 @@ export default function RootLayout({
           </div>
         </div>
         {children}
+        <Analytics />
       </body>
     </html>
   );
