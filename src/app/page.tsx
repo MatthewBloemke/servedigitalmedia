@@ -7,6 +7,8 @@ import videoHome from '../../public/videoHome.png';
 import Link from 'next/link';
 import Carousel from '@/components/Carousel';
 import { BsStarFill } from 'react-icons/bs';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 export default function Home() {
   const slide = [
@@ -63,7 +65,7 @@ export default function Home() {
             digital space.
           </p>
         </div>
-        <div className="w-[90&] mx-[5%] md:w-3/6 items-center justify-center flex md:mr-[96px] mt-5 md:mt-40 md:ml-12">
+        <div className="w-[90&] mx-[5%] md:w-3/6 md:mr-[96px] mt-5 md:mt-40 md:ml-12">
           <Carousel cardObjects={slide} buttons={buttons} />
         </div>
       </div>

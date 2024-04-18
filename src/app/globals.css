@@ -30,6 +30,41 @@
 
 }
 
+@keyframes rotate {
+  from {
+    rotate: 0deg;
+  }
+
+  50% {
+    scale: 1 1.5;
+  }
+  to {
+    rotate: 360deg;
+  }
+}
+
+#blob {
+  height: 250px;
+  aspect-ratio: 1;
+  left: 50%;
+  top: 50%;
+  translate: -50% -50%;
+  border-radius: 50%;
+  background: rgb(140,82,255);
+  background: linear-gradient(90deg, rgba(140,82,255,1) 0%, rgba(251,93,0,1) 100%);
+  animation: rotate 20s infinite;
+  filter: blur(100px);
+  z-index: 0;
+}
+
+#blur {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 2;
+  backdrop-filter: blur(200px);
+}
+
 html {
   scroll-behavior: smooth !important;
 }
@@ -38,10 +73,6 @@ a, button, div {
   -webkit-tap-highlight-color: transparent;
 }
 
-
-.navItems {
-  color: white;
-}
 
 .navList {
   list-style-type: none;

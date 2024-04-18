@@ -17,7 +17,7 @@ import { BsStarFill } from 'react-icons/bs';
 const Gallery = () => {
   return (
     <div className="flex flex-col">
-      <div id="socialProjects" className="mt-20 pb-10 bg-[#121212]">
+      <div id="socialProjects" className="mt-20 pb-10 bg-[#121212] relative">
         <h1 className="mt-3 font-semibold w-[90%] mx-[5%] bg-[#1c1c1c] text-center py-2 text-2xl md:text-3xl lg:text-4xl">
           Social Media Projects
         </h1>
@@ -89,7 +89,7 @@ const Gallery = () => {
       </div>
 
       <div id="webProjects" className="flex flex-col items-center py-20">
-        <h1 className="text-2xl font-semibold text-center md:text-3xl lg:text-4xl bg-[#121212] py-2 w-[80%] mx-[10%]">
+        <h1 className="text-2xl font-semibold text-center md:text-3xl lg:text-4xl bg-[#121212] py-2 w-[80%] mx-[10%] relative">
           Web Design Projects
         </h1>
         <div className="w-[80%] mx-auto my-5 relative bg-[#121212]">
@@ -101,7 +101,7 @@ const Gallery = () => {
             </p>
           </div>
         </div>
-        <div className="flex flex-col md:flex-row justify-center items-center">
+        <div className="flex flex-col md:flex-row justify-center items-center relative">
           <div className="my-2 w-[80%] mx-[5%] md:w-[40%] md:mx-[5%] bg-[#121212] flex flex-row flex-wrap md:flex-nowrap">
             <div className="relative m-5">
               <div className="absolute bg-gradient-to-b from-[#fb5d00] w-[70px] h-[50px] top-[-5px] left-[-5px]" />
@@ -144,7 +144,7 @@ const Gallery = () => {
       </div>
       <div
         id="videoProjects"
-        className=" flex flex-col items-center bg-[#121212]"
+        className=" flex flex-col items-center bg-[#121212] relative"
       >
         <h1 className="mt-3 font-semibold w-[80%] mx-auto bg-[#1c1c1c] text-center py-2 text-2xl md:text-3xl lg:text-4xl">
           Video Projects
@@ -215,7 +215,7 @@ const Gallery = () => {
       </div>
 
       <div id="brandingProjects" className="py-12">
-        <h1 className="mx-[5%] w-[90%] text-center bg-[#121212] py-2 font-semibold text-2xl md:text-3xl lg:text-4xl">
+        <h1 className="mx-[5%] w-[90%] text-center bg-[#121212] py-2 font-semibold text-2xl md:text-3xl lg:text-4xl relative">
           General Branding Projects
         </h1>
         <div className="w-[90%] mx-auto my-5 relative bg-[#121212]">
@@ -226,7 +226,7 @@ const Gallery = () => {
             </p>
           </div>
         </div>
-        <div className="flex flex-col">
+        <div className="flex flex-col relative">
           <div className="flex flex-col md:flex-row flex-wrap justify-evenly items-center">
             <div className="my-2 w-[90%] mx-[5%] md:w-[27%] md:mx-[3%] bg-[#121212] flex flex-row flex-wrap md:flex-nowrap">
               <div className="relative m-5">

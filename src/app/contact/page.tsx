@@ -3,6 +3,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { send } from '@emailjs/browser';
 import Alert from '@/components/Alert';
 import Error from '@/components/Error';
+import { TextField } from '@mui/material';
 
 const initialState = {
   name: '',
@@ -91,12 +92,26 @@ const Page = () => {
   };
 
   return (
-    <div className="flex justify-center items-center">
+    <div className="flex justify-center items-center relative">
       <div className=" w-full md:w-[80%] h-auto rounded-xl lg:p-4 mt-10">
         <div className="p-4">
           <form onSubmit={handleSubmit}>
-            <div className="grid md:grid-cols-2 gap-4 w-full py-2">
-              <div className="flex flex-col">
+            <div className="grid md:grid-cols-2 gap-4 w-full py-2 mt-5">
+              <TextField
+                variant="filled"
+                label="Name"
+                name="name"
+                onChange={handleChange}
+                value={contactState.name}
+              />
+              <TextField
+                variant="outlined"
+                name="number"
+                label="Phone Number"
+                onChange={handleChange}
+                value={contactState.number}
+              />
+              {/* <div className="flex flex-col">
                 <label className="uppercase text-sm py-2 text-white">
                   Name
                 </label>
@@ -107,20 +122,7 @@ const Page = () => {
                   name="name"
                   value={contactState.name}
                 />
-              </div>
-              <div className="flex flex-col">
-                <label className="uppercase text-sm py-2 text-white">
-                  Phone Number
-                </label>
-                <input
-                  maxLength={12}
-                  onChange={handleChange}
-                  type="text"
-                  className="border-2 rounded-lg p-2 flex border-gray-300"
-                  name="number"
-                  value={contactState.number}
-                />
-              </div>
+              </div> */}
             </div>
             <div className="flex flex-col py-2">
               <label className="uppercase text-sm py-2 text-white">Email</label>

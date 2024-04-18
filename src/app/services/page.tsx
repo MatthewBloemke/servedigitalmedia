@@ -11,7 +11,7 @@ const Page = () => {
     <div id="servicesPage" className="flex flex-col">
       <div
         id="video"
-        className="mt-20 pb-4 md:py-8 flex flex-wrap flex-row lg:flex-nowrap justify-evenly bg-[#121212]"
+        className="mt-20 pb-4 md:py-8 flex flex-wrap flex-row lg:flex-nowrap justify-evenly bg-[#121212] relative"
       >
         <div className="m-4 bg-[#1c1c1c] p-4">
           <h2 className="font-bold text-[#c4c4c4]">Video</h2>
@@ -61,9 +61,9 @@ const Page = () => {
 
       <div
         id="web"
-        className="py-4 md:py-14 flex flex-wrap flex-col-reverse lg:flex-row lg:flex-nowrap justify-evenly "
+        className="py-4 md:py-14 flex flex-wrap flex-col-reverse lg:flex-row lg:flex-nowrap justify-evenly"
       >
-        <div className="w-[90%] my-4 mx-auto lg:m-4">
+        <div className="w-[90%] my-4 mx-auto lg:m-4 relative">
           <div className="relative">
             <div className="absolute bg-gradient-to-b from-[#fb5d00] w-[70px] h-[50px] top-[-5px] left-[-5px] " />
             <div className="absolute bg-gradient-to-t from-[#fb5d00] w-[70px] h-[50px] bottom-[-5px] right-[-5px] " />
@@ -76,7 +76,7 @@ const Page = () => {
           </div>
           <h2 className="text-[#fb5d00]">Packages starting at $550*</h2>
         </div>
-        <div className="m-4 bg-[#121212] p-4 ">
+        <div className="m-4 bg-[#121212] p-4 relative">
           <h2 className="font-bold text-[#c4c4c4]">Web Design</h2>
           <p className="font-extralight">
             Websites are the best way for you to promote your brand, but it can
@@ -109,7 +109,7 @@ const Page = () => {
 
       <div
         id="social"
-        className="py-4 md:py-8 flex flex-wrap flex-row lg:flex-nowrap justify-evenly bg-[#121212]"
+        className="py-4 md:py-8 flex flex-wrap flex-row lg:flex-nowrap justify-evenly bg-[#121212] relative"
       >
         <div className="m-4 bg-[#1c1c1c] p-4 ">
           <h2 className="font-bold text-[#c4c4c4]">Social Media Promotion</h2>
@@ -157,9 +157,9 @@ const Page = () => {
 
       <div
         id="branding"
-        className="py-4 md:py-14 flex flex-wrap flex-col-reverse lg:flex-row lg:flex-nowrap justify-evenly"
+        className="py-4 md:py-14 flex flex-wrap flex-col-reverse lg:flex-row lg:flex-nowrap justify-evenly "
       >
-        <div className="w-[90%] my-4 mx-auto lg:m-4">
+        <div className="w-[90%] my-4 mx-auto lg:m-4 relative">
           <div className="relative">
             <div className="absolute bg-gradient-to-b from-[#fb5d00] w-[70px] h-[50px] top-[-5px] left-[-5px] " />
             <div className="absolute bg-gradient-to-t from-[#fb5d00] w-[70px] h-[50px] bottom-[-5px] right-[-5px] " />
@@ -172,7 +172,7 @@ const Page = () => {
           </div>
           <h2 className="text-[#fb5d00]">Packages starting at $120*</h2>
         </div>
-        <div className="m-4 bg-[#121212] p-4 ">
+        <div className="m-4 bg-[#121212] p-4 relative">
           <h2 className="font-bold text-[#c4c4c4]">General Branding</h2>
           <p className="font-extralight">
             Logos, color palettes and general design for starting your brand can
@@ -201,12 +201,12 @@ const Page = () => {
           </div>
         </div>
       </div>
-      <div className="flex flex-col items-center justify-center w-full bg-[#121212]">
+      <div className="flex flex-col items-center justify-center w-full bg-[#121212] relative">
         <Link href="/contact">
           <button className="mt-2 serve-button">Contact Us</button>
         </Link>
       </div>
-      <div className="flex items-center justify-center w-full py-3 bg-[#121212]">
+      <div className="flex items-center justify-center w-full py-3 bg-[#121212] relative">
         <p className="text-[#fb5d00] mx-[10%]">
           *Price represents the lowest level of the lowest package. Package
           pricing is subject to change upon adding additional benefits. Please
