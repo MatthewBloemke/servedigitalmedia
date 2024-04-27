@@ -6,7 +6,7 @@ import serveImage from '../../public/ServeWhite.png';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Analytics } from '@vercel/analytics/react';
 import Providers from '@/components/Providers';
 import Blob from '@/components/Blob';
@@ -21,6 +21,23 @@ export default function RootLayout({
 }) {
   const pathname = usePathname();
   const [nav, setNav] = useState(false);
+  const [isScrolled, setIsScrolled] = useState<boolean>(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   const handleNav = () => {
     setNav(!nav);
@@ -30,6 +47,7 @@ export default function RootLayout({
   const servicesColor = pathname === '/services' ? 'primary' : 'info';
   const galleryColor = pathname === '/gallery' ? 'primary' : 'info';
   const contactColor = pathname === '/contact' ? 'primary' : 'info';
+  const navbarClassName = isScrolled ? 'bg-[#2d2d2d]' : '';
 
   return (
     <html lang="en">
@@ -44,7 +62,9 @@ export default function RootLayout({
       <body id={pathname?.slice(1)} className={roboto.className}>
         <Blob />
         <Providers>
-          <div className="w-full h-16 md:h-[72px] absolute z-[3]">
+          <div
+            className={'w-full h-16 md:h-[72px] fixed z-[3] ' + navbarClassName}
+          >
             <div className="flex justify-between items-center w-full h-full px-2">
               <div className="w-full flex items-center">
                 <div className="flex flex-row justify-normal w-[125px] md:w-[150px] lg:w-[175px] lg:ml-10">

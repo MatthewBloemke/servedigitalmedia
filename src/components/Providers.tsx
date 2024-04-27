@@ -30,7 +30,7 @@ const theme = createTheme({
     },
   },
   shape: {
-    borderRadius: 0,
+    borderRadius: 6,
   },
 });
 

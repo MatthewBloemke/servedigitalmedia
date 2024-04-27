@@ -51,10 +51,10 @@ export default function Home() {
       <div id="home" className="w-full flex flex-row flex-wrap md:flex-nowrap">
         <div
           id="info"
-          className="w-[90&] mx-[5%] mt-20 md:w-3/6 md:ml-20 md:mt-40 md:mr-4"
+          className="w-[90&] mx-[5%] mt-20 md:w-3/6 md:ml-20 md:mt-40 md:mr-4 relative"
         >
           <h1>Serve Digital Media</h1>
-          <h2 className="text-[#8c52ff] mt-[8px]">
+          <h2 className="text-[#8c52ff] mt-[8px] magic">
             Serving to build your brand
           </h2>
           <p className="mt-[8px]">
