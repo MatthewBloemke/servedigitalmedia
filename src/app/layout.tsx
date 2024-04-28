@@ -11,6 +11,8 @@ import { Analytics } from '@vercel/analytics/react';
 import Providers from '@/components/Providers';
 import Blob from '@/components/Blob';
 import { Button } from '@mui/material';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 const roboto = Roboto({ subsets: ['latin'], weight: '500' });
 
@@ -25,7 +27,7 @@ export default function RootLayout({
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 0) {
+      if (window.scrollY > 0 && pathname !== '/') {
         setIsScrolled(true);
       } else {
         setIsScrolled(false);
@@ -63,7 +65,9 @@ export default function RootLayout({
         <Blob />
         <Providers>
           <div
-            className={'w-full h-16 md:h-[72px] fixed z-[3] ' + navbarClassName}
+            className={
+              'w-full h-16 md:h-[72px] fixed z-[3] mb-24 ' + navbarClassName
+            }
           >
             <div className="flex justify-between items-center w-full h-full px-2">
               <div className="w-full flex items-center">
