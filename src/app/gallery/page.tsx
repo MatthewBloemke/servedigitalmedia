@@ -18,7 +18,7 @@ import GalleryCarousel from '@/components/GalleryCarousel';
 const Gallery = () => {
   return (
     <div className="relative">
-      <div className="w-3/6 mt-24">
+      <div className="w-[80%] mx-[10%] pt-24">
         <GalleryCarousel />
       </div>
     </div>

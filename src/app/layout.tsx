@@ -65,9 +65,7 @@ export default function RootLayout({
         <Blob />
         <Providers>
           <div
-            className={
-              'w-full h-16 md:h-[72px] fixed z-[3] mb-24 ' + navbarClassName
-            }
+            className={'w-full h-16 md:h-[72px] fixed z-[3] ' + navbarClassName}
           >
             <div className="flex justify-between items-center w-full h-full px-2">
               <div className="w-full flex items-center">
