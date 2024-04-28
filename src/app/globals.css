@@ -88,6 +88,7 @@
 
 .serve-card {
   position: relative;
+  
 }
 
 .serve-card:after, .serve-card:before {
@@ -96,6 +97,7 @@
   width: 1px;
   position: absolute;
   content: "";
+  transition: top 600ms ease;
 }
 
 .serve-card:after {
@@ -108,17 +110,20 @@
   top: 75%;
 }
 
+.serve-card:hover:after {
+  top: 75%;
+}
+
+.serve-card:hover:before {
+  top: 15%;
+}
+
 html {
   scroll-behavior: smooth !important;
 }
 
 a, button, div {
   -webkit-tap-highlight-color: transparent;
-}
-
-
-.navList {
-  list-style-type: none;
 }
 
 .highlight {
@@ -142,27 +147,4 @@ body {
   background-size: cover;
   background-color: black;
   background-repeat: repeat-y;
-}
-
-.carouselActive {
-  visibility: visible;
-  opacity: 1;
-}
-
-.carouselNext {
-  position: absolute;
-  opacity: 0;
-  visibility: hidden;
-}
-
-.carouselPrev {
-  position: absolute;
-  opacity: 0;
-  visibility: hidden;
-}
-
-.carouselHidden {
-  position: absolute;
-  opacity: 0;
-  visibility: hidden;
 }

@@ -47,7 +47,7 @@ export default function RootLayout({
   const servicesColor = pathname === '/services' ? 'primary' : 'info';
   const galleryColor = pathname === '/gallery' ? 'primary' : 'info';
   const contactColor = pathname === '/contact' ? 'primary' : 'info';
-  const navbarClassName = isScrolled ? 'bg-[#2d2d2d]' : '';
+  const navbarClassName = isScrolled ? 'bg-[#2d2d2d] shadow-lg' : '';
 
   return (
     <html lang="en">
