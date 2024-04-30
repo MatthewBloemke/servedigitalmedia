@@ -14,6 +14,7 @@ import branding6 from '../../../public/ServeWhite.png';
 import Link from 'next/link';
 import { BsStarFill } from 'react-icons/bs';
 import GalleryCarousel from '@/components/GalleryCarousel';
+import './gallery.css';
 
 const Gallery = () => {
   return (
@@ -165,39 +166,39 @@ const Gallery = () => {
     //       </div>
     //     </div>
     //     <div className="flex flex-col md:flex-row items-center justify-evenly flex-wrap">
-    //       <div className="relative mt-5 mx-[1%]">
-    //         <div className="absolute bg-gradient-to-b from-[#fb5d00] w-[70px] h-[50px] top-[-5px] left-[-5px]" />
-    //         <div className="absolute bg-gradient-to-t from-[#fb5d00] w-[70px] h-[50px] bottom-[-5px] right-[-5px]" />{' '}
-    //         <iframe
-    //           className="w-[280px] h-[158px] md:w-[560px] md:h-[315px] relative"
-    //           src="https://www.youtube.com/embed/UpFPaZmv104"
-    //           title="YouTube video player"
-    //           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-    //           allowFullScreen
-    //         ></iframe>
-    //       </div>
-    //       <div className="relative mt-5 mx-[1%]">
-    //         <div className="absolute bg-gradient-to-b from-[#fb5d00] w-[70px] h-[50px] top-[-5px] left-[-5px]" />
-    //         <div className="absolute bg-gradient-to-t from-[#fb5d00] w-[70px] h-[50px] bottom-[-5px] right-[-5px]" />
-    //         <iframe
-    //           className="w-[280px] h-[158px] md:w-[560px] md:h-[315px] relative"
-    //           src="https://www.youtube.com/embed/AWFT2IWnP1w?si=AWQ_XKeyIkYwValV"
-    //           title="YouTube video player"
-    //           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-    //           allowFullScreen
-    //         ></iframe>
-    //       </div>
-    //       <div className="relative mt-5 mx-[1%]">
-    //         <div className="absolute bg-gradient-to-b from-[#fb5d00] w-[70px] h-[50px] top-[-5px] left-[-5px]" />
-    //         <div className="absolute bg-gradient-to-t from-[#fb5d00] w-[70px] h-[50px] bottom-[-5px] right-[-5px]" />
-    //         <iframe
-    //           className="w-[280px] h-[158px] md:w-[560px] md:h-[315px] relative"
-    //           src="https://www.youtube.com/embed/sZL0A4Xf-Go?si=ptZUQwflfE24G3_m"
-    //           title="YouTube video player"
-    //           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-    //           allowFullScreen
-    //         ></iframe>
-    //       </div>
+    // <div className="relative mt-5 mx-[1%]">
+    //   <div className="absolute bg-gradient-to-b from-[#fb5d00] w-[70px] h-[50px] top-[-5px] left-[-5px]" />
+    //   <div className="absolute bg-gradient-to-t from-[#fb5d00] w-[70px] h-[50px] bottom-[-5px] right-[-5px]" />{' '}
+    //   <iframe
+    //     className="w-[280px] h-[158px] md:w-[560px] md:h-[315px] relative"
+    //     src="https://www.youtube.com/embed/UpFPaZmv104"
+    //     title="YouTube video player"
+    //     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    //     allowFullScreen
+    //   ></iframe>
+    // </div>
+    // <div className="relative mt-5 mx-[1%]">
+    //   <div className="absolute bg-gradient-to-b from-[#fb5d00] w-[70px] h-[50px] top-[-5px] left-[-5px]" />
+    //   <div className="absolute bg-gradient-to-t from-[#fb5d00] w-[70px] h-[50px] bottom-[-5px] right-[-5px]" />
+    //   <iframe
+    //     className="w-[280px] h-[158px] md:w-[560px] md:h-[315px] relative"
+    //     src="https://www.youtube.com/embed/AWFT2IWnP1w?si=AWQ_XKeyIkYwValV"
+    //     title="YouTube video player"
+    //     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    //     allowFullScreen
+    //   ></iframe>
+    // </div>
+    // <div className="relative mt-5 mx-[1%]">
+    //   <div className="absolute bg-gradient-to-b from-[#fb5d00] w-[70px] h-[50px] top-[-5px] left-[-5px]" />
+    //   <div className="absolute bg-gradient-to-t from-[#fb5d00] w-[70px] h-[50px] bottom-[-5px] right-[-5px]" />
+    //   <iframe
+    //     className="w-[280px] h-[158px] md:w-[560px] md:h-[315px] relative"
+    //     src="https://www.youtube.com/embed/sZL0A4Xf-Go?si=ptZUQwflfE24G3_m"
+    //     title="YouTube video player"
+    //     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    //     allowFullScreen
+    //   ></iframe>
+    // </div>
     //     </div>
     //     <div className="w-[80%] mx-auto my-5 relative bg-[#1c1c1c]">
     //       <div className="flex justify-center items-center w-full text-center">

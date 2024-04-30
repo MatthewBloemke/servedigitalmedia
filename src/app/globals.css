@@ -27,6 +27,14 @@
 
 }
 
+.slick-dots li.slick-active button:before {
+  color:White !important;
+}
+
+.slick-dots li button:before {
+  color:White !important;
+}
+
 @keyframes rotate {
   from {
     rotate: 0deg;
