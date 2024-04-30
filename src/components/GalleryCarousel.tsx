@@ -17,6 +17,7 @@ import socialHome from '../../public/socialHome.png';
 import generalBranding from '../../public/generalBranding.png';
 import videoHome from '../../public/videoHome.png';
 import GallerySlider from './GallerySlider';
+import ReviewSlider from './ReviewSlider';
 
 const categoryStrings = [
   'Video Design',
@@ -183,7 +184,7 @@ const socialExamples = [
       key="social2"
       src={social1}
       alt="social media photo"
-      className="max-h-[300px] w-auto bg-[#2d2d2d] p-2 serve-card"
+      className="max-h-[300px] w-auto bg-[#2d2d2d] p-2 serve-card mx-auto"
     />
   </div>,
   <div key="social2" className="">
@@ -191,7 +192,7 @@ const socialExamples = [
       key="social2"
       src={social2}
       alt="social media photo"
-      className="max-h-[300px] w-auto bg-[#2d2d2d] p-2 serve-card"
+      className="max-h-[300px] w-auto bg-[#2d2d2d] p-2 serve-card mx-auto"
     />
   </div>,
   <div key="social2" className="">
@@ -199,7 +200,7 @@ const socialExamples = [
       key="social2"
       src={social3}
       alt="social media photo"
-      className="max-h-[300px] w-auto bg-[#2d2d2d] p-2 serve-card"
+      className="max-h-[300px] w-auto bg-[#2d2d2d] p-2 serve-card mx-auto"
     />
   </div>,
 ];
@@ -227,23 +228,7 @@ const GalleryCarousel = () => {
   const sliderSettings = {
     slidesToShow: 1,
     slidesToScroll: 1,
-    arrows: true,
-    dots: true,
-    afterChange: (currentSlide: number) => {
-      if (currentSlide === 0 && selectedCategory != 'Video Design') {
-        setSelectedCategory('Video Design');
-        sliderRef2.current?.slickGoTo(categoryStartSlides['Video Design']);
-      } else if (currentSlide === 1 && selectedCategory != 'Web Design') {
-        setSelectedCategory('Web Design');
-        sliderRef1.current?.slickGoTo(categoryStartSlides['Web Design']);
-      } else if (currentSlide === 2 && selectedCategory != 'Social Media') {
-        setSelectedCategory('Social Media');
-        sliderRef1.current?.slickGoTo(categoryStartSlides['Social Media']);
-      } else if (currentSlide === 3 && selectedCategory != 'General Branding') {
-        setSelectedCategory('General Branding');
-        sliderRef1.current?.slickGoTo(categoryStartSlides['General Branding']);
-      }
-    },
+    speed: 2000,
   };
 
   const exampleSliderSettings = {
@@ -254,59 +239,63 @@ const GalleryCarousel = () => {
     speed: 2000,
     autoplaySpeed: 3500,
     arrows: true,
-    afterChange: (currentSlide: number) => {
-      if (currentSlide >= 0 && currentSlide <= 2) {
+    beforeChange: (currentSlide: number, next: number) => {
+      console.log(next);
+      if (next >= 0 && next <= 2) {
         if (selectedCategory != 'Video Design') {
           setSelectedCategory('Video Design');
-          sliderRef1.current?.slickGoTo(0);
+          if (currentSlide === 12) {
+            sliderRef1.current?.slickNext();
+          } else {
+            handleChangeSlide1(0);
+          }
         }
-      } else if (currentSlide >= 3 && currentSlide <= 5) {
+      } else if (next >= 3 && next <= 5) {
         if (selectedCategory != 'Web Design') {
           setSelectedCategory('Web Design');
-          sliderRef1.current?.slickGoTo(1);
+          handleChangeSlide1(1);
         }
-      } else if (currentSlide >= 6 && currentSlide <= 8) {
+      } else if (next >= 6 && next <= 8) {
         if (selectedCategory != 'Social Media') {
           setSelectedCategory('Social Media');
-          sliderRef1.current?.slickGoTo(2);
+          handleChangeSlide1(2);
         }
-      } else if (currentSlide >= 9 && currentSlide <= 12) {
+      } else if (next >= 9 && next <= 12) {
         if (selectedCategory != 'General Branding') {
           setSelectedCategory('General Branding');
-          sliderRef1.current?.slickGoTo(3);
+          handleChangeSlide1(3);
         }
       }
     },
   };
 
   return (
-    <div className="flex flex-row h-full">
-      {/* Left carousel: Categories */}
-      <div className={'w-2/6 mr-8 my-auto'}>
-        <Slider {...sliderSettings} ref={sliderRef1}>
-          {categoryStrings.map((category) => {
-            return (
-              <div key={category} className={' relative w-full bg-black/40'}>
-                {categories[category as Category]}
-                <div className="absolute inset-0 flex items-center justify-center py-5 text-center text-white">
-                  <h3 className="">{category}</h3>
+    <div>
+      <div className="flex flex-row h-full">
+        <div className={'w-[40%] mr-8 my-auto'}>
+          <Slider {...sliderSettings} ref={sliderRef1}>
+            {categoryStrings.map((category) => {
+              return (
+                <div key={category} className={' relative w-full bg-black/40'}>
+                  {categories[category as Category]}
+                  <div className="absolute inset-0 flex items-center justify-center py-5 text-center text-white">
+                    <h2>{category}</h2>
+                  </div>
                 </div>
-              </div>
-            );
-          })}
-        </Slider>
-      </div>
+              );
+            })}
+          </Slider>
+        </div>
 
-      {/* Right carousel: Examples */}
-      <div className="w-[60%] ml-8 mt-10 ">
-        {' '}
-        <GallerySlider
-          sliderRef={sliderRef2}
-          sliderSettings={exampleSliderSettings}
-          examples={examples.map((example: React.JSX.Element) => {
-            return example;
-          })}
-        />
+        <div className="w-[60%] ml-8 mt-10 ">
+          <GallerySlider
+            sliderRef={sliderRef2}
+            sliderSettings={exampleSliderSettings}
+            examples={examples.map((example: React.JSX.Element) => {
+              return example;
+            })}
+          />
+        </div>
       </div>
     </div>
   );

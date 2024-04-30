@@ -12,7 +12,7 @@ interface props {
     speed: number;
     autoplaySpeed: number;
     arrows: boolean;
-    afterChange: (currentSlide: number) => void;
+    beforeChange: (currentSlide: number, next: number) => void;
   };
   sliderRef: React.MutableRefObject<Slider | null>;
 }
