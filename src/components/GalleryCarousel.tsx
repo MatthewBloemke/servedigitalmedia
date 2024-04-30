@@ -25,6 +25,13 @@ const categoryStrings = [
   'General Branding',
 ];
 
+const categoryStartSlides = {
+  'Video Design': 0,
+  'Web Design': 3,
+  'Social Media': 6,
+  'General Branding': 9,
+};
+
 const categories = {
   'Video Design': (
     <Image
@@ -197,12 +204,12 @@ const socialExamples = [
   </div>,
 ];
 
-const examples = {
-  'Web Design': webExamples,
-  'Social Media': socialExamples,
-  'General Branding': brandingExamples,
-  'Video Design': videoExamples,
-};
+const examples = [
+  ...videoExamples,
+  ...webExamples,
+  ...socialExamples,
+  ...brandingExamples,
+];
 
 const GalleryCarousel = () => {
   const [selectedCategory, setSelectedCategory] =
@@ -223,96 +230,54 @@ const GalleryCarousel = () => {
     arrows: true,
     dots: true,
     afterChange: (currentSlide: number) => {
-      setSelectedCategory(categoryStrings[currentSlide]);
+      if (currentSlide === 0 && selectedCategory != 'Video Design') {
+        setSelectedCategory('Video Design');
+        sliderRef2.current?.slickGoTo(categoryStartSlides['Video Design']);
+      } else if (currentSlide === 1 && selectedCategory != 'Web Design') {
+        setSelectedCategory('Web Design');
+        sliderRef1.current?.slickGoTo(categoryStartSlides['Web Design']);
+      } else if (currentSlide === 2 && selectedCategory != 'Social Media') {
+        setSelectedCategory('Social Media');
+        sliderRef1.current?.slickGoTo(categoryStartSlides['Social Media']);
+      } else if (currentSlide === 3 && selectedCategory != 'General Branding') {
+        setSelectedCategory('General Branding');
+        sliderRef1.current?.slickGoTo(categoryStartSlides['General Branding']);
+      }
     },
   };
 
   const exampleSliderSettings = {
     dots: true,
-    slidesToShow: selectedCategory === 'Social Media' ? 3 : 1,
+    slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
     speed: 2000,
     autoplaySpeed: 3500,
     arrows: true,
     afterChange: (currentSlide: number) => {
-      if (currentSlide === examples[selectedCategory as Category].length - 1) {
-        const currentIndex = categoryStrings.indexOf(selectedCategory);
-
-        const nextIndex = (currentIndex + 1) % categoryStrings.length;
-        setTimeout(() => {
-          setSelectedCategory(categoryStrings[nextIndex]);
-          handleChangeSlide1(nextIndex);
-        }, 1600);
+      if (currentSlide >= 0 && currentSlide <= 2) {
+        if (selectedCategory != 'Video Design') {
+          setSelectedCategory('Video Design');
+          sliderRef1.current?.slickGoTo(0);
+        }
+      } else if (currentSlide >= 3 && currentSlide <= 5) {
+        if (selectedCategory != 'Web Design') {
+          setSelectedCategory('Web Design');
+          sliderRef1.current?.slickGoTo(1);
+        }
+      } else if (currentSlide >= 6 && currentSlide <= 8) {
+        if (selectedCategory != 'Social Media') {
+          setSelectedCategory('Social Media');
+          sliderRef1.current?.slickGoTo(2);
+        }
+      } else if (currentSlide >= 9 && currentSlide <= 12) {
+        if (selectedCategory != 'General Branding') {
+          setSelectedCategory('General Branding');
+          sliderRef1.current?.slickGoTo(3);
+        }
       }
     },
   };
-
-  const videoSlider = (
-    <GallerySlider
-      sliderRef={sliderRef2}
-      sliderSettings={exampleSliderSettings}
-      examples={examples['Video Design'].map((example: React.JSX.Element) => {
-        return example;
-      })}
-    />
-  );
-
-  const [SecondSlider, setSecondSlider] = useState(videoSlider);
-
-  const webSlider = (
-    <GallerySlider
-      sliderRef={sliderRef2}
-      sliderSettings={exampleSliderSettings}
-      examples={examples['Web Design'].map((example: React.JSX.Element) => {
-        return example;
-      })}
-    />
-  );
-
-  const generalSlider = (
-    <GallerySlider
-      sliderRef={sliderRef2}
-      sliderSettings={exampleSliderSettings}
-      examples={examples['General Branding'].map(
-        (example: React.JSX.Element) => {
-          return example;
-        }
-      )}
-    />
-  );
-
-  const socialSlider = (
-    <GallerySlider
-      sliderRef={sliderRef2}
-      sliderSettings={exampleSliderSettings}
-      examples={examples['Social Media'].map((example: React.JSX.Element) => {
-        return example;
-      })}
-    />
-  );
-
-  useEffect(() => {
-    switch (selectedCategory) {
-      case 'Video Design':
-        setSecondSlider(videoSlider);
-        break;
-      case 'Web Design':
-        setSecondSlider(webSlider);
-        break;
-      case 'General Branding':
-        setSecondSlider(generalSlider);
-        break;
-      case 'Social Media':
-        setSecondSlider(socialSlider);
-        break;
-    }
-
-    if (sliderRef2.current) {
-      sliderRef2.current.slickGoTo(0);
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [selectedCategory]);
 
   return (
     <div className="flex flex-row h-full">
@@ -333,7 +298,16 @@ const GalleryCarousel = () => {
       </div>
 
       {/* Right carousel: Examples */}
-      <div className="w-[60%] ml-8 mt-10 ">{SecondSlider}</div>
+      <div className="w-[60%] ml-8 mt-10 ">
+        {' '}
+        <GallerySlider
+          sliderRef={sliderRef2}
+          sliderSettings={exampleSliderSettings}
+          examples={examples.map((example: React.JSX.Element) => {
+            return example;
+          })}
+        />
+      </div>
     </div>
   );
 };
