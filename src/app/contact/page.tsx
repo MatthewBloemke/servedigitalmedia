@@ -11,6 +11,7 @@ import {
   Select,
   TextField,
 } from '@mui/material';
+import withSnackbar from '@/components/withSnackbar';
 
 const initialState = {
   name: '',
@@ -21,16 +22,12 @@ const initialState = {
   secondUser: '',
 };
 
-const Page = () => {
+const Page = ({ showSnackbar }: any) => {
   const [contactState, setContactState] = useState(initialState);
-  const [error, setError] = useState(false);
-  const [alert, setAlert] = useState(false);
   const [disabled, setDisabled] = useState(false);
   const phoneLength = useRef(0);
 
   useEffect(() => {
-    setError(false);
-    setAlert(false);
     setContactState(initialState);
   }, []);
 
@@ -57,9 +54,8 @@ const Page = () => {
     phoneLength.current = target.value.length;
   };
 
-  const handleSubmit = (event: any) => {
+  const handleSubmit = async (event: any) => {
     event.preventDefault();
-    console.log(contactState);
     setDisabled(true);
     if (
       contactState.name === '' ||
@@ -68,33 +64,33 @@ const Page = () => {
       contactState.subject === '' ||
       contactState.number === ''
     ) {
-      setError(true);
+      showSnackbar('Please fill out all fields', 'warning');
       setDisabled(false);
       return;
     } else if (contactState.number.length !== 12) {
-      setError(true);
+      showSnackbar('Please enter a full phone number', 'warning');
       setDisabled(false);
       return;
     }
     if (contactState.subject === 'web') {
       contactState.secondUser = 'mattbloemke@gmail.com';
     }
-    send(
-      'service_ne09bab',
-      'template_ayev97b',
-      contactState,
-      'O_RJ2i4_VWfnQbVbv'
-    ).then(
-      (result) => {
-        console.log(result.text);
-        setAlert(true);
-        setContactState(initialState);
+
+    const options = {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
       },
-      (error) => {
-        setError(true);
-        console.log(error.text);
-      }
-    );
+      body: JSON.stringify(contactState),
+    };
+
+    const response = await fetch(`/api/email`, options);
+
+    if (response.status === 200) {
+      showSnackbar('The message was sent', 'success');
+    } else {
+      showSnackbar(response.statusText, 'error');
+    }
     setDisabled(false);
   };
 
@@ -167,10 +163,8 @@ const Page = () => {
           </form>
         </div>
       </div>
-      {alert ? <Alert alert={alert} setAlert={setAlert} /> : null}
-      {error ? <Error error={error} setError={setError} /> : null}
     </div>
   );
 };
 
-export default Page;
+export default withSnackbar(Page);
