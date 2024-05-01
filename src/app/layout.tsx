@@ -27,7 +27,7 @@ export default function RootLayout({
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 0 && pathname !== '/') {
+      if (window.scrollY > 0) {
         setIsScrolled(true);
       } else {
         setIsScrolled(false);

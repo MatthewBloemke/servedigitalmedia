@@ -17,7 +17,7 @@ import socialHome from '../../public/socialHome.png';
 import generalBranding from '../../public/generalBranding.png';
 import videoHome from '../../public/videoHome.png';
 import GallerySlider from './GallerySlider';
-import ReviewSlider from './ReviewSlider';
+import Link from 'next/link';
 
 const categoryStrings = [
   'Video Design',
@@ -25,13 +25,6 @@ const categoryStrings = [
   'Social Media',
   'General Branding',
 ];
-
-const categoryStartSlides = {
-  'Video Design': 0,
-  'Web Design': 3,
-  'Social Media': 6,
-  'General Branding': 9,
-};
 
 const categories = {
   'Video Design': (
@@ -75,10 +68,7 @@ type Category =
   | 'Video Design';
 
 const brandingExamples = [
-  <div
-    key="branding1"
-    className="!flex items-center h-full justify-center my-auto"
-  >
+  <div key="branding1" className="!flex items-center h-full justify-center">
     <Image
       key="branding1"
       src={branding1}
@@ -86,10 +76,7 @@ const brandingExamples = [
       className="max-h-[300px] w-auto bg-[#2d2d2d] p-2 serve-card mx-auto py-auto"
     />
   </div>,
-  <div
-    key="branding4"
-    className="!flex items-center h-full justify-center my-auto"
-  >
+  <div key="branding4" className="!flex items-center h-full justify-center">
     <Image
       key="branding4"
       src={branding4}
@@ -97,10 +84,7 @@ const brandingExamples = [
       className="max-h-[300px] w-auto bg-[#2d2d2d] p-2 serve-card mx-auto py-auto"
     />
   </div>,
-  <div
-    key="branding2"
-    className="!flex items-center h-full justify-center my-auto"
-  >
+  <div key="branding2" className="!flex items-center h-full justify-center">
     <Image
       key="branding2"
       src={branding2}
@@ -108,10 +92,7 @@ const brandingExamples = [
       className="max-h-[300px] w-auto bg-[#2d2d2d] p-2 serve-card mx-auto py-auto"
     />
   </div>,
-  <div
-    key="branding3"
-    className="!flex items-center h-full justify-center my-auto"
-  >
+  <div key="branding3" className="!flex items-center h-full justify-center">
     <Image
       key="branding3"
       src={branding3}
@@ -123,53 +104,59 @@ const brandingExamples = [
 
 const webExamples = [
   <div key="web2" className="">
-    <Image
-      key="web2"
-      src={webPhoto2}
-      alt="web photo 2"
-      className="max-h-[300px] w-auto bg-[#2d2d2d] p-2 serve-card mx-auto"
-    />
+    <Link href="https://www.lesterheatandair.com/" target="_blank">
+      <Image
+        key="web2"
+        src={webPhoto2}
+        alt="web photo 2"
+        className="max-h-[300px] w-auto bg-[#2d2d2d] p-2 serve-card mx-auto"
+      />
+    </Link>
   </div>,
   <div key="web3" className="">
-    <Image
-      key="web3"
-      src={webPhoto3}
-      alt="web photo 3"
-      className="max-h-[300px] w-auto bg-[#2d2d2d] p-2 serve-card mx-auto"
-    />
+    <Link href="https://studenthealthyconversations.com/" target="_blank">
+      <Image
+        key="web3"
+        src={webPhoto3}
+        alt="web photo 3"
+        className="max-h-[300px] w-auto bg-[#2d2d2d] p-2 serve-card mx-auto"
+      />
+    </Link>
   </div>,
   <div key="web" className="">
-    <Image
-      key="web"
-      src={webPhoto}
-      alt="web photo"
-      className="max-h-[300px] w-auto bg-[#2d2d2d] p-2 serve-card mx-auto"
-    />
+    <Link href="https://www.matthewbloemke.com/" target="_blank">
+      <Image
+        key="web"
+        src={webPhoto}
+        alt="web photo"
+        className="max-h-[300px] w-auto bg-[#2d2d2d] p-2 serve-card mx-auto"
+      />
+    </Link>
   </div>,
 ];
 
 const videoExamples = [
-  <div key="video1" className="relative mt-5 mx-[1%]">
+  <div key="video1" className="relative">
     <iframe
-      className="w-[280px] h-[158px] md:w-[560px] md:h-[315px] relative mx-auto bg-[#2d2d2d] p-2"
+      className="w-[238px] h-[134px] xl:w-[560px] lg:w-[476px] lg:h-[268px] xl:h-[315px] relative mx-auto bg-[#2d2d2d] p-2"
       src="https://www.youtube.com/embed/UpFPaZmv104"
       title="YouTube video player"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
       allowFullScreen
     ></iframe>
   </div>,
-  <div key="video2" className="relative mt-5 mx-[1%]">
+  <div key="video2" className="relative">
     <iframe
-      className="w-[280px] h-[158px] md:w-[560px] md:h-[315px] relative mx-auto bg-[#2d2d2d] p-2"
+      className="w-[238px] h-[134px] xl:w-[560px] lg:w-[476px] lg:h-[268px] xl:h-[315px] relative mx-auto bg-[#2d2d2d] p-2"
       src="https://www.youtube.com/embed/AWFT2IWnP1w?si=AWQ_XKeyIkYwValV"
       title="YouTube video player"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
       allowFullScreen
     ></iframe>
   </div>,
-  <div key="video3" className="relative mt-5 mx-[1%]">
+  <div key="video3" className="relative">
     <iframe
-      className="w-[280px] h-[158px] md:w-[560px] md:h-[315px] relative mx-auto bg-[#2d2d2d] p-2"
+      className="w-[238px] h-[134px] xl:w-[560px] lg:w-[476px] lg:h-[268px] xl:h-[315px] relative mx-auto bg-[#2d2d2d] p-2"
       src="https://www.youtube.com/embed/sZL0A4Xf-Go?si=ptZUQwflfE24G3_m"
       title="YouTube video player"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -271,8 +258,8 @@ const GalleryCarousel = () => {
 
   return (
     <div>
-      <div className="flex flex-row h-full">
-        <div className={'w-[40%] mr-8 my-auto'}>
+      <div className="flex flex-col lg:flex-row h-full">
+        <div className={'lg:w-[40%] lg:mr-8  '}>
           <Slider {...sliderSettings} ref={sliderRef1}>
             {categoryStrings.map((category) => {
               return (
@@ -287,7 +274,7 @@ const GalleryCarousel = () => {
           </Slider>
         </div>
 
-        <div className="w-[60%] ml-8 mt-10 ">
+        <div className="lg:w-[60%] lg:ml-8  ">
           <GallerySlider
             sliderRef={sliderRef2}
             sliderSettings={exampleSliderSettings}

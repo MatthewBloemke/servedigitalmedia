@@ -4,7 +4,6 @@ import webDesign from '../../../public/webDesign.png';
 import socialHome from '../../../public/socialHome.png';
 import generalBranding from '../../../public/generalBranding.png';
 import videoHome from '../../../public/videoHome.png';
-import Link from 'next/link';
 import { Button } from '@mui/material';
 
 const Page = () => {
@@ -71,8 +70,8 @@ const Page = () => {
               <li className="text-[#2d2d2d]"></li>
             </ul>
           </div>
-          <div className="flex justify-end w-full mt-5">
-            <Button variant="contained" href="/gallery#webProjects">
+          <div className="flex justify-end w-full mt-5 md:mt-[116px] lg:mt-[44px] xl:mt-[20px]">
+            <Button variant="contained" href="/gallery">
               View Web Gallery
             </Button>
           </div>
@@ -107,7 +106,7 @@ const Page = () => {
             </ul>
           </div>
           <div className="flex justify-end w-full mt-5">
-            <Button variant="contained" href="/gallery#socialProjects">
+            <Button variant="contained" href="/gallery">
               View Social Gallery
             </Button>
           </div>
@@ -122,6 +121,8 @@ const Page = () => {
           src={generalBranding}
           alt="placeholder"
           className="bg-white w-full relative "
+          height={274.36}
+          width={488}
         />
         <div className="p-2">
           <h2 className="font-bold text-[#f5f5f5]">General Branding</h2>
@@ -140,8 +141,8 @@ const Page = () => {
               <li className="text-[#2d2d2d]"></li>
             </ul>
           </div>
-          <div className="flex justify-end w-full mt-5">
-            <Button variant="contained" href="/gallery#brandingProjects">
+          <div className="flex justify-end w-full mt-5 md:mt-[152px] lg:mt-[156px] xl:mt-[44px]">
+            <Button variant="contained" href="/gallery">
               View Branding Gallery
             </Button>
           </div>

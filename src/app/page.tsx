@@ -1,12 +1,9 @@
 'use-client';
-import Image from 'next/image';
 import webDesign from '../../public/webDesign.png';
 import socialHome from '../../public/socialHome.png';
 import generalBranding from '../../public/generalBranding.png';
 import videoHome from '../../public/videoHome.png';
-import Link from 'next/link';
 import Carousel from '@/components/Carousel';
-import { BsStarFill } from 'react-icons/bs';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import ReviewSlider from '@/components/ReviewSlider';
@@ -52,9 +49,11 @@ export default function Home() {
       <div id="home" className="w-full flex flex-row flex-wrap md:flex-nowrap">
         <div
           id="info"
-          className="w-[90&] mx-[5%] mt-12 md:w-3/6 md:ml-20 md:mt-32 md:mr-4 relative"
+          className="w-[90&] mx-[5%] md:mr-0 mt-[70px] md:mt-[78px] lg:w-3/6 lg:ml-20 lg:mt-32 lg:mr-4 relative"
         >
-          <h1>Serve Digital Media</h1>
+          <h1 className="text-4xl md:text-[40px] lg:text-6xl">
+            Serve Digital Media
+          </h1>
           <h2 className="text-[#8c52ff] mt-[8px] magic">
             Serving to build your brand
           </h2>
@@ -66,7 +65,7 @@ export default function Home() {
             digital space.
           </p>
         </div>
-        <div className="w-[90&] mx-[5%] md:w-[40%] md:mr-[96px] mt-5 md:mt-24 md:ml-12">
+        <div className="w-[80%] mx-[10%] md:mx-4 md:w-[40%] md:mt-32 lg:w-[40%] lg:mr-[96px] mt-5 lg:mt-32 lg:ml-12">
           <Carousel cardObjects={slide} buttons={buttons} />
         </div>
       </div>

@@ -3,7 +3,14 @@ import React, { useState, useEffect, useRef } from 'react';
 import { send } from '@emailjs/browser';
 import Alert from '@/components/Alert';
 import Error from '@/components/Error';
-import { TextField } from '@mui/material';
+import {
+  Button,
+  FormControl,
+  InputLabel,
+  MenuItem,
+  Select,
+  TextField,
+} from '@mui/material';
 
 const initialState = {
   name: '',
@@ -105,68 +112,57 @@ const Page = () => {
                 value={contactState.name}
               />
               <TextField
-                variant="outlined"
+                variant="filled"
                 name="number"
                 label="Phone Number"
                 onChange={handleChange}
                 value={contactState.number}
               />
-              {/* <div className="flex flex-col">
-                <label className="uppercase text-sm py-2 text-white">
-                  Name
-                </label>
-                <input
-                  onChange={handleChange}
-                  type="text"
-                  className="border-2 rounded-lg p-2 flex border-gray-300"
-                  name="name"
-                  value={contactState.name}
-                />
-              </div> */}
             </div>
             <div className="flex flex-col py-2">
-              <label className="uppercase text-sm py-2 text-white">Email</label>
-              <input
-                onChange={handleChange}
-                type="email"
-                className="border-2 rounded-lg p-2 flex border-gray-300"
+              <TextField
+                variant="filled"
                 name="email"
+                label="Email"
+                type="email"
                 value={contactState.email}
-              />
-            </div>
-            <div className="flex flex-col py-2">
-              <label className="uppercase text-sm py-2 text-white">
-                Subject
-              </label>
-              <select
-                onChange={({ target }) =>
-                  setContactState({ ...contactState, subject: target.value })
-                }
-                value={contactState.subject}
-                className="border-2 rounded-lg p-2 flex border-gray-300"
-              >
-                <option value="">Select a subject</option>
-                <option value="general">General Inquiry</option>
-                <option value="web">Web Design</option>
-                <option value="branding">General Branding</option>
-                <option value="social">Social Media Promotion</option>
-                <option value="video">Video Production</option>
-              </select>
-            </div>
-            <div className="flex flex-col py-2">
-              <label className="uppercase text-sm py-2 text-white">
-                Message
-              </label>
-              <textarea
                 onChange={handleChange}
-                className="border-2 rounded-lg p-2 border-gray-300"
-                rows={4}
-                name="message"
-                value={contactState.message}
               />
             </div>
-            <div className="w-full text-center">
-              <button className="serve-button">Send message</button>
+            <div className="flex flex-col py-2">
+              <FormControl>
+                <InputLabel id="Subject">Subject</InputLabel>
+                <Select
+                  variant="filled"
+                  value={contactState.subject}
+                  labelId="Subject"
+                  onChange={({ target }) =>
+                    setContactState({ ...contactState, subject: target.value })
+                  }
+                >
+                  <MenuItem value="">Select a subject</MenuItem>
+                  <MenuItem value="general">General Inquiry</MenuItem>
+                  <MenuItem value="web">Web Design</MenuItem>
+                  <MenuItem value="branding">General Branding</MenuItem>
+                  <MenuItem value="social">Social Media Promotion</MenuItem>
+                  <MenuItem value="video">Video Production</MenuItem>
+                </Select>
+              </FormControl>
+            </div>
+            <div className="flex flex-col py-2">
+              <TextField
+                name="message"
+                label="Message"
+                onChange={handleChange}
+                variant="filled"
+                multiline
+                rows={4}
+              />
+            </div>
+            <div className="w-full text-center mt-5">
+              <Button variant="contained" type="submit">
+                Send Message
+              </Button>
             </div>
           </form>
         </div>

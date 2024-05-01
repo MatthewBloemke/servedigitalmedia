@@ -10,6 +10,8 @@ import { Button } from '@mui/material';
 const Carousel = ({ cardObjects }: any) => {
   const settings = {
     infinite: true,
+    arrows: false,
+    dots: true,
     speed: 1000,
     autoplay: true,
     slidesToShow: 1,
