@@ -71,7 +71,7 @@ const Page = () => {
             </ul>
           </div>
           <div className="flex justify-end w-full mt-5 md:mt-[116px] lg:mt-[44px] xl:mt-[20px]">
-            <Button variant="contained" href="/gallery">
+            <Button variant="contained" href="/gallery#web">
               View Web Gallery
             </Button>
           </div>
@@ -106,7 +106,7 @@ const Page = () => {
             </ul>
           </div>
           <div className="flex justify-end w-full mt-5">
-            <Button variant="contained" href="/gallery">
+            <Button variant="contained" href="/gallery#social">
               View Social Gallery
             </Button>
           </div>
@@ -142,7 +142,7 @@ const Page = () => {
             </ul>
           </div>
           <div className="flex justify-end w-full mt-5 md:mt-[152px] lg:mt-[156px] xl:mt-[44px]">
-            <Button variant="contained" href="/gallery">
+            <Button variant="contained" href="/gallery#branding">
               View Branding Gallery
             </Button>
           </div>

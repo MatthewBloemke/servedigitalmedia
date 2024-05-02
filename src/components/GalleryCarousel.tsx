@@ -206,6 +206,16 @@ const GalleryCarousel = () => {
   const sliderRef1 = useRef<Slider | null>(null);
   const sliderRef2 = useRef<Slider | null>(null);
 
+  useEffect(() => {
+    if (location.hash === '#social') {
+      sliderRef2.current?.slickGoTo(6);
+    } else if (location.hash === '#web') {
+      sliderRef2.current?.slickGoTo(3);
+    } else if (location.hash === '#branding') {
+      sliderRef2.current?.slickGoTo(9);
+    }
+  }, []);
+
   const handleChangeSlide1 = (newSlideIndex: number) => {
     if (sliderRef1.current) {
       sliderRef1.current.slickGoTo(newSlideIndex);

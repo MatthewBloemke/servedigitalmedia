@@ -1,10 +1,6 @@
 'use client';
 import React, { useState, useEffect, useRef } from 'react';
-import { send } from '@emailjs/browser';
-import Alert from '@/components/Alert';
-import Error from '@/components/Error';
 import {
-  Button,
   FormControl,
   InputLabel,
   MenuItem,
@@ -12,6 +8,7 @@ import {
   TextField,
 } from '@mui/material';
 import withSnackbar from '@/components/withSnackbar';
+import { LoadingButton } from '@mui/lab';
 
 const initialState = {
   name: '',
@@ -24,7 +21,7 @@ const initialState = {
 
 const Page = ({ showSnackbar }: any) => {
   const [contactState, setContactState] = useState(initialState);
-  const [disabled, setDisabled] = useState(false);
+  const [loading, setLoading] = useState(false);
   const phoneLength = useRef(0);
 
   useEffect(() => {
@@ -56,7 +53,7 @@ const Page = ({ showSnackbar }: any) => {
 
   const handleSubmit = async (event: any) => {
     event.preventDefault();
-    setDisabled(true);
+    setLoading(true);
     if (
       contactState.name === '' ||
       contactState.email === '' ||
@@ -65,11 +62,11 @@ const Page = ({ showSnackbar }: any) => {
       contactState.number === ''
     ) {
       showSnackbar('Please fill out all fields', 'warning');
-      setDisabled(false);
+      setLoading(false);
       return;
     } else if (contactState.number.length !== 12) {
       showSnackbar('Please enter a full phone number', 'warning');
-      setDisabled(false);
+      setLoading(false);
       return;
     }
     if (contactState.subject === 'web') {
@@ -91,7 +88,7 @@ const Page = ({ showSnackbar }: any) => {
     } else {
       showSnackbar(response.statusText, 'error');
     }
-    setDisabled(false);
+    setLoading(false);
   };
 
   return (
@@ -156,9 +153,13 @@ const Page = ({ showSnackbar }: any) => {
               />
             </div>
             <div className="w-full text-center mt-5">
-              <Button variant="contained" type="submit">
+              <LoadingButton
+                variant="contained"
+                type="submit"
+                loading={loading}
+              >
                 Send Message
-              </Button>
+              </LoadingButton>
             </div>
           </form>
         </div>
