@@ -6,12 +6,12 @@ import Slider from 'react-slick';
 const ReviewSlider = () => {
   const sliderSettings = {
     arrows: false,
-    infinite: true, // Enable infinite loop
-    speed: 2000, // Transition speed in milliseconds (adjust for smooth transition)
-    slidesToShow: 1, // Number of slides to show at once
-    slidesToScroll: 1, // Number of slides to scroll at once
-    autoplay: true, // Enable autoplay
-    autoplaySpeed: 7000, // Autoplay speed in milliseconds
+    infinite: true,
+    speed: 2000,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 7000,
     cssEase: 'linear',
   };
   return (

@@ -4,8 +4,6 @@ import socialHome from '../../public/socialHome.png';
 import generalBranding from '../../public/generalBranding.png';
 import videoHome from '../../public/videoHome.png';
 import Carousel from '@/components/Carousel';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
 import ReviewSlider from '@/components/ReviewSlider';
 
 export default function Home() {

@@ -1,9 +1,6 @@
 'use client';
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Image from 'next/image';
-import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
-import Link from 'next/link';
-
 import Slider from 'react-slick';
 import { Button } from '@mui/material';
 
