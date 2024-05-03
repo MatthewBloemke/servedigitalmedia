@@ -1,26 +1,56 @@
-import Image from 'next/image';
 import React from 'react';
-import webPhoto from '../../../public/website1.png';
-import webPhoto2 from '../../../public/lesterheatair.png';
-import social1 from '../../../public/social1.png';
-import social2 from '../../../public/social2.png';
-import social3 from '../../../public/social3.png';
-import branding1 from '../../../public/branding1.png';
-import branding2 from '../../../public/general2.png';
-import branding3 from '../../../public/general3.png';
-import branding4 from '../../../public/general4.png';
-import branding5 from '../../../public/general5.png';
-import branding6 from '../../../public/ServeWhite.png';
-import Link from 'next/link';
-import { BsStarFill } from 'react-icons/bs';
-import GalleryCarousel from '@/components/GalleryCarousel';
-import './gallery.css';
+import GeneralCarousel from '@/components/GeneralCarousel';
+import VideoCarousel from '@/components/VideoCarousel';
+import WebCarousel from '@/components/WebCarousel';
+import SocialCarousel from '@/components/SocialCarousel';
 
 const Gallery = () => {
   return (
-    <div className="relative">
-      <div className="w-[80%] mx-[10%] pt-24">
-        <GalleryCarousel />
+    <div className="flex flex-row flex-wrap">
+      <div
+        id="video"
+        className="pb-10 mt-24 relative bg-[#2d2d2d] md:ml-[4%] md:mr-[1%] md:w-[45%] p-2 serve-card mx-[2.5%]"
+      >
+        <div className="p-2">
+          <h2 className="font-bold text-[#f5f5f5]">Video Gallery</h2>
+          <div className="w-[90%] mx-auto">
+            <VideoCarousel />
+          </div>
+        </div>
+      </div>
+
+      <div
+        id="web"
+        className="pb-10 mt-24 relative bg-[#2d2d2d] md:ml-[1%] md:mr-[4%] md:w-[45%] p-2 serve-card mx-[2.5%]"
+      >
+        <div className="p-2">
+          <h2 className="font-bold text-[#f5f5f5]">Web Gallery</h2>
+          <div className="w-[90%] mx-auto">
+            <WebCarousel />
+          </div>
+        </div>
+      </div>
+      <div
+        id="social"
+        className="pb-10 mt-24 relative bg-[#2d2d2d] md:ml-[4%] md:mr-[1%] md:w-[45%] p-2 serve-card mx-[2.5%] md:mb-10"
+      >
+        <div className="p-2">
+          <h2 className="font-bold text-[#f5f5f5]">Social Media Gallery</h2>
+          <div className="w-[90%] mx-auto">
+            <SocialCarousel />
+          </div>
+        </div>
+      </div>
+      <div
+        id="general"
+        className="pb-10 mt-24 relative bg-[#2d2d2d] md:ml-[1%] md:mr-[4%] md:w-[45%] p-2 serve-card mx-[2.5%] md:mb-10"
+      >
+        <div className="p-2">
+          <h2 className="font-bold text-[#f5f5f5]">General Branding Gallery</h2>
+          <div className="w-[90%] mx-auto">
+            <GeneralCarousel />
+          </div>
+        </div>
       </div>
     </div>
   );

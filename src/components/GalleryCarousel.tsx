@@ -8,10 +8,7 @@ import webPhoto3 from '../../public/website3.png';
 import social1 from '../../public/social1.png';
 import social2 from '../../public/social2.png';
 import social3 from '../../public/social3.png';
-import branding1 from '../../public/branding1.png';
-import branding2 from '../../public/branding2.png';
-import branding3 from '../../public/branding3.png';
-import branding4 from '../../public/ServeWhite.png';
+
 import webDesign from '../../public/webDesign.png';
 import socialHome from '../../public/socialHome.png';
 import generalBranding from '../../public/generalBranding.png';
@@ -67,41 +64,6 @@ type Category =
   | 'General Branding'
   | 'Video Design';
 
-const brandingExamples = [
-  <div key="branding1" className="!flex items-center h-full justify-center">
-    <Image
-      key="branding1"
-      src={branding1}
-      alt="branding1"
-      className="max-h-[300px] w-auto bg-[#2d2d2d] p-2 serve-card mx-auto py-auto"
-    />
-  </div>,
-  <div key="branding4" className="!flex items-center h-full justify-center">
-    <Image
-      key="branding4"
-      src={branding4}
-      alt="branding4"
-      className="max-h-[300px] w-auto bg-[#2d2d2d] p-2 serve-card mx-auto py-auto"
-    />
-  </div>,
-  <div key="branding2" className="!flex items-center h-full justify-center">
-    <Image
-      key="branding2"
-      src={branding2}
-      alt="branding2"
-      className="max-h-[300px] w-auto bg-[#2d2d2d] p-2 serve-card mx-auto py-auto"
-    />
-  </div>,
-  <div key="branding3" className="!flex items-center h-full justify-center">
-    <Image
-      key="branding3"
-      src={branding3}
-      alt="branding3"
-      className="max-h-[300px] w-auto bg-[#2d2d2d] p-2 serve-card mx-auto py-auto"
-    />
-  </div>,
-];
-
 const webExamples = [
   <div key="web2" className="">
     <Link href="https://www.lesterheatandair.com/" target="_blank">
@@ -135,36 +97,6 @@ const webExamples = [
   </div>,
 ];
 
-const videoExamples = [
-  <div key="video1" className="relative">
-    <iframe
-      className="w-[238px] h-[134px] xl:w-[560px] lg:w-[476px] lg:h-[268px] xl:h-[315px] relative mx-auto bg-[#2d2d2d] p-2"
-      src="https://www.youtube.com/embed/UpFPaZmv104"
-      title="YouTube video player"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      allowFullScreen
-    ></iframe>
-  </div>,
-  <div key="video2" className="relative">
-    <iframe
-      className="w-[238px] h-[134px] xl:w-[560px] lg:w-[476px] lg:h-[268px] xl:h-[315px] relative mx-auto bg-[#2d2d2d] p-2"
-      src="https://www.youtube.com/embed/AWFT2IWnP1w?si=AWQ_XKeyIkYwValV"
-      title="YouTube video player"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      allowFullScreen
-    ></iframe>
-  </div>,
-  <div key="video3" className="relative">
-    <iframe
-      className="w-[238px] h-[134px] xl:w-[560px] lg:w-[476px] lg:h-[268px] xl:h-[315px] relative mx-auto bg-[#2d2d2d] p-2"
-      src="https://www.youtube.com/embed/sZL0A4Xf-Go?si=ptZUQwflfE24G3_m"
-      title="YouTube video player"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      allowFullScreen
-    ></iframe>
-  </div>,
-];
-
 const socialExamples = [
   <div key="social2" className="">
     <Image
@@ -190,13 +122,6 @@ const socialExamples = [
       className="max-h-[300px] w-auto bg-[#2d2d2d] p-2 serve-card mx-auto"
     />
   </div>,
-];
-
-const examples = [
-  ...videoExamples,
-  ...webExamples,
-  ...socialExamples,
-  ...brandingExamples,
 ];
 
 const GalleryCarousel = () => {
@@ -282,16 +207,6 @@ const GalleryCarousel = () => {
               );
             })}
           </Slider>
-        </div>
-
-        <div className="lg:w-[60%] lg:ml-8  ">
-          <GallerySlider
-            sliderRef={sliderRef2}
-            sliderSettings={exampleSliderSettings}
-            examples={examples.map((example: React.JSX.Element) => {
-              return example;
-            })}
-          />
         </div>
       </div>
     </div>
