@@ -143,16 +143,20 @@ ul {
 }
 
 body {
-  height: 100vh;
-  background-image: url("../../public/bg3.png");
+  background-image: url('/parallax.jpg');
   background-size: cover;
-  background-color: black;
-  background-repeat: repeat-y;
 }
 
-#webProjects, #brandingProjects {
+/* body {
+  height: 100vh;
+  background-image: url("../../public/bg3.png");
+  background-color: black;
+  background-repeat: repeat-y;
+} */
+
+/* #webProjects, #brandingProjects {
   background-image: url("../../public/bg3.png");
   background-size: cover;
   background-color: black;
   background-repeat: repeat-y;
-}
+} */

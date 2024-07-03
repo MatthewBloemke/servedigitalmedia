@@ -12,7 +12,6 @@ const WebCarousel = () => {
     dots: true,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: true,
     speed: 2000,
     autoplaySpeed: 3500,
     arrows: true,
@@ -26,7 +25,7 @@ const WebCarousel = () => {
             key="web2"
             src={webPhoto2}
             alt="web photo 2"
-            className="max-h-[300px] w-auto bg-[#2d2d2d] p-2 serve-card mx-auto"
+            className="max-h-[268px] w-auto bg-[#2d2d2d] p-2 serve-card mx-auto"
           />
         </Link>
       </div>
@@ -36,7 +35,7 @@ const WebCarousel = () => {
             key="web3"
             src={webPhoto3}
             alt="web photo 3"
-            className="max-h-[300px] w-auto bg-[#2d2d2d] p-2 serve-card mx-auto"
+            className="max-h-[268px] w-auto bg-[#2d2d2d] p-2 serve-card mx-auto"
           />
         </Link>
       </div>
@@ -46,7 +45,7 @@ const WebCarousel = () => {
             key="web"
             src={webPhoto}
             alt="web photo"
-            className="max-h-[300px] w-auto bg-[#2d2d2d] p-2 serve-card mx-auto"
+            className="max-h-[268px] w-auto bg-[#2d2d2d] p-2 serve-card mx-auto"
           />
         </Link>
       </div>
