@@ -12,7 +12,6 @@ const GeneralCarousel = () => {
     dots: true,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: true,
     speed: 2000,
     autoplaySpeed: 3500,
     arrows: true,
@@ -20,14 +19,6 @@ const GeneralCarousel = () => {
 
   return (
     <Slider {...settings}>
-      <div key="branding1" className="!flex items-center h-full justify-center">
-        <Image
-          key="branding1"
-          src={branding1}
-          alt="branding1"
-          className="max-h-[300px] w-auto bg-[#2d2d2d] p-2 serve-card mx-auto py-auto"
-        />
-      </div>
       <div key="branding4" className="!flex items-center h-full justify-center">
         <Image
           key="branding4"

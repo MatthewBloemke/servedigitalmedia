@@ -46,10 +46,10 @@ export default function Home() {
   const buttons = [0, 1, 2, 3];
   return (
     <div className="overflow-hidden">
-      <div id="home-page" className="100vh">
+      <div id="home-page">
         <div
           id="home"
-          className="w-full flex flex-row flex-wrap md:flex-nowrap "
+          className="w-full h-[100vh] flex flex-row flex-wrap md:flex-nowrap "
         >
           <div
             id="info"

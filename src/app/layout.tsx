@@ -62,7 +62,7 @@ export default function RootLayout({
         <meta property="og:description" content="Serving to build your brand" />
       </head>
       <body id={pathname?.slice(1)} className={roboto.className}>
-        {/* <Blob /> */}
+        <Blob />
         <Providers>
           <div
             className={'w-full h-16 md:h-[72px] fixed z-[3] ' + navbarClassName}
