@@ -49,19 +49,39 @@ export default function Home() {
       <div id="home-page">
         <div
           id="home"
-          className="w-full h-[100vh] flex flex-row flex-wrap md:flex-nowrap "
+          className="
+    relative
+    w-full
+    h-[100vh]
+    flex flex-col md:flex-row
+    items-center justify-center
+    overflow-hidden
+    bg-gradient-to-br from-[#8c52ff1a] via-transparent to-transparent
+  "
         >
+          {/* Gradient overlay for subtle depth */}
+          <div className="absolute inset-0 pointer-events-none bg-gradient-to-br from-[#8c52ff33] via-transparent to-transparent" />
+
+          {/* Info Section */}
           <div
             id="info"
-            className="w-[90&] mx-[5%] md:mr-0 mt-[70px] md:mt-[78px] lg:w-3/6 lg:ml-20 lg:mt-32 lg:mr-4 relative"
+            className="
+              relative
+              w-[90%] mx-[5%]
+              lg:w-3/6 lg:ml-20
+              mt-24 lg:mt-40
+              max-w-[700px]
+            "
           >
-            <h1 className="text-4xl md:text-[40px] lg:text-6xl">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight text-white">
               Serve Digital Media
             </h1>
-            <h2 className="text-[#8c52ff] mt-[8px] magic">
+
+            <h2 className="text-[#8c52ff] mt-3 text-2xl md:text-3xl font-semibold tracking-wide">
               Serving to build your brand
             </h2>
-            <p className="mt-[8px]">
+
+            <p className="mt-5 text-gray-300 text-base md:text-lg leading-relaxed">
               Serve Digital Media was created to serve businesses and
               individuals in building their online brand. Through services in
               social media advertising, web design, video editing, and general
@@ -69,10 +89,19 @@ export default function Home() {
               in the digital space.
             </p>
           </div>
-          <div className="w-[80%] mx-[10%] md:mx-4 md:w-[40%] md:mt-32 lg:w-[40%] lg:mr-[96px] mt-5 lg:mt-32 lg:ml-12">
+
+          {/* Carousel Section */}
+          <div
+            className="
+                relative
+                w-[85%] mx-auto mt-10
+                md:w-[40%] md:mt-32 lg:w-[40%] lg:mr-[96px]
+              "
+          >
             <Carousel cardObjects={slide} buttons={buttons} />
           </div>
         </div>
+
         <Parallax>
           <Page />
         </Parallax>
