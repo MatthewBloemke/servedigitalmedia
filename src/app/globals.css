@@ -151,20 +151,19 @@ body {
   background-attachment: fixed;
 }
 
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
-
-
-
-/* body {
-  height: 100vh;
-  background-image: url("../../public/bg3.png");
-  background-color: black;
-  background-repeat: repeat-y;
-} */
-
-/* #webProjects, #brandingProjects {
-  background-image: url("../../public/bg3.png");
-  background-size: cover;
-  background-color: black;
-  background-repeat: repeat-y;
-} */
+.fade-section {
+  opacity: 0;
+  animation: fadeUp 0.8s ease-out forwards;
+  animation-delay: 0.2s;
+}

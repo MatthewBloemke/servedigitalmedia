@@ -8,7 +8,10 @@ import { Button } from '@mui/material';
 
 const Page = () => {
   return (
-    <div id="servicesPage" className="flex flex-row flex-wrap">
+    <div
+      id="servicesPage"
+      className="flex flex-row flex-wrap relative before:absolute before:inset-0 before:bg-gradient-to-b before:from-[#8c52ff05] before:via-transparent before:to-[#fb5d000a] before:pointer-events-none"
+    >
       <div
         id="video"
         className="mt-24 flex flex-wrap bg-[#2d2d2d] relative md:ml-[10%] md:mr-[5%] md:w-[35%] p-2 serve-card mx-[2.5%]"
