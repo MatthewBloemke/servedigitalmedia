@@ -1,157 +1,83 @@
 import React from 'react';
-import Image from 'next/image';
+import ServiceCard from '@/components/ServiceCard';
+
 import webDesign from '../../../public/webDesign.png';
 import socialHome from '../../../public/socialHome.png';
 import generalBranding from '../../../public/generalBranding.png';
 import videoHome from '../../../public/videoHome.png';
-import { Button } from '@mui/material';
 
 const Page = () => {
+  const services = [
+    {
+      id: 'video',
+      title: 'Video',
+      image: videoHome,
+      link: '/gallery#videoProjects',
+      description:
+        'When competing for attention in the modern market, video helps you stand out and connect with your audience before that initial contact.',
+      packages: [
+        'Promotional video package (1–2 minutes)',
+        'Shorts/Reels package (under 60 seconds)',
+        'Long-form video package (3+ minutes)',
+      ],
+    },
+    {
+      id: 'web',
+      title: 'Web Design',
+      image: webDesign,
+      link: '/gallery#web',
+      description:
+        'Websites are essential for promoting your brand—but professional sites can be expensive. We create high-quality, affordable websites tailored to your needs.',
+      packages: [
+        'Custom Website (starting from a 3-page site)',
+        'Website + ongoing maintenance',
+      ],
+    },
+    {
+      id: 'social',
+      title: 'Social Media Promotion',
+      image: socialHome,
+      link: '/gallery#social',
+      description:
+        'Social media is vital for reach. We create posts, plan campaigns, and teach techniques that make your content stand out.',
+      packages: [
+        'Post creation & campaign direction',
+        'General social media advisement',
+      ],
+    },
+    {
+      id: 'branding',
+      title: 'General Branding',
+      image: generalBranding,
+      link: '/gallery#branding',
+      description:
+        "Logos, palettes, and brand design can be overwhelming. Let us help build a brand identity that you're proud of.",
+      packages: ['Time-based development', 'Template selection options'],
+    },
+  ];
+
   return (
-    <div id="servicesPage" className="relative flex flex-row flex-wrap">
+    <div className="relative px-6 md:px-12 lg:px-20 pt-24 pb-10">
+      {/* Backgrounds */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute inset-0 bg-[url('/textures/noise.svg')] opacity-[0.08]" />
         <div className="absolute inset-0 bg-gradient-to-tl from-[#fb5d0022] via-transparent to-[#8c52ff33]" />
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 to-transparent" />
       </div>
-      <div
-        id="video"
-        className="mt-24 flex flex-wrap bg-[#2d2d2d] relative md:ml-[10%] md:mr-[5%] md:w-[35%] p-2 serve-card mx-[2.5%]"
-      >
-        <Image
-          src={videoHome}
-          alt="placeholder"
-          className="bg-white w-full relative "
-        />
-        <div className="p-2">
-          <h2 className="font-bold text-[#f5f5f5]">Video</h2>
-          <p className="font-extralight text-[#f5f5f5]">
-            When competing for attention in the modern market, video helps you
-            stand out from the rest of the world with the opportunity for your
-            audience to connect with you before making that initial contact.
-            Make a splash with this personal marketing tool! Each package is
-            customizable, reach out for more information
-          </p>
-          <br />
-          <div className="flex">
-            <p className="font-semibold text-[#fb5d00]">Packages:</p>
-            <ul className="ml-[35px] text-[#f5f5f5]">
-              <li>Promotional video package (1 - 2 minute video)</li>
-              <li>Shorts/Reels package (under 60 second video)</li>
-              <li>Long form video package (3+ minute video)</li>
-            </ul>
-          </div>
-          <div className="flex justify-end w-full mt-5">
-            <Button href="/gallery#videoProjects" variant="contained">
-              View Video Gallery
-            </Button>
-          </div>
-        </div>
-      </div>
 
       <div
-        id="web"
-        className="md:mt-24 mt-[8%] flex flex-wrap bg-[#2d2d2d] relative md:ml-[5%] md:mr-[10%] md:w-[35%] p-2 serve-card mx-[2.5%]"
+        id="servicesPage"
+        className="
+          relative 
+          grid
+          grid-cols-1 
+          md:grid-cols-2
+          gap-12
+        "
       >
-        <Image
-          src={webDesign}
-          alt="placeholder"
-          className="bg-white w-full relative"
-        />
-        <div className="p-2">
-          <h2 className="font-bold text-[#f5f5f5]">Web Design</h2>
-          <p className="font-extralight text-[#f5f5f5]">
-            Websites are the best way for you to promote your brand, but it can
-            be hard to make one look professional without paying a lot to have
-            it done for you. Allow us to make you a website at an affordable
-            rate! Each package is customizable, reach out for more information
-          </p>
-          <br />
-          <div className="flex">
-            <p className="font-semibold text-[#fb5d00]">Packages:</p>
-            <ul className="ml-[35px] text-[#f5f5f5]">
-              <li>Website (Customize up from 3-page site)</li>
-              <li>Website and updated maintenance</li>
-              <li className="text-[#2d2d2d]"></li>
-            </ul>
-          </div>
-          <div className="flex justify-end w-full mt-5 md:mt-[116px] lg:mt-[44px] xl:mt-[20px]">
-            <Button variant="contained" href="/gallery#web">
-              View Web Gallery
-            </Button>
-          </div>
-        </div>
-      </div>
-
-      <div
-        id="social"
-        className="md:mb-20 mt-[8%] flex flex-wrap bg-[#2d2d2d] relative md:ml-[10%] md:mr-[5%] md:w-[35%] p-2 serve-card mx-[2.5%]"
-      >
-        <Image
-          src={socialHome}
-          alt="placeholder"
-          className="bg-white w-full relative "
-        />
-        <div className="p-2">
-          <h2 className="font-bold text-[#f5f5f5]">Social Media Promotion</h2>
-          <p className="font-extralight text-[#f5f5f5]">
-            In the modern market, social media is a necessity to maximize your
-            {" brand's reach. Allow us to create posts and plan social media "}
-            campaigns for your business. We will even teach you how to apply
-            eye-catching techniques to your social media for the future! Each
-            package is customizable, reach out for more information
-          </p>
-          <br />
-          <div className="flex">
-            <p className="font-semibold text-[#fb5d00]">Packages:</p>
-            <ul className="ml-[35px] text-[#f5f5f5]">
-              <li>Post creation & campaign direction</li>
-              <li>General social media advisement</li>
-              <li className="text-[#2d2d2d]"></li>
-            </ul>
-          </div>
-          <div className="flex justify-end w-full mt-5">
-            <Button variant="contained" href="/gallery#social">
-              View Social Gallery
-            </Button>
-          </div>
-        </div>
-      </div>
-
-      <div
-        id="branding"
-        className="md:mb-20 mb-4 mt-[8%] flex flex-wrap bg-[#2d2d2d] relative md:ml-[5%] md:mr-[10%] md:w-[35%] p-2 serve-card mx-[2.5%]"
-      >
-        <Image
-          src={generalBranding}
-          alt="placeholder"
-          className="bg-white w-full relative "
-          height={274.36}
-          width={488}
-        />
-        <div className="p-2">
-          <h2 className="font-bold text-[#f5f5f5]">General Branding</h2>
-          <p className="font-extralight text-[#f5f5f5]">
-            Logos, color palettes and general design for starting your brand can
-            be a daunting task, but allow us to help create a brand with you
-            both worthy of your business and that you can be proud of! Each
-            package is customizable, reach out for more information
-          </p>
-          <br />
-          <div className="flex">
-            <p className="font-semibold text-[#fb5d00]">Packages:</p>
-            <ul className="ml-[35px] text-[#f5f5f5]">
-              <li>Time-based development</li>
-              <li>Choice of templates</li>
-              <li className="text-[#2d2d2d]"></li>
-            </ul>
-          </div>
-          <div className="flex justify-end w-full mt-5 md:mt-[152px] lg:mt-[156px] xl:mt-[44px]">
-            <Button variant="contained" href="/gallery#branding">
-              View Branding Gallery
-            </Button>
-          </div>
-        </div>
+        {services.map((service) => (
+          <ServiceCard key={service.id} {...service} />
+        ))}
       </div>
     </div>
   );

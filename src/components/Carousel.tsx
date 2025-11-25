@@ -21,22 +21,24 @@ const Carousel = ({ cardObjects }: any) => {
       <Slider {...settings} adaptiveHeight={true}>
         {cardObjects.map((obj: any, index: number) => {
           return (
-            <div
-              key={index}
-              className={'transition-opacity duration-[2500ms] h-full'}
-            >
-              <div className={'relative w-full bg-black/40 h-full '}>
+            <div className="relative w-full" key={index}>
+              <div className="relative bg-black/40 w-full h-[200px] sm:h-[200px] md:h-[300px] lg:h-[300px]">
                 <Image
                   src={obj.src}
                   alt={obj.alt}
-                  className="block w-full relative -z-[1] shadow-[0_0_40px_rgba(140,82,255,0.2)]"
+                  fill
+                  className="object-cover w-full h-full -z-[1]"
+                  priority={index === 0}
                 />
-                <div className="absolute inset-x-[15%] bottom-3 py-5 text-center text-white md:block">
-                  <h3>{obj.label}</h3>
-                  <Button variant="contained" size="small" href={obj.href}>
-                    {obj.button}
-                  </Button>
-                </div>
+              </div>
+
+              <div className="absolute inset-x-0 bottom-6 flex flex-col items-center text-white">
+                <h3 className="text-xl font-semibold drop-shadow-lg">
+                  {obj.label}
+                </h3>
+                <Button variant="contained" size="small" href={obj.href}>
+                  {obj.button}
+                </Button>
               </div>
             </div>
           );

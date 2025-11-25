@@ -49,27 +49,25 @@ export default function Home() {
         <div
           id="home"
           className="
-            relative w-full h-[100vh]
+            relative w-full h-full md:h-[100vh]
             flex flex-col md:flex-row
             items-center justify-center
             overflow-hidden
           "
         >
-          {/* Layered background */}
           <div className="absolute inset-0 pointer-events-none">
             <div className="absolute inset-0 bg-[url('/textures/noise.svg')] opacity-[0.08]" />
             <div className="absolute inset-0 bg-gradient-to-tr from-[#8c52ff33] via-transparent to-[#fb5d0022]" />
             <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/40" />
           </div>
 
-          {/* Text Content */}
           <div
             id="info"
             className="
               relative
               w-[90%] mx-[5%]
               lg:w-3/6 lg:ml-20
-              mt-24 lg:mt-36
+              mt-20 md:mt-32
               max-w-[700px]
             "
           >
@@ -77,7 +75,7 @@ export default function Home() {
               Serve Digital Media
             </h1>
 
-            <h2 className="text-[#8c52ff] mt-3 text-2xl md:text-3xl font-semibold tracking-wide magic">
+            <h2 className="text-[#8c52ff] mt-3 text-[22px] md:text-3xl font-semibold tracking-wide magic">
               Serving to build your brand
             </h2>
 
@@ -90,7 +88,6 @@ export default function Home() {
             </p>
           </div>
 
-          {/* Carousel */}
           <div
             className="
               relative
