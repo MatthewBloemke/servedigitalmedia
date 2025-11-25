@@ -13,20 +13,23 @@ const Carousel = ({ cardObjects }: any) => {
     autoplay: true,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplaySpeed: 6000,
+    autoplaySpeed: 60000,
   };
 
   return (
     <div>
-      <Slider {...settings}>
+      <Slider {...settings} adaptiveHeight={true}>
         {cardObjects.map((obj: any, index: number) => {
           return (
-            <div key={index} className={'transition-opacity duration-[2500ms]'}>
-              <div className={' relative  w-full bg-black/40'}>
+            <div
+              key={index}
+              className={'transition-opacity duration-[2500ms] h-full'}
+            >
+              <div className={'relative w-full bg-black/40 h-full '}>
                 <Image
                   src={obj.src}
                   alt={obj.alt}
-                  className="block w-full  relative -z-[1]"
+                  className="block w-full relative -z-[1] shadow-[0_0_40px_rgba(140,82,255,0.2)]"
                 />
                 <div className="absolute inset-x-[15%] bottom-3 py-5 text-center text-white md:block">
                   <h3>{obj.label}</h3>

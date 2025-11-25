@@ -5,7 +5,6 @@ import generalBranding from '../../public/generalBranding.png';
 import videoHome from '../../public/videoHome.png';
 import Carousel from '@/components/Carousel';
 import ReviewSlider from '@/components/ReviewSlider';
-import Parallax from '@/components/Parallax';
 import Page from './services/page';
 
 export default function Home() {
@@ -54,7 +53,6 @@ export default function Home() {
             flex flex-col md:flex-row
             items-center justify-center
             overflow-hidden
-            bg-gradient-to-br from-[#0e0e0e] via-[#151515] to-[#0e0e0e]
           "
         >
           {/* Layered background */}
@@ -100,24 +98,15 @@ export default function Home() {
               md:w-[40%] md:mt-24 lg:w-[40%] lg:mr-[96px]
             "
           >
-            <div className="rounded-2xl overflow-hidden shadow-[0_0_40px_rgba(140,82,255,0.2)]">
+            <div className="h-full">
               <Carousel cardObjects={slide} buttons={buttons} />
             </div>
           </div>
         </div>
 
-        {/* <div className="relative h-[160px] w-full overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#0e0e0e] to-[#0e0e0e]" />
-        </div> */}
+        <Page />
 
-        {/* Services Section */}
-        <div className="fade-section">
-          <Page />
-        </div>
-
-        <div className="w-[90%] mx-auto">
-          <ReviewSlider />
-        </div>
+        <ReviewSlider />
       </div>
     </div>
   );

@@ -8,10 +8,12 @@ import { Button } from '@mui/material';
 
 const Page = () => {
   return (
-    <div
-      id="servicesPage"
-      className="flex flex-row flex-wrap relative before:absolute before:inset-0 before:bg-gradient-to-b before:from-[#8c52ff05] before:via-transparent before:to-[#fb5d000a] before:pointer-events-none"
-    >
+    <div id="servicesPage" className="relative flex flex-row flex-wrap">
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute inset-0 bg-[url('/textures/noise.svg')] opacity-[0.08]" />
+        <div className="absolute inset-0 bg-gradient-to-tl from-[#fb5d0022] via-transparent to-[#8c52ff33]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/40 to-transparent" />
+      </div>
       <div
         id="video"
         className="mt-24 flex flex-wrap bg-[#2d2d2d] relative md:ml-[10%] md:mr-[5%] md:w-[35%] p-2 serve-card mx-[2.5%]"
