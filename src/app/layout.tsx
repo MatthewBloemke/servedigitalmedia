@@ -22,6 +22,7 @@ export default function RootLayout({
 }) {
   const pathname = usePathname();
   const [nav, setNav] = useState(false);
+  const [hash, setHash] = useState('');
   const [isScrolled, setIsScrolled] = useState<boolean>(false);
 
   useEffect(() => {
@@ -33,14 +34,26 @@ export default function RootLayout({
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      setHash(window.location.hash || '');
+
+      const updateHash = () => setHash(window.location.hash || '');
+      window.addEventListener('hashchange', updateHash);
+      window.addEventListener('popstate', updateHash);
+
+      return () => {
+        window.removeEventListener('hashchange', updateHash);
+        window.removeEventListener('popstate', updateHash);
+      };
+    }
+  }, []);
+
   const handleNav = () => setNav(!nav);
 
-  const homeColor =
-    pathname === '/' && !window?.location.hash.length ? 'primary' : 'info';
+  const homeColor = pathname === '/' && !hash.length ? 'primary' : 'info';
   const servicesColor =
-    pathname === '/' && window.location.hash === '#servicesPage'
-      ? 'primary'
-      : 'info';
+    pathname === '/' && hash === '#servicesPage' ? 'primary' : 'info';
   const galleryColor = pathname === '/gallery' ? 'primary' : 'info';
   const contactColor = pathname === '/contact' ? 'primary' : 'info';
 
