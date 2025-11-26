@@ -9,7 +9,6 @@ import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
 import { useEffect, useState } from 'react';
 import { Analytics } from '@vercel/analytics/react';
 import Providers from '@/components/Providers';
-import Blob from '@/components/Blob';
 import { Button } from '@mui/material';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -27,28 +26,24 @@ export default function RootLayout({
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 0) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
+      setIsScrolled(window.scrollY > 0);
     };
 
     window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const handleNav = () => {
-    setNav(!nav);
-  };
+  const handleNav = () => setNav(!nav);
 
-  const homeColor = pathname === '/' ? 'primary' : 'info';
-  const servicesColor = pathname === '/services' ? 'primary' : 'info';
+  const homeColor =
+    pathname === '/' && !window?.location.hash.length ? 'primary' : 'info';
+  const servicesColor =
+    pathname === '/' && window.location.hash === '#servicesPage'
+      ? 'primary'
+      : 'info';
   const galleryColor = pathname === '/gallery' ? 'primary' : 'info';
   const contactColor = pathname === '/contact' ? 'primary' : 'info';
+
   const navbarClassName = isScrolled
     ? 'bg-[rgba(20,20,20,0.55)] backdrop-blur-xl border-b border-white/10'
     : '';
@@ -63,11 +58,17 @@ export default function RootLayout({
         <meta property="og:type" content="website" />
         <meta property="og:description" content="Serving to build your brand" />
       </head>
+
       <body id={pathname?.slice(1)} className={roboto.className}>
-        {/* <Blob /> */}
         <Providers>
+          {/* ─────────────────────────────
+              NAVBAR (fixed top)
+
+          ───────────────────────────── */}
           <div
-            className={'w-full h-16 md:h-[72px] fixed z-[3] ' + navbarClassName}
+            className={
+              'w-full h-16 md:h-[72px] fixed z-[40] ' + navbarClassName
+            }
           >
             <div className="flex justify-between items-center w-full h-full px-2">
               <div className="w-full flex items-center">
@@ -81,6 +82,8 @@ export default function RootLayout({
                   </Link>
                 </div>
               </div>
+
+              {/* Desktop Nav */}
               <div>
                 <ul className="hidden md:flex navList">
                   <div className="mx-2">
@@ -108,6 +111,8 @@ export default function RootLayout({
                     </Button>
                   </div>
                 </ul>
+
+                {/* Mobile Menu Button */}
                 <div
                   onClick={handleNav}
                   className="text-white mr-2 md:hidden rounded-full p-3 cursor-pointer hover:bg-black/10 active:scale-95 ease-in duration-100"
@@ -116,91 +121,98 @@ export default function RootLayout({
                 </div>
               </div>
             </div>
-            <div
-              className={
-                nav
-                  ? 'md:hidden fixed left-0 top-0 w-full h-screen bg-black/70 z-[50]'
-                  : ''
-              }
-            >
-              <div
-                className={
-                  nav
-                    ? 'fixed left-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen  bg-[#000000] p-8 ease-in duration-500'
-                    : 'fixed left-[-100%] top-0 p-8 ease-in duration-500 h-screen'
-                }
-              >
-                <div>
-                  <div className="flex w-full items-center justify-between">
-                    <Link href="/">
-                      <Image
-                        onClick={() => setNav(false)}
-                        src={serveImage}
-                        alt="Serve Digital Media logo"
-                        width={125}
-                      />
-                    </Link>
-                    <div
-                      onClick={handleNav}
-                      className="rounded-full p-3 cursor-pointer text-white -mr-[10px]"
-                    >
-                      <AiOutlineClose />
-                    </div>
-                  </div>
-                  <div className="border-b border-white my-4">
-                    <p className="w-full md:w-[90%] py-4 text-xs">
-                      Serving to build your brand
-                    </p>
-                  </div>
-                </div>
-                <div className="py-4 flex flex-col">
-                  <ul className="uppercase navList">
-                    <Link href="/">
-                      <li
-                        onClick={() => setNav(false)}
-                        className="py-4 text-sm"
-                      >
-                        Home
-                      </li>
-                    </Link>
-                    <Link href="/services">
-                      <li
-                        onClick={() => setNav(false)}
-                        className="py-4 text-sm"
-                      >
-                        Services
-                      </li>
-                    </Link>
-                    <Link href="/gallery">
-                      <li
-                        onClick={() => setNav(false)}
-                        className="py-4 text-sm"
-                      >
-                        Gallery
-                      </li>
-                    </Link>
-                    <Link href="/contact">
-                      <li
-                        onClick={() => setNav(false)}
-                        className="py-4 text-sm"
-                      >
-                        Contact Us
-                      </li>
-                    </Link>
-                  </ul>
-                </div>
-              </div>
-              <div
-                onClick={() => setNav(false)}
-                className={
-                  nav
-                    ? 'md:hidden fixed right-0 h-screen w-[25%] sm:w-[40%] md:w-[55%]'
-                    : ''
-                }
-              />
-            </div>
           </div>
-          {children}
+
+          {/* ─────────────────────────────
+              MOBILE OVERLAY (OUTSIDE NAVBAR!)
+          ───────────────────────────── */}
+          <div
+            className={
+              nav
+                ? 'fixed inset-0 bg-black/60 backdrop-blur-sm z-[50] transition-opacity'
+                : 'pointer-events-none opacity-0'
+            }
+            onClick={() => setNav(false)}
+          />
+
+          {/* ─────────────────────────────
+              MOBILE SLIDE-IN PANEL
+          ───────────────────────────── */}
+          <div
+            className={
+              nav
+                ? 'fixed left-0 top-0 h-full w-[78%] sm:w-[60%] md:w-[45%] bg-[rgba(20,20,20,0.55)] backdrop-blur-xl border-r border-white/10 p-8 z-[60] transition-all duration-300'
+                : 'fixed left-[-100%] top-0 h-full w-[78%] p-8 transition-all duration-300'
+            }
+          >
+            {/* HEADER */}
+            <div className="flex w-full items-center justify-between">
+              <Link href="/" onClick={() => setNav(false)}>
+                <Image src={serveImage} alt="Serve Logo" width={125} />
+              </Link>
+
+              <button
+                onClick={handleNav}
+                className="text-white p-2 rounded-full hover:bg-white/10 transition"
+              >
+                <AiOutlineClose size={22} />
+              </button>
+            </div>
+
+            {/* TAGLINE */}
+            <div className="mt-6">
+              <p className="text-sm text-gray-200">
+                Serving to build your brand
+              </p>
+              <div className="w-20 h-[3px] bg-gradient-to-r from-[#8c52ff] to-[#fb5d00] mt-2 rounded-full"></div>
+            </div>
+
+            {/* NAV LINKS */}
+            <nav className="mt-8">
+              <ul className="space-y-3 text-gray-200">
+                <li>
+                  <Link
+                    href="/"
+                    className="block py-3 text-lg hover:text-white hover:translate-x-1 transition"
+                    onClick={() => setNav(false)}
+                  >
+                    Home
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/#servicesPage"
+                    className="block py-3 text-lg hover:text-white hover:translate-x-1 transition"
+                    onClick={() => setNav(false)}
+                  >
+                    Services
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/gallery"
+                    className="block py-3 text-lg hover:text-white hover:translate-x-1 transition"
+                    onClick={() => setNav(false)}
+                  >
+                    Gallery
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/contact"
+                    className="block py-3 text-lg hover:text-white hover:translate-x-1 transition"
+                    onClick={() => setNav(false)}
+                  >
+                    Contact
+                  </Link>
+                </li>
+              </ul>
+            </nav>
+          </div>
+
+          {/* Page Content */}
+          <div>{children}</div>
+
           <Analytics />
         </Providers>
       </body>

@@ -5,42 +5,38 @@ import Slider from 'react-slick';
 const VideoCarousel = () => {
   const settings = {
     dots: true,
+    arrows: true,
     slidesToShow: 1,
     slidesToScroll: 1,
-    speed: 2000,
-    autoplaySpeed: 3500,
-    arrows: true,
+    speed: 500,
+    infinite: true,
+    adaptiveHeight: true,
   };
+
+  const videos = [
+    'https://www.youtube.com/embed/UpFPaZmv104',
+    'https://www.youtube.com/embed/AWFT2IWnP1w?si=AWQ_XKeyIkYwValV',
+    'https://www.youtube.com/embed/sZL0A4Xf-Go?si=ptZUQwflfE24G3_m',
+  ];
 
   return (
     <Slider {...settings}>
-      <div className="relative">
-        <iframe
-          className="w-[238px] h-[134px] lg:w-[476px] lg:h-[268px] relative mx-auto bg-[#2d2d2d] p-2"
-          src="https://www.youtube.com/embed/UpFPaZmv104"
-          title="YouTube video player"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowFullScreen
-        ></iframe>
-      </div>
-      <div className="relative">
-        <iframe
-          className="w-[238px] h-[134px] lg:w-[476px] lg:h-[268px] relative mx-auto bg-[#2d2d2d] p-2"
-          src="https://www.youtube.com/embed/AWFT2IWnP1w?si=AWQ_XKeyIkYwValV"
-          title="YouTube video player"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowFullScreen
-        ></iframe>
-      </div>
-      <div className="relative">
-        <iframe
-          className="w-[238px] h-[134px] lg:w-[476px] lg:h-[268px] relative mx-auto bg-[#2d2d2d] p-2"
-          src="https://www.youtube.com/embed/sZL0A4Xf-Go?si=ptZUQwflfE24G3_m"
-          title="YouTube video player"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowFullScreen
-        ></iframe>
-      </div>
+      {videos.map((src, i) => (
+        <div className="flex justify-center" key={i}>
+          <div
+            className="
+              w-full 
+              max-w-[500px] 
+              aspect-video 
+              rounded-md 
+              overflow-hidden
+              bg-black/40
+            "
+          >
+            <iframe src={src} className="w-full h-full" allowFullScreen />
+          </div>
+        </div>
+      ))}
     </Slider>
   );
 };

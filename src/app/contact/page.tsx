@@ -7,8 +7,8 @@ import {
   Select,
   TextField,
 } from '@mui/material';
-import withSnackbar from '@/components/withSnackbar';
 import { LoadingButton } from '@mui/lab';
+import withSnackbar from '@/components/withSnackbar';
 
 const initialState = {
   name: '',
@@ -34,32 +34,22 @@ const Page = ({ showSnackbar }: any) => {
         target.value = target.value + '-';
       } else if (target.value.length === 7 && phoneLength.current === 6) {
         target.value = target.value + '-';
-      } else if (target.value.length === 8 && phoneLength.current === 9) {
-        target.value = target.value.slice(0, -1);
-      } else if (target.value.length === 4 && phoneLength.current === 5) {
-        target.value = target.value.slice(0, -1);
-      } else if (target.value.length === 4 && phoneLength.current === 3) {
-        target.value = target.value.slice(0, 3) + '-' + target.value.slice(3);
-      } else if (target.value.length === 8 && phoneLength.current === 7) {
-        target.value = target.value.slice(0, 7) + '-' + target.value.slice(7);
       }
     }
-    setContactState({
-      ...contactState,
-      [target.name]: target.value,
-    });
+    setContactState({ ...contactState, [target.name]: target.value });
     phoneLength.current = target.value.length;
   };
 
   const handleSubmit = async (event: any) => {
     event.preventDefault();
     setLoading(true);
+
     if (
-      contactState.name === '' ||
-      contactState.email === '' ||
-      contactState.message === '' ||
-      contactState.subject === '' ||
-      contactState.number === ''
+      !contactState.name ||
+      !contactState.email ||
+      !contactState.message ||
+      !contactState.subject ||
+      !contactState.number
     ) {
       showSnackbar('Please fill out all fields', 'warning');
       setLoading(false);
@@ -69,66 +59,92 @@ const Page = ({ showSnackbar }: any) => {
       setLoading(false);
       return;
     }
+
     if (contactState.subject === 'web') {
       contactState.secondUser = 'mattbloemke@gmail.com';
     }
 
-    const options = {
+    const response = await fetch(`/api/email`, {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(contactState),
-    };
+    });
 
-    const response = await fetch(`/api/email`, options);
+    showSnackbar(
+      response.status === 200 ? 'The message was sent' : response.statusText,
+      response.status === 200 ? 'success' : 'error'
+    );
 
-    if (response.status === 200) {
-      showSnackbar('The message was sent', 'success');
-    } else {
-      showSnackbar(response.statusText, 'error');
-    }
     setLoading(false);
   };
 
   return (
-    <div className="flex justify-center items-center relative">
-      <div className=" w-full md:w-[80%] h-auto rounded-xl lg:p-4 mt-10">
-        <div className="p-4">
+    <div className="relative min-h-screen pt-24 pb-20 flex justify-center">
+      {/* BACKGROUND */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute inset-0 bg-[url('/textures/noise.svg')] opacity-[0.08]" />
+        <div className="absolute inset-0 bg-gradient-to-tr from-[#8c52ff33] via-transparent to-[#fb5d0022]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/40" />
+      </div>
+
+      {/* CONTENT WRAPPER */}
+      <div className="relative w-full max-w-3xl mx-auto px-6">
+        {/* PAGE HEADER */}
+        <div className="text-center mb-10">
+          <h1 className="text-3xl md:text-4xl font-semibold text-white tracking-wide">
+            Contact Us
+          </h1>
+          <div className="w-40 h-[3px] mx-auto mt-3 rounded-full bg-gradient-to-r from-[#8c52ff] to-[#fb5d00]" />
+          <p className="text-gray-300 mt-4">
+            Tell us about your project — we’ll get back to you shortly.
+          </p>
+        </div>
+
+        {/* GLASS CARD */}
+        <div className="backdrop-blur-xl bg-black/40 border border-white/10 rounded-xl p-6 shadow-[0_0_25px_rgba(0,0,0,0.4)]">
           <form onSubmit={handleSubmit}>
-            <div className="grid md:grid-cols-2 gap-4 w-full py-2 mt-5">
+            {/* NAME + PHONE */}
+            <div className="grid md:grid-cols-2 gap-4 w-full py-2 mt-2">
               <TextField
                 variant="filled"
                 label="Name"
                 name="name"
+                fullWidth
                 onChange={handleChange}
                 value={contactState.name}
               />
+
               <TextField
                 variant="filled"
                 name="number"
                 label="Phone Number"
+                fullWidth
                 onChange={handleChange}
                 value={contactState.number}
               />
             </div>
+
+            {/* EMAIL */}
             <div className="flex flex-col py-2">
               <TextField
                 variant="filled"
                 name="email"
                 label="Email"
+                fullWidth
                 type="email"
                 value={contactState.email}
                 onChange={handleChange}
               />
             </div>
+
+            {/* SUBJECT */}
             <div className="flex flex-col py-2">
-              <FormControl>
-                <InputLabel id="Subject">Subject</InputLabel>
+              <FormControl variant="filled" fullWidth>
+                <InputLabel id="subject-label">Subject</InputLabel>
                 <Select
-                  variant="filled"
+                  label="Subject"
+                  labelId="subject-label"
                   value={contactState.subject}
-                  labelId="Subject"
                   onChange={({ target }) =>
                     setContactState({ ...contactState, subject: target.value })
                   }
@@ -142,18 +158,25 @@ const Page = ({ showSnackbar }: any) => {
                 </Select>
               </FormControl>
             </div>
+
+            {/* MESSAGE */}
             <div className="flex flex-col py-2">
               <TextField
                 name="message"
                 label="Message"
                 onChange={handleChange}
+                value={contactState.message}
                 variant="filled"
                 multiline
                 rows={4}
+                fullWidth
               />
             </div>
-            <div className="w-full text-center mt-5">
+
+            {/* BUTTON */}
+            <div className="w-full text-center mt-6">
               <LoadingButton
+                style={{ borderRadius: 28 }}
                 variant="contained"
                 type="submit"
                 loading={loading}

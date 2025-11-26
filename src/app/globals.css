@@ -167,3 +167,31 @@ body {
   animation: fadeUp 0.8s ease-out forwards;
   animation-delay: 0.2s;
 }
+
+/* Put slick arrows OUTSIDE the video edges */
+.slick-prev {
+  left: -38px !important;
+}
+
+.slick-next {
+  right: -38px !important;
+}
+
+/* On very small screens */
+@media (max-width: 480px) {
+  .slick-prev {
+    left: -24px !important;
+  }
+  .slick-next {
+    right: -24px !important;
+  }
+}
+
+/* Make arrows darker */
+.slick-prev:before,
+.slick-next:before {
+  color: #bbb !important;
+  opacity: 0.9 !important;
+  font-size: 28px !important;
+}
+
