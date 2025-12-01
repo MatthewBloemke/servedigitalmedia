@@ -53,7 +53,7 @@ const branding = [
 
 const MasonrySection = ({ items }: any) => {
   return (
-    <div className="columns-1 sm:columns-2 lg:columns-3 gap-4 space-y-4">
+    <div className="columns-1 sm:columns-2 lg:columns-3 gap-4 space-y-10">
       {items.map((item: any) => (
         <div
           key={item.id}

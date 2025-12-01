@@ -70,6 +70,7 @@ export default function RootLayout({
         <meta property="og:url" content="https://servedm.com" />
         <meta property="og:type" content="website" />
         <meta property="og:description" content="Serving to build your brand" />
+        <link rel="icon" href="/favicon.ico" sizes="any" />
       </head>
 
       <body id={pathname?.slice(1)} className={roboto.className}>
