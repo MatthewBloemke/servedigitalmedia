@@ -30,6 +30,8 @@ export default function RootLayout({
       setIsScrolled(window.scrollY > 0);
     };
 
+    handleScroll();
+
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -37,7 +39,6 @@ export default function RootLayout({
   useEffect(() => {
     if (typeof window !== 'undefined') {
       setHash(window.location.hash || '');
-
       const updateHash = () => setHash(window.location.hash || '');
       window.addEventListener('hashchange', updateHash);
       window.addEventListener('popstate', updateHash);

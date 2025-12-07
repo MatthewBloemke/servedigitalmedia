@@ -4,7 +4,6 @@ import React from 'react';
 import Image from 'next/image';
 import SectionHeader from '@/components/SectionHeader';
 
-// IMPORTS YOU PROVIDED
 import webPhoto from '../../../public/website1.png';
 import webPhoto2 from '../../../public/lesterheatair.png';
 import webPhoto3 from '../../../public/website3.png';
@@ -17,6 +16,7 @@ import branding1 from '../../../public/branding1.png';
 import branding2 from '../../../public/branding2.png';
 import branding3 from '../../../public/branding3.png';
 import branding4 from '../../../public/ServeWhite.png';
+import Link from 'next/link';
 
 const videos = [
   { id: 'v1', type: 'video', src: 'https://www.youtube.com/embed/UpFPaZmv104' },
@@ -33,9 +33,24 @@ const videos = [
 ];
 
 const websites = [
-  { id: 'w1', type: 'image', src: webPhoto },
-  { id: 'w2', type: 'image', src: webPhoto2 },
-  { id: 'w3', type: 'image', src: webPhoto3 },
+  {
+    id: 'w1',
+    type: 'website',
+    src: webPhoto,
+    href: 'https://www.mattbloemke.com',
+  },
+  {
+    id: 'w2',
+    type: 'website',
+    src: webPhoto2,
+    href: 'https://www.lesterheatandair.com',
+  },
+  {
+    id: 'w3',
+    type: 'website',
+    src: webPhoto3,
+    href: 'https://www.studenthealthyconversations.com',
+  },
 ];
 
 const socials = [
@@ -53,7 +68,7 @@ const branding = [
 
 const MasonrySection = ({ items }: any) => {
   return (
-    <div className="columns-1 sm:columns-2 lg:columns-3 gap-4 space-y-10">
+    <div className="columns-1 sm:columns-2 lg:columns-3 gap-4 space-y-10 md:space-y-4">
       {items.map((item: any) => (
         <div
           key={item.id}
@@ -75,6 +90,15 @@ const MasonrySection = ({ items }: any) => {
               alt="gallery item"
               className="w-full h-auto object-cover"
             />
+          )}
+          {item.type === 'website' && (
+            <Link href={item.href} target="_blank">
+              <Image
+                src={item.src}
+                alt="gallery item"
+                className="w-full h-auto object-cover"
+              />
+            </Link>
           )}
 
           {item.type === 'video' && (
@@ -103,6 +127,7 @@ const Gallery = () => {
       </div>
       <div>
         <SectionHeader
+          id="video"
           title="Video"
           subtitle="A selection of recent video productions created for clients across multiple industries."
         />
@@ -111,14 +136,18 @@ const Gallery = () => {
 
       <div>
         <SectionHeader
+          id="web"
           title="Websites"
-          subtitle="Custom website builds designed to be fast, accessible, and conversion-focused."
+          subtitle="Websites are custom made for each client, hand coded by our
+              subcontracted developer. Inquire to learn more about the benefits
+              of this approach versus Wordpress or WIX."
         />
         <MasonrySection items={websites} />
       </div>
 
       <div>
         <SectionHeader
+          id="social"
           title="Social Media"
           subtitle="Eye-catching social content created for engagement and brand recognition."
         />
@@ -127,6 +156,7 @@ const Gallery = () => {
 
       <div>
         <SectionHeader
+          id="branding"
           title="Branding"
           subtitle="Logos, visual identities, and foundational branding elements."
         />

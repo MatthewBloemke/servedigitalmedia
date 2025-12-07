@@ -12,7 +12,7 @@ const Page = () => {
       id: 'video',
       title: 'Video',
       image: videoHome,
-      link: '/gallery#videoProjects',
+      link: '/gallery#video',
       description:
         'When competing for attention in the modern market, video helps you stand out and connect with your audience before that initial contact.',
       packages: [
