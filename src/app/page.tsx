@@ -1,12 +1,11 @@
 'use-client';
-import Image from 'next/image';
 import webDesign from '../../public/webDesign.png';
 import socialHome from '../../public/socialHome.png';
 import generalBranding from '../../public/generalBranding.png';
 import videoHome from '../../public/videoHome.png';
-import Link from 'next/link';
 import Carousel from '@/components/Carousel';
-import { BsStarFill } from 'react-icons/bs';
+import ReviewSlider from '@/components/ReviewSlider';
+import Page from './services/page';
 
 export default function Home() {
   const slide = [
@@ -45,47 +44,66 @@ export default function Home() {
   ];
   const buttons = [0, 1, 2, 3];
   return (
-    <div id="home-page" className="100vh">
-      <div id="home" className="w-full flex flex-row flex-wrap md:flex-nowrap">
+    <div className="overflow-hidden">
+      <div id="home-page">
         <div
-          id="info"
-          className="w-[90&] mx-[5%] mt-20 md:w-3/6 md:ml-20 md:mt-40 md:mr-4"
+          id="home"
+          className="
+            relative w-full h-full md:h-[100vh]
+            flex flex-col md:flex-row
+            items-center justify-center
+            overflow-hidden
+          "
         >
-          <h1>Serve Digital Media</h1>
-          <h2 className="text-[#8c52ff] mt-[8px]">
-            Serving to build your brand
-          </h2>
-          <p className="mt-[8px]">
-            Serve Digital Media was created to serve businesses and individuals
-            in building their online brand. Through services in social media
-            advertising, web design, video editing, and general branding
-            development, our goal is to help you maximize your reach in the
-            digital space.
-          </p>
-        </div>
-        <div className="w-[90&] mx-[5%] md:w-3/6 items-center justify-center flex md:mr-[96px] mt-5 md:mt-40 md:ml-12">
-          <Carousel cardObjects={slide} buttons={buttons} />
-        </div>
-      </div>
-      <div className="bg-[#121212] md:w-[60%] md:mx-[20%] px-4 mt-8 relative pb-1 md:mb-10">
-        <div className="flex justify-center items-center w-full text-center">
-          <p className="md:text-lg mt-2 mr-2 ml-2">
-            <span className="">&quot;</span> Samuel is absolutely great to work
-            with! His professionalism is only rivaled by his execution and
-            creativity. I would 10/10 hire him again.
-            <span className="">&quot;</span>
-          </p>
-        </div>
-        <div className="flex w-[80%] justify-end mb-1">
-          <h4 className="md:text-2xl m-[-5px] text-white">-Dan</h4>
-          <div className="flex flex-row justify-center mt-[3px] ml-4">
-            <BsStarFill className="text-yellow-500" />
-            <BsStarFill className="text-yellow-500" />
-            <BsStarFill className="text-yellow-500" />
-            <BsStarFill className="text-yellow-500" />
-            <BsStarFill className="text-yellow-500" />
+          <div className="absolute inset-0 pointer-events-none">
+            <div className="absolute inset-0 bg-[url('/textures/noise.svg')] opacity-[0.08]" />
+            <div className="absolute inset-0 bg-gradient-to-tr from-[#8c52ff33] via-transparent to-[#fb5d0022]" />
+            <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/40" />
+          </div>
+
+          <div
+            id="info"
+            className="
+              relative
+              w-[90%] mx-[5%]
+              lg:w-3/6 lg:ml-20
+              mt-20 md:mt-32
+              max-w-[700px]
+            "
+          >
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight text-white drop-shadow-[0_0_15px_rgba(140,82,255,0.2)]">
+              Serve Digital Media
+            </h1>
+
+            <h2 className="text-[#8c52ff] mt-3 text-[22px] md:text-3xl font-semibold tracking-wide magic">
+              Serving to build your brand
+            </h2>
+
+            <p className="mt-6 text-gray-300 text-base md:text-lg leading-relaxed max-w-[550px]">
+              Serve Digital Media was created to serve businesses and
+              individuals in building their online brand. Through services in
+              social media advertising, web design, video editing, and general
+              branding development, our goal is to help you maximize your reach
+              in the digital space.
+            </p>
+          </div>
+
+          <div
+            className="
+              relative
+              w-[85%] mx-auto mt-10
+              md:w-[40%] md:mt-24 lg:w-[40%] lg:mr-[96px]
+            "
+          >
+            <div className="h-full">
+              <Carousel cardObjects={slide} buttons={buttons} />
+            </div>
           </div>
         </div>
+
+        <Page />
+
+        <ReviewSlider />
       </div>
     </div>
   );

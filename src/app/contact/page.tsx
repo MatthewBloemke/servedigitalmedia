@@ -1,8 +1,14 @@
 'use client';
 import React, { useState, useEffect, useRef } from 'react';
-import { send } from '@emailjs/browser';
-import Alert from '@/components/Alert';
-import Error from '@/components/Error';
+import {
+  FormControl,
+  InputLabel,
+  MenuItem,
+  Select,
+  TextField,
+} from '@mui/material';
+import { LoadingButton } from '@mui/lab';
+import withSnackbar from '@/components/withSnackbar';
 
 const initialState = {
   name: '',
@@ -13,16 +19,12 @@ const initialState = {
   secondUser: '',
 };
 
-const Page = () => {
+const Page = ({ showSnackbar }: any) => {
   const [contactState, setContactState] = useState(initialState);
-  const [error, setError] = useState(false);
-  const [alert, setAlert] = useState(false);
-  const [disabled, setDisabled] = useState(false);
+  const [loading, setLoading] = useState(false);
   const phoneLength = useRef(0);
 
   useEffect(() => {
-    setError(false);
-    setAlert(false);
     setContactState(initialState);
   }, []);
 
@@ -32,147 +34,161 @@ const Page = () => {
         target.value = target.value + '-';
       } else if (target.value.length === 7 && phoneLength.current === 6) {
         target.value = target.value + '-';
-      } else if (target.value.length === 8 && phoneLength.current === 9) {
-        target.value = target.value.slice(0, -1);
-      } else if (target.value.length === 4 && phoneLength.current === 5) {
-        target.value = target.value.slice(0, -1);
-      } else if (target.value.length === 4 && phoneLength.current === 3) {
-        target.value = target.value.slice(0, 3) + '-' + target.value.slice(3);
-      } else if (target.value.length === 8 && phoneLength.current === 7) {
-        target.value = target.value.slice(0, 7) + '-' + target.value.slice(7);
       }
     }
-    setContactState({
-      ...contactState,
-      [target.name]: target.value,
-    });
+    setContactState({ ...contactState, [target.name]: target.value });
     phoneLength.current = target.value.length;
   };
 
-  const handleSubmit = (event: any) => {
+  const handleSubmit = async (event: any) => {
     event.preventDefault();
-    console.log(contactState);
-    setDisabled(true);
+    setLoading(true);
+
     if (
-      contactState.name === '' ||
-      contactState.email === '' ||
-      contactState.message === '' ||
-      contactState.subject === '' ||
-      contactState.number === ''
+      !contactState.name ||
+      !contactState.email ||
+      !contactState.message ||
+      !contactState.subject ||
+      !contactState.number
     ) {
-      setError(true);
-      setDisabled(false);
+      showSnackbar('Please fill out all fields', 'warning');
+      setLoading(false);
       return;
     } else if (contactState.number.length !== 12) {
-      setError(true);
-      setDisabled(false);
+      showSnackbar('Please enter a full phone number', 'warning');
+      setLoading(false);
       return;
     }
+
     if (contactState.subject === 'web') {
       contactState.secondUser = 'mattbloemke@gmail.com';
     }
-    send(
-      'service_ne09bab',
-      'template_ayev97b',
-      contactState,
-      'O_RJ2i4_VWfnQbVbv'
-    ).then(
-      (result) => {
-        console.log(result.text);
-        setAlert(true);
-        setContactState(initialState);
-      },
-      (error) => {
-        setError(true);
-        console.log(error.text);
-      }
+
+    const response = await fetch(`/api/email`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(contactState),
+    });
+
+    showSnackbar(
+      response.status === 200 ? 'The message was sent' : response.statusText,
+      response.status === 200 ? 'success' : 'error'
     );
-    setDisabled(false);
+
+    setLoading(false);
   };
 
   return (
-    <div className="flex justify-center items-center">
-      <div className=" w-full md:w-[80%] h-auto rounded-xl lg:p-4 mt-10">
-        <div className="p-4">
+    <div className="relative min-h-screen pt-24 pb-20 flex justify-center">
+      {/* BACKGROUND */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute inset-0 bg-[url('/textures/noise.svg')] opacity-[0.08]" />
+        <div className="absolute inset-0 bg-gradient-to-tr from-[#8c52ff33] via-transparent to-[#fb5d0022]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/40" />
+      </div>
+
+      {/* CONTENT WRAPPER */}
+      <div className="relative w-full max-w-3xl mx-auto px-6">
+        {/* PAGE HEADER */}
+        <div className="text-center mb-10">
+          <h1 className="text-3xl md:text-4xl font-semibold text-white tracking-wide">
+            Contact Us
+          </h1>
+          <div className="w-40 h-[3px] mx-auto mt-3 rounded-full bg-gradient-to-r from-[#8c52ff] to-[#fb5d00]" />
+          <p className="text-gray-300 mt-4">
+            Tell us about your project — we’ll get back to you shortly.
+          </p>
+        </div>
+
+        {/* GLASS CARD */}
+        <div className="backdrop-blur-xl bg-black/40 border border-white/10 rounded-xl p-6 shadow-[0_0_25px_rgba(0,0,0,0.4)]">
           <form onSubmit={handleSubmit}>
-            <div className="grid md:grid-cols-2 gap-4 w-full py-2">
-              <div className="flex flex-col">
-                <label className="uppercase text-sm py-2 text-white">
-                  Name
-                </label>
-                <input
-                  onChange={handleChange}
-                  type="text"
-                  className="border-2 rounded-lg p-2 flex border-gray-300"
-                  name="name"
-                  value={contactState.name}
-                />
-              </div>
-              <div className="flex flex-col">
-                <label className="uppercase text-sm py-2 text-white">
-                  Phone Number
-                </label>
-                <input
-                  maxLength={12}
-                  onChange={handleChange}
-                  type="text"
-                  className="border-2 rounded-lg p-2 flex border-gray-300"
-                  name="number"
-                  value={contactState.number}
-                />
-              </div>
-            </div>
-            <div className="flex flex-col py-2">
-              <label className="uppercase text-sm py-2 text-white">Email</label>
-              <input
+            {/* NAME + PHONE */}
+            <div className="grid md:grid-cols-2 gap-4 w-full py-2 mt-2">
+              <TextField
+                variant="filled"
+                label="Name"
+                name="name"
+                fullWidth
                 onChange={handleChange}
-                type="email"
-                className="border-2 rounded-lg p-2 flex border-gray-300"
+                value={contactState.name}
+              />
+
+              <TextField
+                variant="filled"
+                name="number"
+                label="Phone Number"
+                fullWidth
+                onChange={handleChange}
+                value={contactState.number}
+              />
+            </div>
+
+            {/* EMAIL */}
+            <div className="flex flex-col py-2">
+              <TextField
+                variant="filled"
                 name="email"
+                label="Email"
+                fullWidth
+                type="email"
                 value={contactState.email}
-              />
-            </div>
-            <div className="flex flex-col py-2">
-              <label className="uppercase text-sm py-2 text-white">
-                Subject
-              </label>
-              <select
-                onChange={({ target }) =>
-                  setContactState({ ...contactState, subject: target.value })
-                }
-                value={contactState.subject}
-                className="border-2 rounded-lg p-2 flex border-gray-300"
-              >
-                <option value="">Select a subject</option>
-                <option value="general">General Inquiry</option>
-                <option value="web">Web Design</option>
-                <option value="branding">General Branding</option>
-                <option value="social">Social Media Promotion</option>
-                <option value="video">Video Production</option>
-              </select>
-            </div>
-            <div className="flex flex-col py-2">
-              <label className="uppercase text-sm py-2 text-white">
-                Message
-              </label>
-              <textarea
                 onChange={handleChange}
-                className="border-2 rounded-lg p-2 border-gray-300"
-                rows={4}
-                name="message"
-                value={contactState.message}
               />
             </div>
-            <div className="w-full text-center">
-              <button className="serve-button">Send message</button>
+
+            {/* SUBJECT */}
+            <div className="flex flex-col py-2">
+              <FormControl variant="filled" fullWidth>
+                <InputLabel id="subject-label">Subject</InputLabel>
+                <Select
+                  label="Subject"
+                  labelId="subject-label"
+                  value={contactState.subject}
+                  onChange={({ target }) =>
+                    setContactState({ ...contactState, subject: target.value })
+                  }
+                >
+                  <MenuItem value="">Select a subject</MenuItem>
+                  <MenuItem value="general">General Inquiry</MenuItem>
+                  <MenuItem value="web">Web Design</MenuItem>
+                  <MenuItem value="branding">General Branding</MenuItem>
+                  <MenuItem value="social">Social Media Promotion</MenuItem>
+                  <MenuItem value="video">Video Production</MenuItem>
+                </Select>
+              </FormControl>
+            </div>
+
+            {/* MESSAGE */}
+            <div className="flex flex-col py-2">
+              <TextField
+                name="message"
+                label="Message"
+                onChange={handleChange}
+                value={contactState.message}
+                variant="filled"
+                multiline
+                rows={4}
+                fullWidth
+              />
+            </div>
+
+            {/* BUTTON */}
+            <div className="w-full text-center mt-6">
+              <LoadingButton
+                style={{ borderRadius: 28 }}
+                variant="contained"
+                type="submit"
+                loading={loading}
+              >
+                Send Message
+              </LoadingButton>
             </div>
           </form>
         </div>
       </div>
-      {alert ? <Alert alert={alert} setAlert={setAlert} /> : null}
-      {error ? <Error error={error} setError={setError} /> : null}
     </div>
   );
 };
 
-export default Page;
+export default withSnackbar(Page);
