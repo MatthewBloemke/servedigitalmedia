@@ -22,8 +22,23 @@ export default function RootLayout({
 }) {
   const pathname = usePathname();
   const [nav, setNav] = useState(false);
-  const [hash, setHash] = useState('');
   const [isScrolled, setIsScrolled] = useState<boolean>(false);
+  const [isInView, setIsInView] = useState(false);
+
+  useEffect(() => {
+    const target = document.getElementById('servicesPage');
+    if (!target) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsInView(entry.isIntersecting);
+      },
+      { threshold: 0.5 }
+    );
+
+    observer.observe(target);
+    return () => observer.disconnect();
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -36,25 +51,10 @@ export default function RootLayout({
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      setHash(window.location.hash || '');
-      const updateHash = () => setHash(window.location.hash || '');
-      window.addEventListener('hashchange', updateHash);
-      window.addEventListener('popstate', updateHash);
-
-      return () => {
-        window.removeEventListener('hashchange', updateHash);
-        window.removeEventListener('popstate', updateHash);
-      };
-    }
-  }, []);
-
   const handleNav = () => setNav(!nav);
 
-  const homeColor = pathname === '/' && !hash.length ? 'primary' : 'info';
-  const servicesColor =
-    pathname === '/' && hash === '#servicesPage' ? 'primary' : 'info';
+  const homeColor = pathname === '/' && !isInView ? 'primary' : 'info';
+  const servicesColor = pathname === '/' && isInView ? 'primary' : 'info';
   const galleryColor = pathname === '/gallery' ? 'primary' : 'info';
   const contactColor = pathname === '/contact' ? 'primary' : 'info';
 
@@ -76,10 +76,6 @@ export default function RootLayout({
 
       <body id={pathname?.slice(1)} className={roboto.className}>
         <Providers>
-          {/* ─────────────────────────────
-              NAVBAR (fixed top)
-
-          ───────────────────────────── */}
           <div
             className={
               'w-full h-16 md:h-[72px] fixed z-[40] ' + navbarClassName
@@ -98,7 +94,6 @@ export default function RootLayout({
                 </div>
               </div>
 
-              {/* Desktop Nav */}
               <div>
                 <ul className="hidden md:flex navList">
                   <div className="mx-2">
@@ -127,7 +122,6 @@ export default function RootLayout({
                   </div>
                 </ul>
 
-                {/* Mobile Menu Button */}
                 <div
                   onClick={handleNav}
                   className="text-white mr-2 md:hidden rounded-full p-3 cursor-pointer hover:bg-black/10 active:scale-95 ease-in duration-100"
@@ -138,9 +132,6 @@ export default function RootLayout({
             </div>
           </div>
 
-          {/* ─────────────────────────────
-              MOBILE OVERLAY (OUTSIDE NAVBAR!)
-          ───────────────────────────── */}
           <div
             className={
               nav
@@ -150,9 +141,6 @@ export default function RootLayout({
             onClick={() => setNav(false)}
           />
 
-          {/* ─────────────────────────────
-              MOBILE SLIDE-IN PANEL
-          ───────────────────────────── */}
           <div
             className={
               nav
@@ -160,21 +148,19 @@ export default function RootLayout({
                 : 'fixed left-[-100%] top-0 h-full w-[78%] p-8 transition-all duration-300'
             }
           >
-            {/* HEADER */}
-            <div className="flex w-full items-center justify-between">
+            <div className="flex w-full items-center justify-between ml-[-9px]">
               <Link href="/" onClick={() => setNav(false)}>
                 <Image src={serveImage} alt="Serve Logo" width={125} />
               </Link>
 
               <button
                 onClick={handleNav}
-                className="text-white p-2 rounded-full hover:bg-white/10 transition"
+                className="text-white p-2 rounded-full hover:bg-white/10 transition mr-[-18px]"
               >
                 <AiOutlineClose size={22} />
               </button>
             </div>
 
-            {/* TAGLINE */}
             <div className="mt-6">
               <p className="text-sm text-gray-200">
                 Serving to build your brand
@@ -182,9 +168,8 @@ export default function RootLayout({
               <div className="w-20 h-[3px] bg-gradient-to-r from-[#8c52ff] to-[#fb5d00] mt-2 rounded-full"></div>
             </div>
 
-            {/* NAV LINKS */}
             <nav className="mt-8">
-              <ul className="space-y-3 text-gray-200">
+              <ul className="space-y-3 text-gray-200 list-none">
                 <li>
                   <Link
                     href="/"
@@ -225,7 +210,6 @@ export default function RootLayout({
             </nav>
           </div>
 
-          {/* Page Content */}
           <div>{children}</div>
 
           <Analytics />
